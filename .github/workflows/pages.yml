@@ -37,8 +37,15 @@ jobs:
           mkdir _site
           cp -r index.html anfrage.html impressum.html datenschutz.html Angebot.pdf assets data _site/
           touch _site/.nojekyll
+      - name: Vorschau-Paket (zum Herunterladen, auch bei privatem Repo)
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-vorschau
+          path: _site
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ !github.event.repository.private }}
         with:
           path: _site
       - id: deployment
+        if: ${{ !github.event.repository.private }}
         uses: actions/deploy-pages@v4

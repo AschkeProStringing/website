@@ -22,10 +22,13 @@
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 
+  // Eingebettete Daten (data/data.js) erlauben das Öffnen per Doppelklick (file://); sonst JSON per fetch
+  const loadData = () => window.SITE_DATA ? Promise.resolve([window.SITE_DATA.products, window.SITE_DATA.site])
+    : Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/site.json').then(r => r.json())]);
   const catalog = $('#catalog');
   if (!catalog) return;
 
-  Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/site.json').then(r => r.json())])
+  loadData()
     .then(([data, site]) => { renderSite(site); initCatalog(data, site); })
     .catch(() => { catalog.innerHTML = '<p class="empty">Das Sortiment konnte nicht geladen werden. Bitte Seite neu laden oder <a href="Angebot.pdf">das Angebot als PDF</a> öffnen.</p>'; });
 

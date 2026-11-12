@@ -110,8 +110,15 @@ def check(save_changes=True):
         if before != data:
             data["updated"] = date.today().isoformat()
             save(data)
+    write_embedded(data)
     print(f"OK – {len(data['products'])} Produkte, {len(warnings)} Hinweise")
     return data
+
+
+def write_embedded(data):
+    site = json.loads((ROOT / "data/site.json").read_text(encoding="utf-8"))
+    js = "window.SITE_DATA=" + json.dumps({"products": data, "site": site}, ensure_ascii=False) + ";\n"
+    (ROOT / "data/data.js").write_text(js, encoding="utf-8")
 
 
 def unused_images(data):

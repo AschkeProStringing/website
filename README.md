@@ -55,6 +55,13 @@ pip install -r scripts/requirements.txt
 python scripts/build_pdf.py         # erzeugt Angebot.pdf
 ```
 
+## Vorschau ansehen (ohne Veröffentlichung)
+
+* **Schnell:** Repo → *Code → Download ZIP*, entpacken, `index.html` doppelklicken (Daten sind in `data/data.js` eingebettet; das PDF liegt nur im Actions-Paket).
+* **Komplett inkl. PDF:** Tab *Actions* → letzter Lauf → *Artifacts* → `website-vorschau` herunterladen, entpacken, `index.html` öffnen.
+
+`data/data.js` wird von `python scripts/products.py check` automatisch erzeugt – nicht von Hand bearbeiten.
+
 ## Hosting
 
-GitHub → *Settings → Pages → Source: GitHub Actions*. Eigene Domain optional unter *Custom domain*.
+In einem öffentlichen Repo (z. B. `website`): *Settings → Pages → Source: GitHub Actions*; der Workflow veröffentlicht dann automatisch. In privaten Repos läuft nur der Vorschau-Teil. Eigene Domain optional unter *Custom domain*.

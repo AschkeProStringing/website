@@ -1,5 +1,8 @@
 (() => {
   'use strict';
+  // Eingebettete Daten (data/data.js) erlauben das Öffnen per Doppelklick (file://); sonst JSON per fetch
+  const loadData = () => window.SITE_DATA ? Promise.resolve([window.SITE_DATA.products, window.SITE_DATA.site])
+    : Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/site.json').then(r => r.json())]);
   const $ = (s, r = document) => r.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const form = $('#form');
@@ -39,7 +42,7 @@
   renderRackets();
   form.addEventListener('reset', () => setTimeout(() => { renderRackets(); $('#result').classList.remove('show'); }, 0));
 
-  Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/site.json').then(r => r.json())]).then(([data, s]) => {
+  loadData().then(([data, s]) => {
     site = s;
     $('#stringList').innerHTML = data.products.filter(p => ['saitenrollen-tennis', 'saitensets', 'saitenrollen-badminton', 'saiten-squash'].includes(p.category) && p.stock !== 0)
       .map(p => `<option value="${esc(p.name)}"></option>`).join('');
