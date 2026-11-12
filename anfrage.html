@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuauftrag – Fragebogen | Aschke Besaitungsservice</title>
+  <meta name="description" content="Fragebogen für Neuaufträge beim Aschke Besaitungsservice: Schläger, Saite, Spannung und Übergabe in wenigen Minuten angeben.">
+  <meta name="theme-color" content="#151a30">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/site/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/site/icon-192.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/img/site/icon-192.png" alt="" width="40" height="40"><span><b>Aschke</b> Besaitungsservice</span></a>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="index.html#produkte">Produkte</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a class="cta" href="anfrage.html" aria-current="page">Neuauftrag</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <p class="eyebrow">Neuauftrag</p>
+      <h1>Fragebogen</h1>
+      <p class="lead">Wenige Angaben genügen, damit ich Ihren Schläger genau nach Ihren Wünschen besaiten kann. Ihre Angaben werden <b>nicht</b> auf dieser Seite gespeichert: Am Ende erzeugen Sie eine Nachricht und senden sie selbst per E-Mail oder WhatsApp.</p>
+    </div>
+
+    <form class="questionnaire" id="form" novalidate>
+      <fieldset>
+        <legend>1 · Zu Ihrer Person</legend>
+        <div class="row2">
+          <div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="phone">Telefon / WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="email">E-Mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="contactWay">Bevorzugter Kontaktweg</label>
+            <select id="contactWay" name="contactWay"><option>WhatsApp</option><option>E-Mail</option><option>Telefon</option></select></div>
+        </div>
+        <div class="field"><span class="lbl">Sportart *</span>
+          <div class="choices" role="radiogroup" aria-label="Sportart">
+            <label class="choice"><input type="radio" name="sport" value="Tennis" checked> Tennis</label>
+            <label class="choice"><input type="radio" name="sport" value="Badminton"> Badminton</label>
+            <label class="choice"><input type="radio" name="sport" value="Squash"> Squash</label>
+          </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2 · Spielerprofil (optional – hilft bei der Saitenempfehlung)</legend>
+        <div class="row2">
+          <div class="field"><label for="level">Spielstärke</label>
+            <select id="level" name="level"><option value="">keine Angabe</option><option>Anfänger</option><option>Freizeitspieler</option><option>Clubspieler / Ligaspieler</option><option>Turnierspieler</option></select></div>
+          <div class="field"><label for="freq">Spielhäufigkeit</label>
+            <select id="freq" name="freq"><option value="">keine Angabe</option><option>weniger als 1× pro Woche</option><option>1–2× pro Woche</option><option>3–4× pro Woche</option><option>öfter</option></select></div>
+        </div>
+        <div class="field"><span class="lbl">Was ist Ihnen wichtig?</span>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="wants" value="Spin"> Spin</label>
+            <label class="choice"><input type="checkbox" name="wants" value="Kontrolle"> Kontrolle</label>
+            <label class="choice"><input type="checkbox" name="wants" value="Power"> Power</label>
+            <label class="choice"><input type="checkbox" name="wants" value="Komfort / Armschonung"> Komfort / Armschonung</label>
+            <label class="choice"><input type="checkbox" name="wants" value="Haltbarkeit"> Haltbarkeit</label>
+            <label class="choice"><input type="checkbox" name="wants" value="Spannungsstabilität"> Spannungsstabilität</label>
+            <label class="choice"><input type="checkbox" name="wants" value="Preis"> günstiger Preis</label>
+          </div></div>
+        <div class="field"><label class="choice"><input type="checkbox" name="arm" value="ja"> Ich habe Beschwerden an Arm, Ellbogen oder Schulter (z.&nbsp;B. Tennisarm)</label></div>
+        <div class="field"><label for="bisher">Bisherige Saite / bisherige Erfahrungen</label><textarea id="bisher" name="bisher" placeholder="z.&nbsp;B. Head Hawk 1.25 mit 24/23 kg – war mir zu hart …"></textarea></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3 · Ihre Schläger</legend>
+        <div class="field"><label for="count">Anzahl Schläger</label>
+          <select id="count" name="count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+        <div id="rackets"></div>
+        <datalist id="stringList"></datalist>
+      </fieldset>
+
+      <fieldset>
+        <legend>4 · Übergabe &amp; Termin</legend>
+        <div class="field"><span class="lbl">Wie übergeben Sie mir den Schläger? *</span>
+          <div class="choices" id="handoverChoices" role="radiogroup" aria-label="Übergabe"></div></div>
+        <div class="field"><label for="until">Gewünscht fertig bis</label><input id="until" name="until" type="date"><span class="hint">Unverbindlich – ich melde mich, wenn es knapp werden könnte.</span></div>
+        <div class="field"><label for="notes">Sonstige Wünsche oder Fragen</label><textarea id="notes" name="notes"></textarea></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>5 · Hinweis zum Datenschutz</legend>
+        <label class="choice"><input type="checkbox" id="privacy" required> Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung des Auftrags verwendet werden. *</label>
+      </fieldset>
+
+      <div class="actions">
+        <button class="btn primary" type="submit">Anfrage erstellen</button>
+        <button class="btn ghost" type="reset" id="reset">Zurücksetzen</button>
+      </div>
+      <p class="hint" id="error" role="alert" style="color:var(--bad)"></p>
+    </form>
+
+    <section class="result card" id="result" aria-live="polite" style="margin:2rem 0 4rem">
+      <h2 style="font-size:1.5rem">Ihre Anfrage ist bereit</h2>
+      <p>Bitte prüfen und dann senden – erst dann gelangen Ihre Angaben zu mir.</p>
+      <pre id="preview"></pre>
+      <div class="actions">
+        <a class="btn primary" id="sendWa" href="#" target="_blank" rel="noopener">Per WhatsApp senden</a>
+        <a class="btn ghost" id="sendMail" href="#">Per E-Mail senden</a>
+        <button class="btn ghost" type="button" id="copy">Text kopieren</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-grid">
+      <div>© <span id="year">2026</span> Michael Aschke · Aschke Besaitungsservice</div>
+      <nav class="foot-links" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="index.html">Startseite</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/questionnaire.js" defer></script>
+</body>
+</html>

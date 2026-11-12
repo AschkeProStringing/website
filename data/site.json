@@ -1,0 +1,38 @@
+{
+  "name": "Aschke Besaitungsservice",
+  "slogan": "Tension your tennis",
+  "owner": "Michael Aschke",
+  "address": "Egerlandstraße 6, 91353 Hausen",
+  "email": "besaitungsservice@aschke.net",
+  "phoneDisplay": "+49 162 6951862",
+  "phone": "+491626951862",
+  "whatsapp": "https://wa.me/491626951862",
+  "facebook": "https://www.facebook.com/TennisbesaitungAschke",
+  "instagram": "https://www.instagram.com/aschkebesaitungsservice/",
+  "website": "https://www.aschke.net/Besaitungsservice.html",
+  "pdfIntro": "Seit 2018 besaite ich Tennisschläger, seit 2021 gewerblich, seit 2026 auch Badminton und Squash. Als zertifizierter ERSA Professional Stringer arbeite ich mit einer kalibrierten Dunlop AC 3.0 Stringing Machine (EX-TE3900) mit linearem Greifer und Diablo-System. Nach jeder Tennisbesaitung wird der DT-Wert (Dynamic Tension) gemessen, alle Daten kommen auf ein Etikett am Schläger.",
+  "services": [
+    { "title": "Besaitung mit Eigensaite", "price": "17 €", "note": "Bei Eigensaiten gilt keine Kulanz." },
+    { "title": "Basisgriffband montieren", "price": "15 €", "note": "inklusive Basisgriffband" },
+    { "title": "Ösenband erneuern", "price": "15 € zzgl. Material", "note": "Materialkosten inkl. Porto" },
+    { "title": "Schlägertuning", "price": "20 € zzgl. Material", "note": "pro modifiziertem Tennisschläger" },
+    { "title": "Schlägervermessung", "price": "kostenfrei", "note": "einmalig je Schläger (Gewicht, Balance, Swingweight, Twistweight)" },
+    { "title": "Versand", "price": "nach Aufwand", "note": "tatsächliche Portokosten mit Sendungsverfolgung" }
+  ],
+  "priceNote": "Alle Saitenpreise sind inklusive Besaitungskosten.",
+  "kulanz": {
+    "intro": "Kulanz bei Normalspielern (höchstens 2 × pro Woche):",
+    "rows": [
+      { "reason": "Polyestersaite reißt in der Schlägerfläche (weniger als 1 Monat nach Spielbeginn mit dem Schläger)", "result": "Materialfehler: Der Saitenpreis wird bei der nächsten Bespannung erstattet." },
+      { "reason": "Polyestersaite reißt in der Mitte (Spliss; weniger als 4 Monate)", "result": "Materialfehler: Der Saitenpreis wird bei der nächsten Bespannung erstattet." }
+    ],
+    "grip": "Wechsel von Basisgriffbändern (BG) / Ösenbändern (ÖB): Arbeitskosten 3 € (BG), 15 € (ÖB) zzgl. Bestellkosten (BG/ÖB + anteiliges Porto) des Griffbandes in gewünschter Farbe."
+  },
+  "handover": [
+    { "title": "Persönliche Übergabe", "text": "Am TC Forchheim, montags und freitags im Home-Office oder – falls wir Kollegen sind – im Büro." },
+    { "title": "Übergabebox beim TC Forchheim", "text": "24/7 zugängliche Box am TC Forchheim, Krankenhausstraße 6, 91301 Forchheim. Die Bedienung ist an der Box erklärt." },
+    { "title": "Versandservice", "text": "Per Post an mich, Rückversand im selben Karton nach der Besaitung." },
+    { "title": "Individuelle Terminvereinbarung", "text": "Gerne stimme ich die Übergabe flexibel mit Ihnen ab." }
+  ],
+  "diademNote": "Über mich können sämtliche Produkte von DIADEM zu einem attraktiven Preis bezogen werden. Kontaktieren Sie mich einfach, an welchem Produkt Sie interessiert sind – ich nenne Ihnen dann den Preis."
+}
