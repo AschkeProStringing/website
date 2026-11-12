@@ -2260,10 +2260,10 @@
    "shape": "rund"
   },
   {
-   "id": "babolat-syntec-pro-basic-grip-schwarz-gelb-20250208",
+   "id": "babolat-syntec-pro-basic-grip-schwarz-gelb",
    "category": "griffbaender",
    "brand": "Babolat",
-   "name": "Babolat Syntec Pro Basic Grip schwarz-gelb 20250208",
+   "name": "Babolat Syntec Pro Basic Grip schwarz-gelb",
    "color": "schwarz-gelb",
    "price": 15.0,
    "stock": 3,
@@ -2275,10 +2275,10 @@
    ]
   },
   {
-   "id": "babolat-syntec-pro-basic-grip-schwarz-weiss-20260617",
+   "id": "babolat-syntec-pro-basic-grip-schwarz-weiss",
    "category": "griffbaender",
    "brand": "Babolat",
-   "name": "Babolat Syntec Pro Basic Grip schwarz-weiß 20260617",
+   "name": "Babolat Syntec Pro Basic Grip schwarz-weiß",
    "color": "schwarz-weiß",
    "price": 15.0,
    "stock": 3,
@@ -2290,10 +2290,10 @@
    ]
   },
   {
-   "id": "babolat-syntec-pro-basic-grip-weiss-20260617",
+   "id": "babolat-syntec-pro-basic-grip-weiss",
    "category": "griffbaender",
    "brand": "Babolat",
-   "name": "Babolat Syntec Pro Basic Grip weiß 20260617",
+   "name": "Babolat Syntec Pro Basic Grip weiß",
    "color": "weiß",
    "price": 15.0,
    "stock": 1,
@@ -2304,10 +2304,10 @@
    ]
   },
   {
-   "id": "head-hydrosorb-pro-basic-grip-neon-gelb-20260727",
+   "id": "head-hydrosorb-pro-basic-grip-neon-gelb",
    "category": "griffbaender",
    "brand": "Head",
-   "name": "Head Hydrosorb PRO Basic Grip neon gelb 20260727",
+   "name": "Head Hydrosorb PRO Basic Grip neon gelb",
    "color": "neongelb",
    "price": 15.0,
    "stock": 2,
@@ -2317,10 +2317,10 @@
    ]
   },
   {
-   "id": "head-hydrosorb-pro-basic-grip-neon-orange-20260707",
+   "id": "head-hydrosorb-pro-basic-grip-neon-orange",
    "category": "griffbaender",
    "brand": "Head",
-   "name": "Head Hydrosorb PRO Basic Grip neon orange 20260707",
+   "name": "Head Hydrosorb PRO Basic Grip neon orange",
    "color": "orange",
    "price": 15.0,
    "stock": 3,
@@ -2331,13 +2331,13 @@
    ]
   },
   {
-   "id": "head-hydrosorb-pro-basic-grip-schwarz-20260526",
+   "id": "head-hydrosorb-pro-basic-grip-schwarz",
    "category": "griffbaender",
    "brand": "Head",
-   "name": "Head Hydrosorb PRO Basic Grip schwarz 20260526",
+   "name": "Head Hydrosorb PRO Basic Grip schwarz",
    "color": "schwarz",
    "price": 15.0,
-   "stock": 1,
+   "stock": 4,
    "image": "assets/img/products/grip-basic-grip-schwarz-2026-8.webp",
    "sub": "Basisgriffbänder",
    "colorHex": [
@@ -2345,24 +2345,10 @@
    ]
   },
   {
-   "id": "head-hydrosorb-pro-basic-grip-schwarz-20260727",
+   "id": "head-hydrosorb-pro-basic-grip-weiss",
    "category": "griffbaender",
    "brand": "Head",
-   "name": "Head Hydrosorb PRO Basic Grip schwarz 20260727",
-   "color": "schwarz",
-   "price": 15.0,
-   "stock": 3,
-   "image": "assets/img/products/grip-basic-grip-schwarz-2026-8.webp",
-   "sub": "Basisgriffbänder",
-   "colorHex": [
-    "#1a1a1a"
-   ]
-  },
-  {
-   "id": "head-hydrosorb-pro-basic-grip-weiss-20250717",
-   "category": "griffbaender",
-   "brand": "Head",
-   "name": "Head Hydrosorb PRO Basic Grip weiß 20250717",
+   "name": "Head Hydrosorb PRO Basic Grip weiß",
    "color": "weiß",
    "price": 15.0,
    "stock": 1,
@@ -2373,10 +2359,10 @@
    ]
   },
   {
-   "id": "head-hydrosorb-pro-basic-grip-weiss",
+   "id": "head-hydrosorb-pro-basic-grip-weiss-7",
    "category": "griffbaender",
    "brand": "Head",
-   "name": "Head Hydrosorb PRO Basic Grip weiß*",
+   "name": "Head Hydrosorb PRO Basic Grip weiß",
    "color": "weiß",
    "price": 7.0,
    "stock": 1,
@@ -2387,10 +2373,10 @@
    ]
   },
   {
-   "id": "head-ultimate-20260526",
+   "id": "head-ultimate",
    "category": "griffbaender",
    "brand": "Head",
-   "name": "Head Ultimate 20260526",
+   "name": "Head Ultimate",
    "color": "schwarz",
    "price": 15.0,
    "stock": 3,
@@ -2400,10 +2386,10 @@
    ]
   },
   {
-   "id": "karakal-pu-super-grip-gelb-20260306",
+   "id": "karakal-pu-super-grip-gelb",
    "category": "griffbaender",
    "brand": "Karakal",
-   "name": "Karakal PU Super Grip gelb 20260306",
+   "name": "Karakal PU Super Grip gelb",
    "color": "gelb",
    "price": 11.0,
    "stock": 2,
@@ -2413,10 +2399,10 @@
    ]
   },
   {
-   "id": "karakal-pu-super-grip-schwarz-20260306",
+   "id": "karakal-pu-super-grip-schwarz",
    "category": "griffbaender",
    "brand": "Karakal",
-   "name": "Karakal PU Super Grip schwarz 20260306",
+   "name": "Karakal PU Super Grip schwarz",
    "color": "schwarz",
    "price": 11.0,
    "stock": 3,
@@ -2426,10 +2412,10 @@
    ]
   },
   {
-   "id": "karakal-pu-super-grip-weiss-20260306",
+   "id": "karakal-pu-super-grip-weiss",
    "category": "griffbaender",
    "brand": "Karakal",
-   "name": "Karakal PU Super Grip weiß 20260306",
+   "name": "Karakal PU Super Grip weiß",
    "color": "weiß",
    "price": 11.0,
    "stock": 2,
@@ -2439,10 +2425,10 @@
    ]
   },
   {
-   "id": "kirschbaum-touch-it-soft-feeling-schwarz-20251020",
+   "id": "kirschbaum-touch-it-soft-feeling-schwarz",
    "category": "griffbaender",
    "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch It Soft Feeling schwarz 20251020",
+   "name": "Kirschbaum Touch It Soft Feeling schwarz",
    "color": "schwarz",
    "price": 15.0,
    "stock": 3,
@@ -2452,10 +2438,10 @@
    ]
   },
   {
-   "id": "kirschbaum-touch-it-soft-feeling-weiss-20251020",
+   "id": "kirschbaum-touch-it-soft-feeling-weiss",
    "category": "griffbaender",
    "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch It Soft Feeling weiß 20251020",
+   "name": "Kirschbaum Touch It Soft Feeling weiß",
    "color": "weiß",
    "price": 15.0,
    "stock": 2,
@@ -2556,10 +2542,10 @@
    ]
   },
   {
-   "id": "diadem-pro-feel-20260717",
+   "id": "diadem-pro-feel",
    "category": "griffbaender",
    "brand": "Diadem",
-   "name": "Diadem Pro Feel 20260717",
+   "name": "Diadem Pro Feel",
    "color": "weiß",
    "price": 2.0,
    "stock": 14,
@@ -2736,10 +2722,10 @@
    ]
   },
   {
-   "id": "wilson-comfort-overgrip-braun-20240925",
+   "id": "wilson-comfort-overgrip-braun",
    "category": "griffbaender",
    "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip braun 20240925",
+   "name": "Wilson Comfort Overgrip braun",
    "color": "braun",
    "price": 2.0,
    "stock": 7,
@@ -2750,10 +2736,10 @@
    ]
   },
   {
-   "id": "wilson-comfort-overgrip-gelb-20240925",
+   "id": "wilson-comfort-overgrip-gelb",
    "category": "griffbaender",
    "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip gelb 20240925",
+   "name": "Wilson Comfort Overgrip gelb",
    "color": "gelb",
    "price": 2.0,
    "stock": 5,
@@ -2764,10 +2750,10 @@
    ]
   },
   {
-   "id": "wilson-comfort-overgrip-gruen-20240925",
+   "id": "wilson-comfort-overgrip-gruen",
    "category": "griffbaender",
    "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip grün 20240925",
+   "name": "Wilson Comfort Overgrip grün",
    "color": "grün",
    "price": 2.0,
    "stock": 5,
@@ -2778,10 +2764,10 @@
    ]
   },
   {
-   "id": "wilson-comfort-overgrip-lila-20240925",
+   "id": "wilson-comfort-overgrip-lila",
    "category": "griffbaender",
    "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip lila 20240925",
+   "name": "Wilson Comfort Overgrip lila",
    "color": "lila",
    "price": 2.0,
    "stock": 4,
@@ -2792,10 +2778,10 @@
    ]
   },
   {
-   "id": "wilson-comfort-overgrip-pink-20240925",
+   "id": "wilson-comfort-overgrip-pink",
    "category": "griffbaender",
    "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip pink 20240925",
+   "name": "Wilson Comfort Overgrip pink",
    "color": "pink",
    "price": 2.0,
    "stock": 6,
@@ -2806,10 +2792,10 @@
    ]
   },
   {
-   "id": "wilson-comfort-overgrip-weiss-20240925",
+   "id": "wilson-comfort-overgrip-weiss",
    "category": "griffbaender",
    "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip weiß 20240925",
+   "name": "Wilson Comfort Overgrip weiß",
    "color": "weiß",
    "price": 2.0,
    "stock": 4,
@@ -2854,21 +2840,7 @@
    "name": "Yonex Super Grap schwarz",
    "color": "schwarz",
    "price": 2.0,
-   "stock": 3,
-   "image": "assets/img/products/grip-super-grap-schwarz-22.webp",
-   "sub": "Overgrips",
-   "colorHex": [
-    "#1a1a1a"
-   ]
-  },
-  {
-   "id": "yonex-super-grap-schwarz-20260727",
-   "category": "griffbaender",
-   "brand": "Yonex",
-   "name": "Yonex Super Grap schwarz 20260727",
-   "color": "schwarz",
-   "price": 2.0,
-   "stock": 30,
+   "stock": 33,
    "image": "assets/img/products/grip-super-grap-schwarz-22.webp",
    "sub": "Overgrips",
    "colorHex": [
