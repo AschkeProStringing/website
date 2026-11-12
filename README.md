@@ -28,7 +28,7 @@ Alle Produkte stehen in `data/products.json` (Website **und** PDF lesen dieselbe
 * `category`: `id` aus `categories`. `sub`: Unterkategorie dieser Kategorie (Saiten: `Polyester`, `Polyamid`, `Naturdarm`; Griffbänder: `Basisgriffbänder`, `Overgrips`). Neue Unterkategorien unter `subcategories` der Kategorie anlegen.
 * `color`: deutscher Farbname. Die echte Farbe (`colorHex`) wird aus `data/colors.json` ergänzt – unbekannte Farben dort eintragen oder einmalig `"colorCustom": "#aabbcc"` am Produkt setzen. Zweifarbig: `schwarz-gelb`.
 * `material`: `Polyester`, `Polyamid` oder `Naturdarm`. `shape` (optional): `rund`, `pentagonal`, `hexagonal`, `heptagonal`, `octagonal` – wird als Querschnitts-Symbol angezeigt. `structureImage` (optional): Bild des Saitenaufbaus (v. a. Multifilament).
-* `stock` optional (`0` = ausverkauft). `tags`, `comment`, `weight`, `deposit`, `image` optional.
+* `stock` optional (`0` = ausverkauft: standardmäßig auf der Seite ausgeblendet, per Filter "Ausverkauftes anzeigen" sichtbar; nicht im PDF). `tags`, `comment`, `weight`, `deposit`, `image` optional.
 * Preise ändern = `price` anpassen.
 
 **Produkt entfällt:** `python scripts/products.py remove ID [ID …]` – entfernt es aus Website und Angebot und löscht nicht mehr genutzte Bilder.

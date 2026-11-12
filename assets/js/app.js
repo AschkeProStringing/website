@@ -44,7 +44,7 @@
 
   function initCatalog(data, site) {
     const { categories, products } = data;
-    const state = { q: '', cat: 'all', tag: '', sort: 'name', material: '', shape: '' };
+    const state = { q: '', cat: 'all', tag: '', sort: 'name', material: '', shape: '', color: '', soldout: false };
     const shapeById = Object.fromEntries(data.shapes.map(x => [x.id, x]));
     const catById = Object.fromEntries(categories.map(c => [c.id, c]));
     const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -83,6 +83,9 @@
     $('#material').innerHTML += data.materials.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
     $('#shape').innerHTML += data.shapes.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
     $('#material').addEventListener('change', e => { state.material = e.target.value; render(); });
+    $('#color').innerHTML += [...new Set(products.map(p => p.color).filter(Boolean))].sort((x, y) => x.localeCompare(y, 'de')).map(c => `<option>${esc(c)}</option>`).join('');
+    $('#color').addEventListener('change', e => { state.color = e.target.value; render(); });
+    $('#soldout').addEventListener('change', e => { state.soldout = e.target.checked; render(); });
     $('#shape').addEventListener('change', e => { state.shape = e.target.value; render(); });
 
     const stockBadge = p => {
@@ -110,7 +113,7 @@
       const props = [swatch(p), p.material ? `<span class="chip-info">${esc(p.material)}</span>` : '',
         sh ? `<span class="chip-info shape" title="Saitenform: ${esc(sh.title)}">${shapeSvg(sh.sides)}${esc(sh.title)}</span>` : ''].join('');
       const priceNote = cat.priceNote ? `<small class="meta">${esc(cat.priceNote)}</small>` : '';
-      return `<article class="product" data-cat="${esc(p.category)}">
+      return `<article class="product${p.stock === 0 ? ' soldout' : ''}" data-cat="${esc(p.category)}">
         <div class="pic">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : '<span class="ph" aria-hidden="true">◎</span>'}</div>
         <div class="body">
           <span class="brand-l">${esc(p.brand)}</span>
@@ -131,6 +134,8 @@
         if (state.tag && !(p.tags || []).includes(state.tag)) return false;
         if (state.material && p.material !== state.material) return false;
         if (state.shape && p.shape !== state.shape) return false;
+        if (state.color && p.color !== state.color) return false;
+        if (p.stock === 0 && !state.soldout) return false;
         if (state.q) {
           const hay = norm([p.brand, p.name, p.color, p.comment, ...(p.tags || []), catById[p.category].title, p.sub, p.material, p.shape].filter(Boolean).join(' '));
           if (!state.q.split(/\s+/).every(w => hay.includes(w))) return false;
