@@ -91,33 +91,42 @@
     const stockBadge = p => {
       if (p.stock === undefined) return '';
       if (p.stock <= 0) return '<span class="stock out">ausverkauft</span>';
-      if (p.stock <= 2) return `<span class="stock low">nur ${p.stock} da</span>`;
-      return '<span class="stock ok">verfügbar</span>';
+            return '<span class="stock ok">verfügbar</span>';
     };
     // Querschnitt der Saite: Kreis oder regelmäßiges Vieleck
-    const shapeSvg = sides => {
-      const c = 12, r = 9;
-      if (!sides) return `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="${c}" cy="${c}" r="${r}"/></svg>`;
-      const pts = Array.from({ length: sides }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / sides; return (c + r * Math.cos(a)).toFixed(2) + ',' + (c + r * Math.sin(a)).toFixed(2); }).join(' ');
-      return `<svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="${pts}"/></svg>`;
+    const shapeSvg = sh => {
+      const c = 12, r = 9, f = n => n.toFixed(2);
+      let inner;
+      if (sh.icon === 'star') {
+        inner = `<polygon points="${Array.from({ length: 12 }, (_, i) => { const a = -Math.PI / 2 + i * Math.PI / 6, k = i % 2 ? 4.6 : 10; return f(c + k * Math.cos(a)) + ',' + f(c + k * Math.sin(a)); }).join(' ')}"/>`;
+      } else if (sh.icon === 'rough') {
+        inner = `<circle cx="${c}" cy="${c}" r="7"/>` + Array.from({ length: 8 }, (_, i) => { const a = i * Math.PI / 4; return `<circle class="dot" cx="${f(c + 9.2 * Math.cos(a))}" cy="${f(c + 9.2 * Math.sin(a))}" r="1.5"/>`; }).join('');
+      } else if (!sh.sides) {
+        inner = `<circle cx="${c}" cy="${c}" r="${r}"/>`;
+      } else {
+        const off = sh.sides === 4 ? Math.PI / 4 : -Math.PI / 2, rr = sh.sides === 4 ? 8.5 : r;
+        inner = `<polygon points="${Array.from({ length: sh.sides }, (_, i) => { const a = off + i * 2 * Math.PI / sh.sides; return f(c + rr * Math.cos(a)) + ',' + f(c + rr * Math.sin(a)); }).join(' ')}"/>`;
+      }
+      return `<svg viewBox="0 0 24 24" aria-hidden="true">${inner}</svg>`;
     };
     const swatch = p => {
       if (!p.colorHex) return '';
       const bg = p.colorHex.length > 1 ? `linear-gradient(135deg, ${p.colorHex[0]} 50%, ${p.colorHex[1]} 50%)` : p.colorHex[0];
       return `<span class="chip-info"><i class="swatch" style="background:${esc(bg)}" aria-hidden="true"></i>${esc(p.color)}</span>`;
     };
+    const shortName = p => p.name.toLowerCase().startsWith(p.brand.toLowerCase() + ' ') ? p.name.slice(p.brand.length + 1) : p.name;
     const cardHtml = p => {
       const cat = catById[p.category];
       const meta = [p.colorHex ? '' : p.color, p.weight].filter(Boolean).join(' · ');
       const sh = p.shape && shapeById[p.shape];
       const props = [swatch(p), p.material ? `<span class="chip-info">${esc(p.material)}</span>` : '',
-        sh ? `<span class="chip-info shape" title="Saitenform: ${esc(sh.title)}">${shapeSvg(sh.sides)}${esc(sh.title)}</span>` : ''].join('');
+        sh ? `<span class="chip-info shape" title="Saitenform: ${esc(sh.title)}">${shapeSvg(sh)}${esc(sh.title)}</span>` : ''].join('');
       const priceNote = cat.priceNote ? `<small class="meta">${esc(cat.priceNote)}</small>` : '';
       return `<article class="product${p.stock === 0 ? ' soldout' : ''}" data-cat="${esc(p.category)}">
         <div class="pic">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : '<span class="ph" aria-hidden="true">◎</span>'}</div>
         <div class="body">
           <span class="brand-l">${esc(p.brand)}</span>
-          <h4>${esc(p.name)}</h4>
+          <h4>${esc(shortName(p))}</h4>
           ${props ? `<div class="props">${props}</div>` : ''}
           ${p.structureImage ? `<figure class="structure"><img src="${esc(p.structureImage)}" alt="Saitenstruktur ${esc(p.name)}" loading="lazy"><figcaption>Saitenaufbau</figcaption></figure>` : ''}
           ${meta ? `<div class="meta">${esc(meta)}</div>` : ''}

@@ -95,33 +95,52 @@ class ColorCell(Flowable):
 class ShapeCell(Flowable):
     """Saitenquerschnitt als Symbol plus Bezeichnung."""
 
-    def __init__(self, sides, label, width=24 * mm):
+    def __init__(self, shape, width=24 * mm):
         super().__init__()
-        self.sides, self.label, self.w = sides, label, width
+        self.shape, self.w = shape, width
 
     def wrap(self, aw, ah):
         return self.w, 7 * mm
 
     def draw(self):
+        sh = self.shape
+        sides, icon = sh["sides"], sh.get("icon")
         c, r = self.canv, 2.3 * mm
         cx, cy = r, 3.5 * mm
         c.saveState()
         c.setStrokeColor(ORANGE)
         c.setFillColor(colors.HexColor("#3a3350"))
         c.setLineWidth(0.9)
-        if not self.sides:
+        if icon == "star":
+            p = c.beginPath()
+            for i in range(12):
+                k = r * (1.1 if i % 2 == 0 else 0.5)
+                a = math.pi / 2 + i * math.pi / 6
+                x, y = cx + k * math.cos(a), cy + k * math.sin(a)
+                p.moveTo(x, y) if i == 0 else p.lineTo(x, y)
+            p.close()
+            c.drawPath(p, stroke=1, fill=1)
+        elif icon == "rough":
+            c.circle(cx, cy, r * 0.8, stroke=1, fill=1)
+            c.setFillColor(ORANGE)
+            for i in range(8):
+                a = i * math.pi / 4
+                c.circle(cx + r * 1.05 * math.cos(a), cy + r * 1.05 * math.sin(a), 0.5 * mm, stroke=0, fill=1)
+        elif not sides:
             c.circle(cx, cy, r, stroke=1, fill=1)
         else:
             p = c.beginPath()
-            for i in range(self.sides):
-                a = math.pi / 2 + i * 2 * math.pi / self.sides
-                x, y = cx + r * math.cos(a), cy + r * math.sin(a)
+            off = math.pi / 4 if sides == 4 else math.pi / 2
+            rr = r * 0.95 if sides == 4 else r
+            for i in range(sides):
+                a = off + i * 2 * math.pi / sides
+                x, y = cx + rr * math.cos(a), cy + rr * math.sin(a)
                 p.moveTo(x, y) if i == 0 else p.lineTo(x, y)
             p.close()
             c.drawPath(p, stroke=1, fill=1)
         c.setFillColor(INK)
         c.setFont("Helvetica", 7.5)
-        c.drawString(2 * r + 1.6 * mm, cy - 2.6, self.label)
+        c.drawString(2 * r + 1.6 * mm, cy - 2.6, sh["title"])
         c.restoreState()
 
 
@@ -150,12 +169,14 @@ def thumb(path, size=13 * mm):
     im.thumbnail((180, 180))
     bg = Image.new("RGBA", im.size, (31, 38, 70, 255))
     bg.alpha_composite(im)
+    # Auf quadratische Fläche zentrieren, damit schmale Bilder nicht linksbündig sitzen
+    side = max(bg.size)
+    sq = Image.new("RGBA", (side, side), (31, 38, 70, 255))
+    sq.paste(bg, ((side - bg.width) // 2, (side - bg.height) // 2))
     buf = io.BytesIO()
-    bg.convert("RGB").save(buf, "JPEG", quality=85)
+    sq.convert("RGB").save(buf, "JPEG", quality=85)
     buf.seek(0)
-    w, h = im.size
-    k = min(size / w, size / h)
-    return RLImage(buf, width=w * k, height=h * k)
+    return RLImage(buf, width=size, height=size)
 
 
 def esc(s):
@@ -192,7 +213,7 @@ def category_table(all_items, items):
             row.append(ColorCell(p["colorHex"], p["color"]) if p.get("colorHex") else Paragraph(esc(p.get("color", "")), S["small"]))
         if show_shape:
             sh = SHAPES.get(p.get("shape"))
-            row.append(ShapeCell(sh["sides"], sh["title"]) if sh else "")
+            row.append(ShapeCell(sh) if sh else "")
         if show_struct:
             row.append(thumb(p.get("structureImage"), 11 * mm) if p.get("structureImage") else "")
         row.append(Paragraph(eur(p["price"]), S["price"]))

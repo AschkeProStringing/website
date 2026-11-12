@@ -191,7 +191,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "quadratisch"
   },
   {
    "id": "head-hawk-touch-1-25",
@@ -269,7 +270,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#c9a227"
-   ]
+   ],
+   "shape": "strukturiert"
   },
   {
    "id": "luxilon-4g-soft-1-25",
@@ -345,7 +347,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#3b3f46"
-   ]
+   ],
+   "shape": "strukturiert"
   },
   {
    "id": "msv-focus-hex-1-23",
@@ -423,7 +426,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "restring-zero-1-28",
@@ -462,7 +466,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f28c28"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "solinco-confidential-1-25",
@@ -503,7 +508,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#e94b9a"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-hyper-g-1-25",
@@ -950,7 +956,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "diadem-flash-1-25-white",
@@ -991,7 +998,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8a8f98"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "diadem-solstice-black-1-25-black",
@@ -1011,7 +1019,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "stern"
   },
   {
    "id": "diadem-solstice-power-1-25-green",
@@ -1032,7 +1041,7 @@
    "colorHex": [
     "#2e9e4f"
    ],
-   "shape": "hexagonal"
+   "shape": "stern"
   },
   {
    "id": "dunlop-black-widow-1-31-black",
@@ -1205,7 +1214,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8a8f98"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "highstring-snap-1-23-green",
@@ -1469,7 +1479,7 @@
    "colorHex": [
     "#b8bcc6"
    ],
-   "shape": "rund"
+   "shape": "strukturiert"
   },
   {
    "id": "kirschbaum-pro-tour-control-1-23-grey",
@@ -1489,7 +1499,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8a8f98"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "kirschbaum-xplosive-speed-1-23-black",
@@ -1542,7 +1553,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "luxilon-eco-power-1-30-green",
@@ -1561,7 +1573,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "luxilon-eco-spin-1-25-black",
@@ -1580,7 +1593,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "luxilon-element-soft-ir-1-27-pink-red",
@@ -1601,7 +1615,8 @@
    "colorHex": [
     "#e94b9a",
     "#d62828"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "msv-focus-hex-1-18-orange",
@@ -1699,7 +1714,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "silvester-energy-1-23-black",
@@ -1719,7 +1735,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "silvester-hepta-plus-1-24-white",
@@ -1777,7 +1794,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#e94b9a"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-hyper-g-1-30-green",
@@ -1808,7 +1826,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "shape": "strukturiert"
   },
   {
    "id": "string-project-armour-1-25-black",
@@ -1827,7 +1846,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "string-project-armour-soft-1-24-natur",
@@ -1846,7 +1866,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "string-project-hexa-pro-1-25-green",
@@ -1887,7 +1908,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#d62828"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "stringlab-atomic-revolution-1-26-blue",
@@ -1902,7 +1924,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2a62c9"
-   ]
+   ],
+   "shape": "octagonal"
   },
   {
    "id": "stringlab-lemon-hexa-1-25-yellow",
@@ -1940,7 +1963,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#d9c7a0"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "yonex-poly-tour-pro-1-20-blue",
@@ -2086,7 +2110,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#2a62c9"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "diadem-evolution-1-25-azure-blue",
@@ -2167,7 +2192,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-for-you-1-30-natur",
@@ -2186,7 +2212,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-gut-feeling-1-25",
@@ -3152,6 +3179,23 @@
    "id": "octagonal",
    "title": "Octagonal",
    "sides": 8
+  },
+  {
+   "id": "quadratisch",
+   "title": "Quadratisch",
+   "sides": 4
+  },
+  {
+   "id": "stern",
+   "title": "Stern (6 Zacken)",
+   "sides": 6,
+   "icon": "star"
+  },
+  {
+   "id": "strukturiert",
+   "title": "Strukturiert (rau)",
+   "sides": 0,
+   "icon": "rough"
   }
  ]
 }

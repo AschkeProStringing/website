@@ -226,7 +226,8 @@ textarea { min-height: 110px; resize: vertical; }
 .product .props { display: flex; flex-wrap: wrap; gap: .35rem; }
 .chip-info { display: inline-flex; align-items: center; gap: .4rem; font-size: .78rem; padding: .18rem .6rem; border-radius: 999px; border: 1px solid var(--line); color: var(--text); background: rgba(255, 255, 255, .03); }
 .swatch { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .45); flex: none; }
-.chip-info.shape svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+.chip-info.shape svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linejoin: round; }
+.chip-info.shape svg .dot { fill: var(--accent); stroke: none; }
 .structure { margin: 0; display: flex; align-items: center; gap: .6rem; }
 .structure img { width: 110px; height: 64px; object-fit: contain; background: #fff; border-radius: 8px; padding: 2px; }
 .structure figcaption { color: var(--muted); font-size: .75rem; }
@@ -257,3 +258,4 @@ textarea { min-height: 110px; resize: vertical; }
 .hero h1 { font-size: clamp(1.9rem, 4.6vw, 3.2rem); }
 .hero h1 .h1-sub { display: block; color: var(--text); font-size: .62em; font-weight: 500; margin: .35rem 0 .6rem; }
 .hero h1 em { display: block; }
+.product .pic img { object-position: center; margin: 0 auto; justify-self: center; }
