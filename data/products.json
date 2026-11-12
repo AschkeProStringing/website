@@ -151,7 +151,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "shape": "octagonal"
   },
   {
    "id": "babolat-rpm-blast-1-25",
@@ -168,26 +169,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
-  },
-  {
-   "id": "diadem-evolution-1-30",
-   "category": "saitenrollen-tennis",
-   "brand": "Diadem",
-   "name": "Diadem Evolution 1.30",
-   "color": "azurblau",
-   "price": 24.0,
-   "tags": [
-    "Armschonung",
-    "Power",
-    "Spannungsstabilität"
    ],
-   "image": "assets/img/products/diadem-evolution-1-30.webp",
-   "material": "Polyester",
-   "sub": "Polyester",
-   "colorHex": [
-    "#1e90e8"
-   ]
+   "shape": "octagonal"
   },
   {
    "id": "grapplesnake-cube-1-18",
@@ -224,7 +207,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#3b3f46"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "head-lynx-1-25",
@@ -244,7 +228,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-super-smash-1-23",
@@ -263,7 +248,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f28c28"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "luxilon-4g-rough-1-25",
@@ -300,7 +286,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#c9a227"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "luxilon-big-banger-alu-power-1-25",
@@ -451,7 +438,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2a62c9"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "signum-pro-poly-plasma-1-23",
@@ -491,7 +479,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8a8e99"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-confidential-soft-1-25",
@@ -530,7 +519,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-hyper-g-round-1-25",
@@ -569,7 +559,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-mach-10-1-25",
@@ -588,7 +579,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#00b7d4"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-tour-bite-1-25",
@@ -606,7 +598,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "topspin-cyber-flash-1-25",
@@ -625,7 +618,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "yonex-poly-tour-fire-1-25",
@@ -644,7 +638,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#d62828"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "yonex-poly-tour-pro-1-20",
@@ -664,7 +659,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "yonex-poly-tour-pro-1-25",
@@ -682,7 +678,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "yonex-poly-tour-rev-1-25",
@@ -702,7 +699,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8e44ad"
-   ]
+   ],
+   "shape": "octagonal"
   },
   {
    "id": "yonex-poly-tour-spin-1-25",
@@ -721,7 +719,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#0047ab"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "yonex-poly-tour-strike-1-25",
@@ -740,7 +739,28 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
+  },
+  {
+   "id": "diadem-evolution-1-30",
+   "category": "saitenrollen-tennis",
+   "brand": "Diadem",
+   "name": "Diadem Evolution 1.30",
+   "color": "azurblau",
+   "price": 24.0,
+   "tags": [
+    "Armschonung",
+    "Power",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/diadem-evolution-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#1e90e8"
+   ],
+   "shape": "rund"
   },
   {
    "id": "dunlop-iconic-speed-1-25",
@@ -760,7 +780,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "head-velocity-mlt-1-30",
@@ -780,7 +801,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "head-velocity-mlt-1-30-black",
@@ -800,7 +822,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "isospeed-control-1-30",
@@ -819,7 +842,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "msv-soft-touch-1-30",
@@ -840,7 +864,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "tecnifibre-multifeel-1-30",
@@ -859,7 +884,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "tecnifibre-triax-1-33",
@@ -877,7 +903,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "tecnifibre-x-one-biphase-1-30",
@@ -896,7 +923,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "wilson-synthetic-gut-1-30",
@@ -916,26 +944,6 @@
    ]
   },
   {
-   "id": "diadem-evolution-1-25-azure-blue",
-   "category": "saitensets",
-   "brand": "Diadem",
-   "name": "Diadem Evolution 1.25 Azure Blue",
-   "color": "azurblau",
-   "price": 26.0,
-   "stock": 0,
-   "tags": [
-    "Armschonung",
-    "Power",
-    "Spannungsstabilität"
-   ],
-   "image": "assets/img/products/diadem-evolution-1-25-azure-blue.webp",
-   "material": "Polyester",
-   "sub": "Polyester",
-   "colorHex": [
-    "#1e90e8"
-   ]
-  },
-  {
    "id": "diadem-flash-1-25-white",
    "category": "saitensets",
    "brand": "Diadem",
@@ -952,7 +960,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "diadem-pro-x-1-25-grey",
@@ -1013,7 +1022,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "dunlop-black-widow-1-31-black",
@@ -1066,7 +1076,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2a62c9"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "dunlop-explosive-tour-1-20-silver",
@@ -1085,7 +1096,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "dunlop-explosive-tour-1-30-silver",
@@ -1104,7 +1116,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "genesis-hexonic-power-1-23-yellow",
@@ -1202,6 +1215,24 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
+   ],
+   "shape": "hexagonal"
+  },
+  {
+   "id": "isospeed-cream-1-28-beige",
+   "category": "saitensets",
+   "brand": "Isospeed",
+   "name": "Isospeed Cream 1.28 beige",
+   "color": "beige",
+   "price": 23.0,
+   "stock": 1,
+   "comment": "Hervorragende Ballkontrolle und Armschonung.",
+   "image": "assets/img/products/isospeed-cream-1-28-beige.webp",
+   "material": "Polyester",
+   "shape": "rund",
+   "sub": "Polyester",
+   "colorHex": [
+    "#d9c7a0"
    ]
   },
   {
@@ -1222,7 +1253,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#dfff2e"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-black-shark-1-25-black",
@@ -1240,7 +1272,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "kirschbaum-flash-1-25-mint",
@@ -1260,7 +1293,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#7fd8b8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-flash-1-25-pink",
@@ -1280,7 +1314,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#e94b9a"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-flash-1-25-yellow",
@@ -1300,7 +1335,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-max-power-1-20-red",
@@ -1320,7 +1356,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#d62828"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-max-power-1-20-white",
@@ -1339,7 +1376,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-max-power-1-25-grey",
@@ -1360,7 +1398,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8a8f98"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-max-power-1-25-red",
@@ -1379,7 +1418,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#d62828"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-max-power-1-25-white",
@@ -1398,7 +1438,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-max-power-rough-1-25-silver",
@@ -1418,7 +1459,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-pro-tour-control-1-23-grey",
@@ -1458,7 +1500,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "hexagonal"
   },
   {
    "id": "luxilon-big-banger-alu-power-1-20-grey",
@@ -1699,7 +1742,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#8a8e99"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-confidential-soft-1-25-set",
@@ -1735,7 +1779,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "solinco-tour-bite-diamond-rough-1-25-silver",
@@ -1900,7 +1945,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#2a62c9"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "yonex-poly-tour-rev-1-25-mint",
@@ -1921,7 +1967,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#7fd8b8"
-   ]
+   ],
+   "shape": "octagonal"
   },
   {
    "id": "yonex-poly-tour-rev-1-25-orange",
@@ -1942,7 +1989,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f28c28"
-   ]
+   ],
+   "shape": "octagonal"
   },
   {
    "id": "yonex-poly-tour-spin-1-20-black",
@@ -1962,7 +2010,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "shape": "pentagonal"
   },
   {
    "id": "babolat-addiction-1-30",
@@ -1982,7 +2031,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "babolat-xalt-1-30-white",
@@ -2001,7 +2051,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "babolat-xplore-1-30-blue",
@@ -2023,6 +2074,27 @@
    ]
   },
   {
+   "id": "diadem-evolution-1-25-azure-blue",
+   "category": "saitensets",
+   "brand": "Diadem",
+   "name": "Diadem Evolution 1.25 Azure Blue",
+   "color": "azurblau",
+   "price": 26.0,
+   "stock": 0,
+   "tags": [
+    "Armschonung",
+    "Power",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/diadem-evolution-1-25-azure-blue.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#1e90e8"
+   ],
+   "shape": "rund"
+  },
+  {
    "id": "diadem-impulse-1-25-natur",
    "category": "saitensets",
    "brand": "Diadem",
@@ -2040,7 +2112,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "genesis-new-cyan-1-25-mint",
@@ -2059,24 +2132,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#7fd8b8"
-   ]
-  },
-  {
-   "id": "isospeed-cream-1-28-beige",
-   "category": "saitensets",
-   "brand": "Isospeed",
-   "name": "Isospeed Cream 1.28 beige",
-   "color": "beige",
-   "price": 23.0,
-   "stock": 1,
-   "comment": "Hervorragende Ballkontrolle und Armschonung.",
-   "image": "assets/img/products/isospeed-cream-1-28-beige.webp",
-   "material": "Polyamid",
-   "shape": "rund",
-   "sub": "Polyamid",
-   "colorHex": [
-    "#d9c7a0"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-for-you-1-30-black",
@@ -2133,7 +2190,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "kirschbaum-touch-dura-1-25",
@@ -2152,7 +2210,8 @@
    "sub": "Polyamid",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "babolat-vs-touch-1-30",
@@ -2174,7 +2233,8 @@
    "sub": "Naturdarm",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "luxilon-natural-gut-1-30",
@@ -2196,7 +2256,8 @@
    "sub": "Naturdarm",
    "colorHex": [
     "#e6d3a8"
-   ]
+   ],
+   "shape": "rund"
   },
   {
    "id": "babolat-syntec-pro-basic-grip-schwarz-gelb-20250208",
