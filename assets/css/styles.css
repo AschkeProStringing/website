@@ -45,7 +45,7 @@ p { margin: 0 0 1em; }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .7rem; color: var(--text); font-weight: 700; }
 .brand:hover { text-decoration: none; }
-.brand img { width: 40px; height: 40px; border-radius: 10px; }
+.brand img { width: 52px; height: 40px; }
 .brand span b { color: var(--accent); font-weight: 700; }
 .menu { display: none; list-style: none; margin: 0; padding: 0; }
 .menu a { color: var(--text); padding: .5rem .8rem; border-radius: 10px; font-weight: 500; }
@@ -216,3 +216,22 @@ textarea { min-height: 110px; resize: vertical; }
 }
 .split img.ersa { width: 240px; margin-top: 1rem; box-shadow: none; }
 .ersa, img.ersa { max-width: 160px; height: auto; }
+
+/* Logo-Elemente im Design */
+.hero::after { content: ""; position: absolute; right: -6%; top: 50%; width: min(70vw, 720px); aspect-ratio: 215 / 165; transform: translateY(-50%); background: url(../img/site/icon.svg) center / contain no-repeat; opacity: .045; pointer-events: none; }
+.hero-media .logo-card { border-radius: 0; width: min(78%, 380px); }
+.section.alt { position: relative; }
+.eyebrow::before { content: ""; display: inline-block; width: 1.6rem; height: 2px; background: var(--accent); vertical-align: middle; margin-right: .6rem; }
+
+/* Produktmerkmale */
+.product .props { display: flex; flex-wrap: wrap; gap: .35rem; }
+.chip-info { display: inline-flex; align-items: center; gap: .4rem; font-size: .78rem; padding: .18rem .6rem; border-radius: 999px; border: 1px solid var(--line); color: var(--text); background: rgba(255, 255, 255, .03); }
+.swatch { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .45); flex: none; }
+.chip-info.shape svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+.structure { margin: 0; display: flex; align-items: center; gap: .6rem; }
+.structure img { width: 72px; height: 54px; object-fit: contain; background: #fff; border-radius: 8px; padding: 2px; }
+.structure figcaption { color: var(--muted); font-size: .75rem; }
+.cat-block h4.subcat { margin: 1.8rem 0 .9rem; font-size: 1.05rem; color: var(--accent); letter-spacing: .04em; display: flex; align-items: center; gap: .6rem; }
+.cat-block h4.subcat::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.cat-block h4.subcat span { order: 2; color: var(--muted); font-size: .8rem; font-weight: 400; }
+.cat-block h4.subcat::after { order: 1; }

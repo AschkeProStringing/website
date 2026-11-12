@@ -41,7 +41,8 @@
 
   function initCatalog(data, site) {
     const { categories, products } = data;
-    const state = { q: '', cat: 'all', tag: '', sort: 'name', onlyStock: false };
+    const state = { q: '', cat: 'all', tag: '', sort: 'name', onlyStock: false, material: '', shape: '' };
+    const shapeById = Object.fromEntries(data.shapes.map(x => [x.id, x]));
     const catById = Object.fromEntries(categories.map(c => [c.id, c]));
     const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
@@ -76,6 +77,10 @@
 
     $('#search').addEventListener('input', e => { state.q = norm(e.target.value.trim()); render(); });
     $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
+    $('#material').innerHTML += data.materials.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
+    $('#shape').innerHTML += data.shapes.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
+    $('#material').addEventListener('change', e => { state.material = e.target.value; render(); });
+    $('#shape').addEventListener('change', e => { state.shape = e.target.value; render(); });
     $('#onlyStock').addEventListener('change', e => { state.onlyStock = e.target.checked; render(); });
 
     const stockBadge = p => {
@@ -84,15 +89,32 @@
       if (p.stock <= 2) return `<span class="stock low">nur ${p.stock} da</span>`;
       return '<span class="stock ok">verfügbar</span>';
     };
+    // Querschnitt der Saite: Kreis oder regelmäßiges Vieleck
+    const shapeSvg = sides => {
+      const c = 12, r = 9;
+      if (!sides) return `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="${c}" cy="${c}" r="${r}"/></svg>`;
+      const pts = Array.from({ length: sides }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / sides; return (c + r * Math.cos(a)).toFixed(2) + ',' + (c + r * Math.sin(a)).toFixed(2); }).join(' ');
+      return `<svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="${pts}"/></svg>`;
+    };
+    const swatch = p => {
+      if (!p.colorHex) return '';
+      const bg = p.colorHex.length > 1 ? `linear-gradient(135deg, ${p.colorHex[0]} 50%, ${p.colorHex[1]} 50%)` : p.colorHex[0];
+      return `<span class="chip-info"><i class="swatch" style="background:${esc(bg)}" aria-hidden="true"></i>${esc(p.color)}</span>`;
+    };
     const cardHtml = p => {
       const cat = catById[p.category];
-      const meta = [p.type, p.color, p.weight && p.weight].filter(Boolean).join(' · ');
+      const meta = [p.colorHex ? '' : p.color, p.weight].filter(Boolean).join(' · ');
+      const sh = p.shape && shapeById[p.shape];
+      const props = [swatch(p), p.material ? `<span class="chip-info">${esc(p.material)}</span>` : '',
+        sh ? `<span class="chip-info shape" title="Saitenform: ${esc(sh.title)}">${shapeSvg(sh.sides)}${esc(sh.title)}</span>` : ''].join('');
       const priceNote = cat.priceNote ? `<small class="meta">${esc(cat.priceNote)}</small>` : '';
       return `<article class="product${p.stock === 0 ? ' soldout' : ''}">
         <div class="pic">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : '<span class="ph" aria-hidden="true">◎</span>'}</div>
         <div class="body">
           <span class="brand-l">${esc(p.brand)}</span>
           <h4>${esc(p.name)}</h4>
+          ${props ? `<div class="props">${props}</div>` : ''}
+          ${p.structureImage ? `<figure class="structure"><img src="${esc(p.structureImage)}" alt="Saitenstruktur ${esc(p.name)}" loading="lazy"><figcaption>Saitenaufbau</figcaption></figure>` : ''}
           ${meta ? `<div class="meta">${esc(meta)}</div>` : ''}
           ${p.tags ? `<div class="tags">${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
           ${p.comment ? `<div class="meta">${esc(p.comment)}</div>` : ''}
@@ -106,19 +128,24 @@
         if (state.cat !== 'all' && p.category !== state.cat) return false;
         if (state.tag && !(p.tags || []).includes(state.tag)) return false;
         if (state.onlyStock && p.stock === 0) return false;
+        if (state.material && p.material !== state.material) return false;
+        if (state.shape && p.shape !== state.shape) return false;
         if (state.q) {
-          const hay = norm([p.brand, p.name, p.color, p.type, p.comment, ...(p.tags || []), catById[p.category].title].filter(Boolean).join(' '));
+          const hay = norm([p.brand, p.name, p.color, p.comment, ...(p.tags || []), catById[p.category].title, p.sub, p.material, p.shape].filter(Boolean).join(' '));
           if (!state.q.split(/\s+/).every(w => hay.includes(w))) return false;
         }
         return true;
       });
-      const cmp = { name: (a, b) => a.name.localeCompare(b.name, 'de', { numeric: true }), 'price-asc': (a, b) => a.price - b.price || a.name.localeCompare(b.name, 'de'), 'price-desc': (a, b) => b.price - a.price || a.name.localeCompare(b.name, 'de') }[state.sort];
+      const byName = (a, b) => a.name.localeCompare(b.name, 'de', { numeric: true, sensitivity: 'base' });
+      const cmp = { name: byName, 'price-asc': (a, b) => a.price - b.price || byName(a, b), 'price-desc': (a, b) => b.price - a.price || byName(a, b) }[state.sort];
       $('#count').textContent = list.length + (list.length === 1 ? ' Produkt' : ' Produkte');
       if (!list.length) { catalog.innerHTML = '<p class="empty">Nichts gefunden. Probieren Sie einen anderen Suchbegriff – oder fragen Sie mich einfach direkt an.</p>'; return; }
       catalog.innerHTML = categories.map(c => {
         const items = list.filter(p => p.category === c.id).sort(cmp);
         if (!items.length) return '';
-        return `<section class="cat-block" aria-labelledby="h-${esc(c.id)}"><h3 id="h-${esc(c.id)}">${esc(c.title)}</h3>${c.subtitle ? `<p class="sub">${esc(c.subtitle)}</p>` : ''}<div class="products">${items.map(cardHtml).join('')}</div></section>`;
+        const subs = c.subcategories || [{ id: undefined, title: '' }];
+        const groups = subs.map(sc => ({ sc, list: items.filter(p => p.sub === sc.id) })).filter(g => g.list.length);
+        return `<section class="cat-block" aria-labelledby="h-${esc(c.id)}"><h3 id="h-${esc(c.id)}">${esc(c.title)}</h3>${c.subtitle ? `<p class="sub">${esc(c.subtitle)}</p>` : ''}${groups.map(g => `${g.sc.title ? `<h4 class="subcat">${esc(g.sc.title)} <span>${g.list.length}</span></h4>` : ''}<div class="products">${g.list.map(cardHtml).join('')}</div>`).join('')}</section>`;
       }).join('');
     }
     render();

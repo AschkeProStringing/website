@@ -9,6 +9,7 @@
   <meta property="og:title" content="Aschke Besaitungsservice – Tension your tennis">
   <meta property="og:description" content="ERSA-zertifizierter Besaitungsservice für Tennis, Badminton und Squash in Forchheim &amp; Umgebung.">
   <meta property="og:image" content="assets/img/site/logo.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/img/site/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/site/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/site/icon-192.png">
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -22,7 +23,7 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Aschke Besaitungsservice – Startseite">
-        <img src="assets/img/site/icon-192.png" alt="" width="40" height="40">
+        <img src="assets/img/site/icon.svg" alt="" width="52" height="40">
         <span><b>Aschke</b> Besaitungsservice</span>
       </a>
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu">
@@ -60,7 +61,7 @@
         </div>
         <div class="hero-media">
           <img class="photo" src="assets/img/site/maschine-1.jpg" alt="Detailaufnahme der Dunlop-Besaitungsmaschine" width="500" height="281">
-          <img class="logo-card" src="assets/img/site/logo.jpg" alt="Logo Aschke Besaitungsservice – Tension your tennis" width="500" height="271">
+          <img class="logo-card" src="assets/img/site/logo.svg" alt="Logo Aschke Besaitungsservice – Tension your tennis" width="534" height="314">
         </div>
       </div>
     </section>
@@ -174,8 +175,14 @@
           <div class="chips" id="catChips" role="group" aria-label="Kategorien"></div>
           <div class="filters">
             <div class="chips" id="tagChips" role="group" aria-label="Eigenschaften"></div>
+            <label for="material">Material
+              <select id="material"><option value="">alle</option></select>
+            </label>
+            <label for="shape">Form
+              <select id="shape"><option value="">alle</option></select>
+            </label>
             <label for="sort">Sortieren
-              <select id="sort"><option value="name">Name</option><option value="price-asc">Preis ↑</option><option value="price-desc">Preis ↓</option></select>
+              <select id="sort"><option value="name">A–Z</option><option value="price-asc">Preis ↑</option><option value="price-desc">Preis ↓</option></select>
             </label>
             <label><input type="checkbox" id="onlyStock"> nur verfügbar</label>
             <span class="count" id="count" aria-live="polite"></span>

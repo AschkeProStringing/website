@@ -1,26 +1,66 @@
 {
- "updated": "2026-08-06",
+ "updated": "2026-11-12",
  "categories": [
   {
    "id": "saitenrollen-tennis",
    "title": "Tennissaiten",
    "subtitle": "Saitenrollen – Preis inklusive Besaitung",
    "sport": "Tennis",
-   "priceNote": "inkl. Besaitung"
+   "priceNote": "inkl. Besaitung",
+   "kind": "string",
+   "subcategories": [
+    {
+     "id": "Polyester",
+     "title": "Polyester"
+    },
+    {
+     "id": "Polyamid",
+     "title": "Polyamid (Multifilament & Synthetik)"
+    },
+    {
+     "id": "Naturdarm",
+     "title": "Naturdarm"
+    }
+   ]
   },
   {
    "id": "saitensets",
    "title": "Saitensets",
    "subtitle": "Einzelsets – nur solange der Vorrat reicht",
    "sport": "Tennis",
-   "priceNote": "inkl. Besaitung"
+   "priceNote": "inkl. Besaitung",
+   "kind": "string",
+   "subcategories": [
+    {
+     "id": "Polyester",
+     "title": "Polyester"
+    },
+    {
+     "id": "Polyamid",
+     "title": "Polyamid (Multifilament & Synthetik)"
+    },
+    {
+     "id": "Naturdarm",
+     "title": "Naturdarm"
+    }
+   ]
   },
   {
    "id": "griffbaender",
    "title": "Griffbänder & Overgrips",
    "subtitle": "Basis-Griffbänder und Overgrips",
    "sport": "Tennis",
-   "priceNote": ""
+   "priceNote": "",
+   "subcategories": [
+    {
+     "id": "Basisgriffbänder",
+     "title": "Basisgriffbänder"
+    },
+    {
+     "id": "Overgrips",
+     "title": "Overgrips"
+    }
+   ]
   },
   {
    "id": "daempfer",
@@ -55,14 +95,44 @@
    "title": "Badmintonsaiten",
    "subtitle": "Saitenrollen – Preis inklusive Besaitung",
    "sport": "Badminton",
-   "priceNote": "inkl. Besaitung"
+   "priceNote": "inkl. Besaitung",
+   "kind": "string",
+   "subcategories": [
+    {
+     "id": "Polyester",
+     "title": "Polyester"
+    },
+    {
+     "id": "Polyamid",
+     "title": "Polyamid (Multifilament & Synthetik)"
+    },
+    {
+     "id": "Naturdarm",
+     "title": "Naturdarm"
+    }
+   ]
   },
   {
    "id": "saiten-squash",
    "title": "Squashsaiten",
    "subtitle": "Preis inklusive Besaitung",
    "sport": "Squash",
-   "priceNote": "inkl. Besaitung"
+   "priceNote": "inkl. Besaitung",
+   "kind": "string",
+   "subcategories": [
+    {
+     "id": "Polyester",
+     "title": "Polyester"
+    },
+    {
+     "id": "Polyamid",
+     "title": "Polyamid (Multifilament & Synthetik)"
+    },
+    {
+     "id": "Naturdarm",
+     "title": "Naturdarm"
+    }
+   ]
   }
  ],
  "products": [
@@ -76,7 +146,12 @@
    "tags": [
     "Spin"
    ],
-   "image": "assets/img/products/babolat-pro-hurricane-tour-1-25.webp"
+   "image": "assets/img/products/babolat-pro-hurricane-tour-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
+   ]
   },
   {
    "id": "babolat-rpm-blast-1-25",
@@ -88,7 +163,12 @@
    "tags": [
     "Spin"
    ],
-   "image": "assets/img/products/babolat-rpm-blast-1-25.webp"
+   "image": "assets/img/products/babolat-rpm-blast-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "diadem-evolution-1-30",
@@ -102,22 +182,12 @@
     "Power",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/diadem-evolution-1-30.webp"
-  },
-  {
-   "id": "dunlop-iconic-speed-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Dunlop",
-   "name": "Dunlop Iconic Speed 1.25",
-   "color": "natur",
-   "price": 27.0,
-   "tags": [
-    "Kontrolle",
-    "Power",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/dunlop-iconic-speed-1-25.webp"
+   "image": "assets/img/products/diadem-evolution-1-30.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1e90e8"
+   ]
   },
   {
    "id": "grapplesnake-cube-1-18",
@@ -131,7 +201,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/grapplesnake-cube-1-18.webp"
+   "image": "assets/img/products/grapplesnake-cube-1-18.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "head-hawk-touch-1-25",
@@ -144,7 +219,12 @@
     "Gefühl",
     "Kontrolle"
    ],
-   "image": "assets/img/products/head-hawk-touch-1-25.webp"
+   "image": "assets/img/products/head-hawk-touch-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#3b3f46"
+   ]
   },
   {
    "id": "head-lynx-1-25",
@@ -159,7 +239,528 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/head-lynx-1-25.webp"
+   "image": "assets/img/products/head-lynx-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "kirschbaum-super-smash-1-23",
+   "category": "saitenrollen-tennis",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Super Smash 1.23",
+   "color": "orange",
+   "price": 19.0,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle",
+    "Power"
+   ],
+   "image": "assets/img/products/kirschbaum-super-smash-1-23.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f28c28"
+   ]
+  },
+  {
+   "id": "luxilon-4g-rough-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Luxilon",
+   "name": "Luxilon 4G Rough 1.25",
+   "color": "gold",
+   "price": 31.0,
+   "tags": [
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/luxilon-4g-rough-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#c9a227"
+   ]
+  },
+  {
+   "id": "luxilon-4g-soft-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Luxilon",
+   "name": "Luxilon 4G Soft 1.25",
+   "color": "gold",
+   "price": 31.0,
+   "tags": [
+    "Power",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/luxilon-4g-soft-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#c9a227"
+   ]
+  },
+  {
+   "id": "luxilon-big-banger-alu-power-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Luxilon",
+   "name": "Luxilon Big Banger Alu Power 1.25",
+   "color": "anthrazit",
+   "price": 30.0,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle"
+   ],
+   "image": "assets/img/products/luxilon-big-banger-alu-power-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "rund",
+   "colorHex": [
+    "#3b3f46"
+   ]
+  },
+  {
+   "id": "luxilon-big-banger-alu-power-1-30",
+   "category": "saitenrollen-tennis",
+   "brand": "Luxilon",
+   "name": "Luxilon Big Banger Alu Power 1.30",
+   "color": "anthrazit",
+   "price": 30.0,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle"
+   ],
+   "image": "assets/img/products/luxilon-big-banger-alu-power-1-30.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "rund",
+   "colorHex": [
+    "#3b3f46"
+   ]
+  },
+  {
+   "id": "luxilon-big-banger-alu-power-rough-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Luxilon",
+   "name": "Luxilon Big Banger Alu Power Rough 1.25",
+   "color": "anthrazit",
+   "price": 29.0,
+   "tags": [
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/luxilon-big-banger-alu-power-rough-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#3b3f46"
+   ]
+  },
+  {
+   "id": "msv-focus-hex-1-23",
+   "category": "saitenrollen-tennis",
+   "brand": "MSV",
+   "name": "MSV Focus HEX 1.23",
+   "color": "schwarz",
+   "price": 20.0,
+   "tags": [
+    "Kontrolle",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/msv-focus-hex-1-23.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "msv-focus-hex-plus-25-1-20",
+   "category": "saitenrollen-tennis",
+   "brand": "MSV",
+   "name": "MSV Focus HEX Plus 25 1.20",
+   "color": "schwarz",
+   "price": 20.0,
+   "tags": [
+    "Kontrolle",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/msv-focus-hex-plus-25-1-20.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "msv-hepta-twist-1-20",
+   "category": "saitenrollen-tennis",
+   "brand": "MSV",
+   "name": "MSV Hepta Twist 1.20",
+   "color": "schwarz",
+   "price": 21.0,
+   "tags": [
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/msv-hepta-twist-1-20.webp",
+   "material": "Polyester",
+   "shape": "heptagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "polyfibre-poly-hightec-1-20",
+   "category": "saitenrollen-tennis",
+   "brand": "Polyfibre",
+   "name": "Polyfibre Poly-Hightec 1.20",
+   "color": "gelb",
+   "price": 20.0,
+   "tags": [
+    "Leistung/Preis",
+    "Power"
+   ],
+   "image": "assets/img/products/polyfibre-poly-hightec-1-20.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
+   ]
+  },
+  {
+   "id": "restring-zero-1-28",
+   "category": "saitenrollen-tennis",
+   "brand": "Restring",
+   "name": "Restring Zero 1.28",
+   "color": "blau",
+   "price": 32.0,
+   "tags": [
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/restring-zero-1-28.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2a62c9"
+   ]
+  },
+  {
+   "id": "signum-pro-poly-plasma-1-23",
+   "category": "saitenrollen-tennis",
+   "brand": "Signum Pro",
+   "name": "Signum Pro Poly Plasma 1.23",
+   "color": "orange",
+   "price": 20.0,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle",
+    "Leistung/Preis",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/signum-pro-poly-plasma-1-23.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f28c28"
+   ]
+  },
+  {
+   "id": "solinco-confidential-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Confidential 1.25",
+   "color": "dunkel silber",
+   "price": 24.0,
+   "tags": [
+    "Kontrolle",
+    "Gefühl",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/solinco-confidential-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8e99"
+   ]
+  },
+  {
+   "id": "solinco-confidential-soft-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Confidential Soft 1.25",
+   "color": "pink",
+   "price": 24.0,
+   "tags": [
+    "Kontrolle",
+    "Gefühl",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/solinco-confidential-soft-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#e94b9a"
+   ]
+  },
+  {
+   "id": "solinco-hyper-g-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Hyper-G 1.25",
+   "color": "grün",
+   "price": 24.0,
+   "tags": [
+    "Armschonung",
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/solinco-hyper-g-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  },
+  {
+   "id": "solinco-hyper-g-round-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Hyper-G Round 1.25",
+   "color": "grün",
+   "price": 24.0,
+   "tags": [
+    "Kontrolle",
+    "Power",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/solinco-hyper-g-round-1-25.webp",
+   "material": "Polyester",
+   "shape": "rund",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  },
+  {
+   "id": "solinco-hyper-g-soft-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Hyper-G Soft 1.25",
+   "color": "grün",
+   "price": 24.0,
+   "tags": [
+    "Armschonung",
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/solinco-hyper-g-soft-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  },
+  {
+   "id": "solinco-mach-10-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Mach-10 1.25",
+   "color": "cyan",
+   "price": 24.0,
+   "tags": [
+    "Armschonung",
+    "Power",
+    "Spin"
+   ],
+   "image": "assets/img/products/solinco-mach-10-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#00b7d4"
+   ]
+  },
+  {
+   "id": "solinco-tour-bite-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Solinco",
+   "name": "Solinco Tour Bite 1.25",
+   "color": "silber",
+   "price": 24.0,
+   "tags": [
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/solinco-tour-bite-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
+  },
+  {
+   "id": "topspin-cyber-flash-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Topspin",
+   "name": "Topspin Cyber Flash 1.25",
+   "color": "silber",
+   "price": 20.0,
+   "tags": [
+    "Kontrolle",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/topspin-cyber-flash-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
+  },
+  {
+   "id": "yonex-poly-tour-fire-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Yonex",
+   "name": "Yonex Poly Tour Fire 1.25",
+   "color": "rot",
+   "price": 26.0,
+   "tags": [
+    "Armschonung",
+    "Haltbarkeit",
+    "Spin"
+   ],
+   "image": "assets/img/products/yonex-poly-tour-fire-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#d62828"
+   ]
+  },
+  {
+   "id": "yonex-poly-tour-pro-1-20",
+   "category": "saitenrollen-tennis",
+   "brand": "Yonex",
+   "name": "Yonex Poly Tour Pro 1.20",
+   "color": "gelb",
+   "price": 23.0,
+   "tags": [
+    "Armschonung",
+    "Haltbarkeit",
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/yonex-poly-tour-pro-1-20.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
+   ]
+  },
+  {
+   "id": "yonex-poly-tour-pro-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Yonex",
+   "name": "Yonex Poly Tour Pro 1.25",
+   "color": "gelb",
+   "price": 23.0,
+   "tags": [
+    "Armschonung",
+    "Kontrolle"
+   ],
+   "image": "assets/img/products/yonex-poly-tour-pro-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
+   ]
+  },
+  {
+   "id": "yonex-poly-tour-rev-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Yonex",
+   "name": "Yonex Poly Tour Rev 1.25",
+   "color": "lila",
+   "price": 28.0,
+   "tags": [
+    "Armschonung",
+    "Gefühl",
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/yonex-poly-tour-rev-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8e44ad"
+   ]
+  },
+  {
+   "id": "yonex-poly-tour-spin-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Yonex",
+   "name": "Yonex Poly Tour Spin 1.25",
+   "color": "cobalt-blau",
+   "price": 26.0,
+   "tags": [
+    "Haltbarkeit",
+    "Power",
+    "Spin"
+   ],
+   "image": "assets/img/products/yonex-poly-tour-spin-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#0047ab"
+   ]
+  },
+  {
+   "id": "yonex-poly-tour-strike-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Yonex",
+   "name": "Yonex Poly Tour Strike 1.25",
+   "color": "schwarz",
+   "price": 26.0,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/yonex-poly-tour-strike-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "dunlop-iconic-speed-1-25",
+   "category": "saitenrollen-tennis",
+   "brand": "Dunlop",
+   "name": "Dunlop Iconic Speed 1.25",
+   "color": "natur",
+   "price": 27.0,
+   "tags": [
+    "Kontrolle",
+    "Power",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/dunlop-iconic-speed-1-25.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "head-velocity-mlt-1-30",
@@ -174,7 +775,12 @@
     "Kontrolle",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/head-velocity-mlt-1-30.webp"
+   "image": "assets/img/products/head-velocity-mlt-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "head-velocity-mlt-1-30-black",
@@ -189,7 +795,12 @@
     "Kontrolle",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/head-velocity-mlt-1-30-black.webp"
+   "image": "assets/img/products/head-velocity-mlt-1-30-black.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "isospeed-control-1-30",
@@ -203,128 +814,12 @@
     "Gefühl",
     "Kontrolle"
    ],
-   "image": "assets/img/products/isospeed-control-1-30.webp"
-  },
-  {
-   "id": "kirschbaum-super-smash-1-23",
-   "category": "saitenrollen-tennis",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Super Smash 1.23",
-   "color": "orange",
-   "price": 19.0,
-   "tags": [
-    "Haltbarkeit",
-    "Kontrolle",
-    "Power"
-   ],
-   "image": "assets/img/products/kirschbaum-super-smash-1-23.webp"
-  },
-  {
-   "id": "luxilon-4g-rough-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Luxilon",
-   "name": "Luxilon 4G Rough 1.25",
-   "color": "gold",
-   "price": 31.0,
-   "tags": [
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/luxilon-4g-rough-1-25.webp"
-  },
-  {
-   "id": "luxilon-4g-soft-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Luxilon",
-   "name": "Luxilon 4G Soft 1.25",
-   "color": "gold",
-   "price": 31.0,
-   "tags": [
-    "Power",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/luxilon-4g-soft-1-25.webp"
-  },
-  {
-   "id": "luxilon-big-banger-alu-power-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Luxilon",
-   "name": "Luxilon Big Banger Alu Power 1.25",
-   "color": "anthrazit",
-   "price": 30.0,
-   "tags": [
-    "Haltbarkeit",
-    "Kontrolle"
-   ],
-   "image": "assets/img/products/luxilon-big-banger-alu-power-1-25.webp"
-  },
-  {
-   "id": "luxilon-big-banger-alu-power-1-30",
-   "category": "saitenrollen-tennis",
-   "brand": "Luxilon",
-   "name": "Luxilon Big Banger Alu Power 1.30",
-   "color": "anthrazit",
-   "price": 30.0,
-   "tags": [
-    "Haltbarkeit",
-    "Kontrolle"
-   ],
-   "image": "assets/img/products/luxilon-big-banger-alu-power-1-30.webp"
-  },
-  {
-   "id": "luxilon-big-banger-alu-power-rough-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Luxilon",
-   "name": "Luxilon Big Banger Alu Power Rough 1.25",
-   "color": "anthrazit",
-   "price": 29.0,
-   "tags": [
-    "Kontrolle",
-    "Spin"
-   ],
-   "image": "assets/img/products/luxilon-big-banger-alu-power-rough-1-25.webp"
-  },
-  {
-   "id": "msv-focus-hex-1-23",
-   "category": "saitenrollen-tennis",
-   "brand": "MSV",
-   "name": "MSV Focus HEX 1.23",
-   "color": "schwarz",
-   "price": 20.0,
-   "tags": [
-    "Kontrolle",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/msv-focus-hex-1-23.webp"
-  },
-  {
-   "id": "msv-focus-hex-plus-25-1-20",
-   "category": "saitenrollen-tennis",
-   "brand": "MSV",
-   "name": "MSV Focus HEX Plus 25 1.20",
-   "color": "schwarz",
-   "price": 20.0,
-   "tags": [
-    "Kontrolle",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/msv-focus-hex-plus-25-1-20.webp"
-  },
-  {
-   "id": "msv-hepta-twist-1-20",
-   "category": "saitenrollen-tennis",
-   "brand": "MSV",
-   "name": "MSV Hepta Twist 1.20",
-   "color": "schwarz",
-   "price": 21.0,
-   "tags": [
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/msv-hepta-twist-1-20.webp"
+   "image": "assets/img/products/isospeed-control-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "msv-soft-touch-1-30",
@@ -340,147 +835,12 @@
     "Power",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/msv-soft-touch-1-30.webp"
-  },
-  {
-   "id": "polyfibre-poly-hightec-1-20",
-   "category": "saitenrollen-tennis",
-   "brand": "Polyfibre",
-   "name": "Polyfibre Poly-Hightec 1.20",
-   "color": "gelb",
-   "price": 20.0,
-   "tags": [
-    "Leistung/Preis",
-    "Power"
-   ],
-   "image": "assets/img/products/polyfibre-poly-hightec-1-20.webp"
-  },
-  {
-   "id": "restring-zero-1-28",
-   "category": "saitenrollen-tennis",
-   "brand": "Restring",
-   "name": "Restring Zero 1.28",
-   "color": "blau",
-   "price": 32.0,
-   "tags": [
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/restring-zero-1-28.webp"
-  },
-  {
-   "id": "signum-pro-poly-plasma-1-23",
-   "category": "saitenrollen-tennis",
-   "brand": "Signum Pro",
-   "name": "Signum Pro Poly Plasma 1.23",
-   "color": "orange",
-   "price": 20.0,
-   "tags": [
-    "Haltbarkeit",
-    "Kontrolle",
-    "Leistung/Preis",
-    "Spannungsstabilität"
-   ],
-   "image": "assets/img/products/signum-pro-poly-plasma-1-23.webp"
-  },
-  {
-   "id": "solinco-confidential-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Confidential 1.25",
-   "color": "dunkel silber",
-   "price": 24.0,
-   "tags": [
-    "Kontrolle",
-    "Gefühl",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/solinco-confidential-1-25.webp"
-  },
-  {
-   "id": "solinco-confidential-soft-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Confidential Soft 1.25",
-   "color": "pink",
-   "price": 24.0,
-   "tags": [
-    "Kontrolle",
-    "Gefühl",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/solinco-confidential-soft-1-25.webp"
-  },
-  {
-   "id": "solinco-hyper-g-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Hyper-G 1.25",
-   "color": "grün",
-   "price": 24.0,
-   "tags": [
-    "Armschonung",
-    "Kontrolle",
-    "Spin"
-   ],
-   "image": "assets/img/products/solinco-hyper-g-1-25.webp"
-  },
-  {
-   "id": "solinco-hyper-g-round-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Hyper-G Round 1.25",
-   "color": "grün",
-   "price": 24.0,
-   "tags": [
-    "Kontrolle",
-    "Power",
-    "Spannungsstabilität"
-   ],
-   "image": "assets/img/products/solinco-hyper-g-round-1-25.webp"
-  },
-  {
-   "id": "solinco-hyper-g-soft-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Hyper-G Soft 1.25",
-   "color": "grün",
-   "price": 24.0,
-   "tags": [
-    "Armschonung",
-    "Kontrolle",
-    "Spin"
-   ],
-   "image": "assets/img/products/solinco-hyper-g-soft-1-25.webp"
-  },
-  {
-   "id": "solinco-mach-10-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Mach-10 1.25",
-   "color": "cyan",
-   "price": 24.0,
-   "tags": [
-    "Armschonung",
-    "Power",
-    "Spin"
-   ],
-   "image": "assets/img/products/solinco-mach-10-1-25.webp"
-  },
-  {
-   "id": "solinco-tour-bite-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Solinco",
-   "name": "Solinco Tour Bite 1.25",
-   "color": "silber",
-   "price": 24.0,
-   "tags": [
-    "Kontrolle",
-    "Spin"
-   ],
-   "image": "assets/img/products/solinco-tour-bite-1-25.webp"
+   "image": "assets/img/products/msv-soft-touch-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "tecnifibre-multifeel-1-30",
@@ -494,7 +854,12 @@
     "Gefühl",
     "Kontrolle"
    ],
-   "image": "assets/img/products/tecnifibre-multifeel-1-30.webp"
+   "image": "assets/img/products/tecnifibre-multifeel-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "tecnifibre-triax-1-33",
@@ -507,7 +872,12 @@
     "Armschonung",
     "Spin"
    ],
-   "image": "assets/img/products/tecnifibre-triax-1-33.webp"
+   "image": "assets/img/products/tecnifibre-triax-1-33.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "tecnifibre-x-one-biphase-1-30",
@@ -521,21 +891,12 @@
     "Gefühl",
     "Power"
    ],
-   "image": "assets/img/products/tecnifibre-x-one-biphase-1-30.webp"
-  },
-  {
-   "id": "topspin-cyber-flash-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Topspin",
-   "name": "Topspin Cyber Flash 1.25",
-   "color": "silber",
-   "price": 20.0,
-   "tags": [
-    "Kontrolle",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/topspin-cyber-flash-1-25.webp"
+   "image": "assets/img/products/tecnifibre-x-one-biphase-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "wilson-synthetic-gut-1-30",
@@ -547,204 +908,12 @@
    "tags": [
     "Power"
    ],
-   "image": "assets/img/products/wilson-synthetic-gut-1-30.webp"
-  },
-  {
-   "id": "yonex-poly-tour-fire-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Yonex",
-   "name": "Yonex Poly Tour Fire 1.25",
-   "color": "rot",
-   "price": 26.0,
-   "tags": [
-    "Armschonung",
-    "Haltbarkeit",
-    "Spin"
-   ],
-   "image": "assets/img/products/yonex-poly-tour-fire-1-25.webp"
-  },
-  {
-   "id": "yonex-poly-tour-pro-1-20",
-   "category": "saitenrollen-tennis",
-   "brand": "Yonex",
-   "name": "Yonex Poly Tour Pro 1.20",
-   "color": "gelb",
-   "price": 23.0,
-   "tags": [
-    "Armschonung",
-    "Haltbarkeit",
-    "Kontrolle",
-    "Spin"
-   ],
-   "image": "assets/img/products/yonex-poly-tour-pro-1-20.webp"
-  },
-  {
-   "id": "yonex-poly-tour-pro-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Yonex",
-   "name": "Yonex Poly Tour Pro 1.25",
-   "color": "gelb",
-   "price": 23.0,
-   "tags": [
-    "Armschonung",
-    "Kontrolle"
-   ],
-   "image": "assets/img/products/yonex-poly-tour-pro-1-25.webp"
-  },
-  {
-   "id": "yonex-poly-tour-rev-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Yonex",
-   "name": "Yonex Poly Tour Rev 1.25",
-   "color": "lila",
-   "price": 28.0,
-   "tags": [
-    "Armschonung",
-    "Gefühl",
-    "Kontrolle",
-    "Spin"
-   ],
-   "image": "assets/img/products/yonex-poly-tour-rev-1-25.webp"
-  },
-  {
-   "id": "yonex-poly-tour-spin-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Yonex",
-   "name": "Yonex Poly Tour Spin 1.25",
-   "color": "cobalt-blau",
-   "price": 26.0,
-   "tags": [
-    "Haltbarkeit",
-    "Power",
-    "Spin"
-   ],
-   "image": "assets/img/products/yonex-poly-tour-spin-1-25.webp"
-  },
-  {
-   "id": "yonex-poly-tour-strike-1-25",
-   "category": "saitenrollen-tennis",
-   "brand": "Yonex",
-   "name": "Yonex Poly Tour Strike 1.25",
-   "color": "schwarz",
-   "price": 26.0,
-   "tags": [
-    "Haltbarkeit",
-    "Kontrolle",
-    "Spannungsstabilität"
-   ],
-   "image": "assets/img/products/yonex-poly-tour-strike-1-25.webp"
-  },
-  {
-   "id": "yonex-bg-65-0-70",
-   "category": "saitenrollen-badminton",
-   "brand": "Yonex",
-   "name": "Yonex BG 65 0.70",
-   "color": "orange",
-   "price": 24.0,
-   "tags": [
-    "Allround"
-   ],
-   "image": "assets/img/products/yonex-bg-65-0-70.webp"
-  },
-  {
-   "id": "yonex-bg-80-0-68",
-   "category": "saitenrollen-badminton",
-   "brand": "Yonex",
-   "name": "Yonex BG 80 0.68",
-   "color": "gelb",
-   "price": 25.0,
-   "tags": [
-    "Power"
-   ],
-   "image": "assets/img/products/yonex-bg-80-0-68.webp"
-  },
-  {
-   "id": "discho-dura-squash-1-30",
-   "category": "saiten-squash",
-   "brand": "Discho",
-   "name": "Discho Dura Squash 1.30",
-   "color": "beige",
-   "price": 22.0,
-   "tags": [
-    "Leistung/Preis"
-   ],
-   "image": "assets/img/products/discho-dura-squash-1-30.webp"
-  },
-  {
-   "id": "tecnifibre-305-1-20",
-   "category": "saiten-squash",
-   "brand": "Tecnifibre",
-   "name": "Tecnifibre 305 1.20",
-   "color": "grün",
-   "price": 28.0,
-   "tags": [
-    "Haltbarkeit",
-    "Gefühl",
-    "Kontrolle",
-    "Power",
-    "Spin"
-   ],
-   "image": "assets/img/products/tecnifibre-305-1-20.webp"
-  },
-  {
-   "id": "babolat-addiction-1-30",
-   "category": "saitensets",
-   "brand": "Babolat",
-   "name": "Babolat Addiction 1.30",
-   "color": "natur",
-   "price": 27.0,
-   "stock": 0,
-   "tags": [
-    "Armschonung",
-    "Haltbarkeit",
-    "Komfort"
-   ],
-   "image": "assets/img/products/babolat-addiction-1-30.webp"
-  },
-  {
-   "id": "babolat-vs-touch-1-30",
-   "category": "saitensets",
-   "brand": "Babolat",
-   "name": "Babolat VS Touch 1.30",
-   "color": "natur",
-   "price": 67.0,
-   "stock": 1,
-   "tags": [
-    "Armschonung",
-    "Gefühl",
-    "Haltbarkeit",
-    "Power",
-    "Spannungsstabilität"
-   ],
-   "image": "assets/img/products/babolat-vs-touch-1-30.webp"
-  },
-  {
-   "id": "babolat-xalt-1-30-white",
-   "category": "saitensets",
-   "brand": "Babolat",
-   "name": "Babolat Xalt 1.30 white",
-   "color": "weiß",
-   "price": 27.0,
-   "stock": 1,
-   "tags": [
-    "Komfort",
-    "Kontrolle"
-   ],
-   "image": "assets/img/products/babolat-xalt-1-30-white.webp"
-  },
-  {
-   "id": "babolat-xplore-1-30-blue",
-   "category": "saitensets",
-   "brand": "Babolat",
-   "name": "Babolat Xplore 1.30 blue",
-   "color": "blau",
-   "price": 25.0,
-   "stock": 1,
-   "tags": [
-    "Armschonung",
-    "Kontrolle"
-   ],
-   "image": "assets/img/products/babolat-xplore-1-30-blue.webp"
+   "image": "assets/img/products/wilson-synthetic-gut-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "diadem-evolution-1-25-azure-blue",
@@ -759,7 +928,12 @@
     "Power",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/diadem-evolution-1-25-azure-blue.webp"
+   "image": "assets/img/products/diadem-evolution-1-25-azure-blue.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1e90e8"
+   ]
   },
   {
    "id": "diadem-flash-1-25-white",
@@ -773,22 +947,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/diadem-flash-1-25-white.webp"
-  },
-  {
-   "id": "diadem-impulse-1-25-natur",
-   "category": "saitensets",
-   "brand": "Diadem",
-   "name": "Diadem Impulse 1.25 natur",
-   "color": "natur",
-   "price": 26.0,
-   "stock": 1,
-   "tags": [
-    "Armschonung",
-    "Spannungsstabilität",
-    "Spin"
-   ],
-   "image": "assets/img/products/diadem-impulse-1-25-natur.webp"
+   "image": "assets/img/products/diadem-flash-1-25-white.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "diadem-pro-x-1-25-grey",
@@ -804,7 +968,12 @@
     "Rückmeldung",
     "Spin"
    ],
-   "image": "assets/img/products/diadem-pro-x-1-25-grey.webp"
+   "image": "assets/img/products/diadem-pro-x-1-25-grey.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8f98"
+   ]
   },
   {
    "id": "diadem-solstice-black-1-25-black",
@@ -819,7 +988,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/diadem-solstice-black-1-25-black.webp"
+   "image": "assets/img/products/diadem-solstice-black-1-25-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "diadem-solstice-power-1-25-green",
@@ -834,7 +1008,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/diadem-solstice-power-1-25-green.webp"
+   "image": "assets/img/products/diadem-solstice-power-1-25-green.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "dunlop-black-widow-1-31-black",
@@ -844,8 +1023,13 @@
    "color": "schwarz",
    "price": 23.0,
    "stock": 1,
-   "comment": "Heptagonal.",
-   "image": "assets/img/products/dunlop-black-widow-1-31-black.webp"
+   "image": "assets/img/products/dunlop-black-widow-1-31-black.webp",
+   "material": "Polyester",
+   "shape": "heptagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "dunlop-explosive-bite-1-27-yellow",
@@ -858,6 +1042,11 @@
    "tags": [
     "Komfort",
     "Spin"
+   ],
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
    ]
   },
   {
@@ -872,7 +1061,12 @@
     "Power",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/dunlop-explosive-speed-1-25-blue.webp"
+   "image": "assets/img/products/dunlop-explosive-speed-1-25-blue.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2a62c9"
+   ]
   },
   {
    "id": "dunlop-explosive-tour-1-20-silver",
@@ -886,7 +1080,12 @@
     "Komfort",
     "Kontrolle"
    ],
-   "image": "assets/img/products/dunlop-explosive-tour-1-20-silver.webp"
+   "image": "assets/img/products/dunlop-explosive-tour-1-20-silver.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
   },
   {
    "id": "dunlop-explosive-tour-1-30-silver",
@@ -900,7 +1099,12 @@
     "Komfort",
     "Kontrolle"
    ],
-   "image": "assets/img/products/dunlop-explosive-tour-1-20-silver.webp"
+   "image": "assets/img/products/dunlop-explosive-tour-1-20-silver.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
   },
   {
    "id": "genesis-hexonic-power-1-23-yellow",
@@ -915,21 +1119,13 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/genesis-hexonic-power-1-23-yellow.webp"
-  },
-  {
-   "id": "genesis-new-cyan-1-25-mint",
-   "category": "saitensets",
-   "brand": "Genesis",
-   "name": "Genesis New Cyan 1.25 mint",
-   "color": "mint",
-   "price": 25.0,
-   "stock": 1,
-   "tags": [
-    "Gefühl",
-    "Power"
-   ],
-   "image": "assets/img/products/genesis-new-cyan-1-25-mint.webp"
+   "image": "assets/img/products/genesis-hexonic-power-1-23-yellow.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "grapplesnake-tour-m8-1-25-olive",
@@ -944,7 +1140,12 @@
     "Power",
     "Spin"
    ],
-   "comment": "Achteckig."
+   "material": "Polyester",
+   "shape": "octagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#6b7a2f"
+   ]
   },
   {
    "id": "grapplesnake-tour-sniper-1-25-silver",
@@ -958,7 +1159,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "comment": "Fünfeckig."
+   "material": "Polyester",
+   "shape": "pentagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
   },
   {
    "id": "highstring-ng-soft-1-25-grey",
@@ -972,7 +1178,12 @@
     "Armschonung",
     "Spin"
    ],
-   "image": "assets/img/products/highstring-ng-soft-1-25-grey.webp"
+   "image": "assets/img/products/highstring-ng-soft-1-25-grey.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8f98"
+   ]
   },
   {
    "id": "highstring-snap-1-23-green",
@@ -986,18 +1197,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/highstring-snap-1-23-green.webp"
-  },
-  {
-   "id": "isospeed-cream-1-28-beige",
-   "category": "saitensets",
-   "brand": "Isospeed",
-   "name": "Isospeed Cream 1.28 beige",
-   "color": "beige",
-   "price": 23.0,
-   "stock": 1,
-   "comment": "Rund, hervorragende Ballkontrolle und Armschonung.",
-   "image": "assets/img/products/isospeed-cream-1-28-beige.webp"
+   "image": "assets/img/products/highstring-snap-1-23-green.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "isospeed-v18-1-17-neon-yellow",
@@ -1012,7 +1217,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/isospeed-v18-1-17-neon-yellow.webp"
+   "image": "assets/img/products/isospeed-v18-1-17-neon-yellow.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#dfff2e"
+   ]
   },
   {
    "id": "kirschbaum-black-shark-1-25-black",
@@ -1025,7 +1235,12 @@
    "tags": [
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-black-shark-1-25-black.webp"
+   "image": "assets/img/products/kirschbaum-black-shark-1-25-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "kirschbaum-flash-1-25-mint",
@@ -1040,7 +1255,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-flash-1-25-mint.webp"
+   "image": "assets/img/products/kirschbaum-flash-1-25-mint.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#7fd8b8"
+   ]
   },
   {
    "id": "kirschbaum-flash-1-25-pink",
@@ -1055,7 +1275,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-flash-1-25-pink.webp"
+   "image": "assets/img/products/kirschbaum-flash-1-25-pink.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#e94b9a"
+   ]
   },
   {
    "id": "kirschbaum-flash-1-25-yellow",
@@ -1070,49 +1295,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-flash-1-25-yellow.webp"
-  },
-  {
-   "id": "kirschbaum-for-you-1-30-black",
-   "category": "saitensets",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum For You 1.30 black",
-   "color": "schwarz",
-   "price": 23.0,
-   "stock": 1,
-   "tags": [
-    "Armschonung",
-    "Power"
-   ],
-   "image": "assets/img/products/kirschbaum-for-you-1-30-black.webp"
-  },
-  {
-   "id": "kirschbaum-for-you-1-30-natur",
-   "category": "saitensets",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum For You 1.30 natur",
-   "color": "natur",
-   "price": 23.0,
-   "stock": 1,
-   "tags": [
-    "Armschonung",
-    "Power"
-   ],
-   "image": "assets/img/products/kirschbaum-for-you-1-30-black.webp"
-  },
-  {
-   "id": "kirschbaum-gut-feeling-1-25",
-   "category": "saitensets",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Gut Feeling 1.25",
-   "color": "natur",
-   "price": 25.0,
-   "stock": 2,
-   "tags": [
-    "Armschonung",
-    "Komfort"
-   ],
-   "image": "assets/img/products/kirschbaum-gut-feeling-1-25.webp"
+   "image": "assets/img/products/kirschbaum-flash-1-25-yellow.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
+   ]
   },
   {
    "id": "kirschbaum-max-power-1-20-red",
@@ -1127,7 +1315,12 @@
     "Rückmeldung",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-max-power-1-20-red.webp"
+   "image": "assets/img/products/kirschbaum-max-power-1-20-red.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#d62828"
+   ]
   },
   {
    "id": "kirschbaum-max-power-1-20-white",
@@ -1141,7 +1334,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-max-power-1-20-white.webp"
+   "image": "assets/img/products/kirschbaum-max-power-1-20-white.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "kirschbaum-max-power-1-25-grey",
@@ -1157,7 +1355,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-max-power-1-25-grey.webp"
+   "image": "assets/img/products/kirschbaum-max-power-1-25-grey.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8f98"
+   ]
   },
   {
    "id": "kirschbaum-max-power-1-25-red",
@@ -1171,7 +1374,12 @@
     "Kontrolle",
     "Power"
    ],
-   "image": "assets/img/products/kirschbaum-max-power-1-20-red.webp"
+   "image": "assets/img/products/kirschbaum-max-power-1-20-red.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#d62828"
+   ]
   },
   {
    "id": "kirschbaum-max-power-1-25-white",
@@ -1185,7 +1393,12 @@
     "Kontrolle",
     "Power"
    ],
-   "image": "assets/img/products/kirschbaum-max-power-1-20-white.webp"
+   "image": "assets/img/products/kirschbaum-max-power-1-20-white.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "kirschbaum-max-power-rough-1-25-silver",
@@ -1200,7 +1413,12 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-max-power-rough-1-25-silver.webp"
+   "image": "assets/img/products/kirschbaum-max-power-rough-1-25-silver.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
   },
   {
    "id": "kirschbaum-pro-tour-control-1-23-grey",
@@ -1215,21 +1433,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/kirschbaum-pro-tour-control-1-23-grey.webp"
-  },
-  {
-   "id": "kirschbaum-touch-dura-1-25",
-   "category": "saitensets",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch Dura 1.25",
-   "color": "natur",
-   "price": 25.0,
-   "stock": 2,
-   "tags": [
-    "Haltbarkeit",
-    "Kontrolle"
-   ],
-   "image": "assets/img/products/kirschbaum-touch-dura-1-25.webp"
+   "image": "assets/img/products/kirschbaum-pro-tour-control-1-23-grey.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8f98"
+   ]
   },
   {
    "id": "kirschbaum-xplosive-speed-1-23-black",
@@ -1244,7 +1453,12 @@
     "Komfort",
     "Power"
    ],
-   "image": "assets/img/products/kirschbaum-xplosive-speed-1-23-black.webp"
+   "image": "assets/img/products/kirschbaum-xplosive-speed-1-23-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "luxilon-big-banger-alu-power-1-20-grey",
@@ -1254,8 +1468,14 @@
    "color": "grau",
    "price": 30.0,
    "stock": 1,
-   "comment": "Rund. Extrem haltbar. Meistgenutzt auf der Profitour.",
-   "image": "assets/img/products/luxilon-big-banger-alu-power-1-20-grey.webp"
+   "comment": "Extrem haltbar. Meistgenutzt auf der Profitour.",
+   "image": "assets/img/products/luxilon-big-banger-alu-power-1-20-grey.webp",
+   "material": "Polyester",
+   "shape": "rund",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8f98"
+   ]
   },
   {
    "id": "luxilon-eco-power-1-25-green",
@@ -1265,7 +1485,12 @@
    "color": "grün",
    "price": 25.0,
    "stock": 2,
-   "image": "assets/img/products/luxilon-eco-power-1-25-green.webp"
+   "image": "assets/img/products/luxilon-eco-power-1-25-green.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "luxilon-eco-power-1-30-green",
@@ -1279,7 +1504,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/luxilon-eco-power-1-25-green.webp"
+   "image": "assets/img/products/luxilon-eco-power-1-25-green.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "luxilon-eco-spin-1-25-black",
@@ -1293,7 +1523,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/luxilon-eco-spin-1-25-black.webp"
+   "image": "assets/img/products/luxilon-eco-spin-1-25-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "luxilon-element-soft-ir-1-27-pink-red",
@@ -1308,24 +1543,13 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/luxilon-element-soft-ir-1-27-pink-red.webp"
-  },
-  {
-   "id": "luxilon-natural-gut-1-30",
-   "category": "saitensets",
-   "brand": "Luxilon",
-   "name": "Luxilon Natural Gut 1.30",
-   "color": "natur",
-   "price": 58.0,
-   "stock": 5,
-   "tags": [
-    "Armschonung",
-    "Gefühl",
-    "Haltbarkeit",
-    "Power",
-    "Spannungsstabilität"
-   ],
-   "image": "assets/img/products/luxilon-natural-gut-1-30.webp"
+   "image": "assets/img/products/luxilon-element-soft-ir-1-27-pink-red.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#e94b9a",
+    "#d62828"
+   ]
   },
   {
    "id": "msv-focus-hex-1-18-orange",
@@ -1339,7 +1563,13 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/msv-focus-hex-1-18-orange.webp"
+   "image": "assets/img/products/msv-focus-hex-1-18-orange.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f28c28"
+   ]
   },
   {
    "id": "msv-focus-hex-plus-25-1-25-black",
@@ -1354,7 +1584,13 @@
     "Spin",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/msv-focus-hex-plus-25-1-25-black.webp"
+   "image": "assets/img/products/msv-focus-hex-plus-25-1-25-black.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "msv-focus-hex-ultra-1-20-neon-yellow",
@@ -1369,7 +1605,13 @@
     "Spin",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/msv-focus-hex-ultra-1-20-neon-yellow.webp"
+   "image": "assets/img/products/msv-focus-hex-ultra-1-20-neon-yellow.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#dfff2e"
+   ]
   },
   {
    "id": "msv-hepta-twist-1-25-white",
@@ -1379,7 +1621,13 @@
    "color": "weiß",
    "price": 23.0,
    "stock": 1,
-   "image": "assets/img/products/msv-hepta-twist-1-25-white.webp"
+   "image": "assets/img/products/msv-hepta-twist-1-25-white.webp",
+   "material": "Polyester",
+   "shape": "heptagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "msv-swift-comfort-1-25-white",
@@ -1390,7 +1638,12 @@
    "price": 23.0,
    "stock": 1,
    "comment": "Armfreundliche Co-Polyestersaite.",
-   "image": "assets/img/products/msv-swift-comfort-1-25-white.webp"
+   "image": "assets/img/products/msv-swift-comfort-1-25-white.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "silvester-energy-1-23-black",
@@ -1405,7 +1658,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/silvester-energy-1-23-black.webp"
+   "image": "assets/img/products/silvester-energy-1-23-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "silvester-hepta-plus-1-24-white",
@@ -1420,7 +1678,13 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/silvester-hepta-plus-1-24-white.webp"
+   "image": "assets/img/products/silvester-hepta-plus-1-24-white.webp",
+   "material": "Polyester",
+   "shape": "heptagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "solinco-confidential-1-20-dark-silver",
@@ -1430,10 +1694,15 @@
    "color": "dunkel silber",
    "price": 25.0,
    "stock": 0,
-   "image": "assets/img/products/solinco-confidential-1-20-dark-silver.webp"
+   "image": "assets/img/products/solinco-confidential-1-20-dark-silver.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#8a8e99"
+   ]
   },
   {
-   "id": "solinco-confidential-soft-1-25",
+   "id": "solinco-confidential-soft-1-25-set",
    "category": "saitensets",
    "brand": "Solinco",
    "name": "Solinco Confidential Soft 1.25",
@@ -1446,7 +1715,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/solinco-confidential-soft-1-25.webp"
+   "image": "assets/img/products/solinco-confidential-soft-1-25.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#e94b9a"
+   ]
   },
   {
    "id": "solinco-hyper-g-1-30-green",
@@ -1456,7 +1730,12 @@
    "color": "grün",
    "price": 25.0,
    "stock": 1,
-   "image": "assets/img/products/solinco-hyper-g-1-30-green.webp"
+   "image": "assets/img/products/solinco-hyper-g-1-30-green.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "solinco-tour-bite-diamond-rough-1-25-silver",
@@ -1466,21 +1745,31 @@
    "color": "silber",
    "price": 25.0,
    "stock": 2,
-   "image": "assets/img/products/solinco-tour-bite-diamond-rough-1-25-silver.webp"
+   "image": "assets/img/products/solinco-tour-bite-diamond-rough-1-25-silver.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#b8bcc6"
+   ]
   },
   {
    "id": "string-project-armour-1-25-black",
    "category": "saitensets",
    "brand": "String Project",
    "name": "String Project armour 1.25 black",
-   "color": "black",
+   "color": "schwarz",
    "price": 25.0,
    "stock": 1,
    "tags": [
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/string-project-armour-1-25-black.webp"
+   "image": "assets/img/products/string-project-armour-1-25-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "string-project-armour-soft-1-24-natur",
@@ -1494,7 +1783,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/string-project-armour-soft-1-24-natur.webp"
+   "image": "assets/img/products/string-project-armour-soft-1-24-natur.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "string-project-hexa-pro-1-25-green",
@@ -1508,7 +1802,13 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/string-project-hexa-pro-1-25-green.webp"
+   "image": "assets/img/products/string-project-hexa-pro-1-25-green.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2e9e4f"
+   ]
   },
   {
    "id": "string-project-magic-1-30-red",
@@ -1524,7 +1824,12 @@
     "Spannungsstabilität",
     "Spin"
    ],
-   "image": "assets/img/products/string-project-magic-1-30-red.webp"
+   "image": "assets/img/products/string-project-magic-1-30-red.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#d62828"
+   ]
   },
   {
    "id": "stringlab-atomic-revolution-1-26-blue",
@@ -1534,7 +1839,12 @@
    "color": "blau",
    "price": 25.0,
    "stock": 1,
-   "image": "assets/img/products/stringlab-atomic-revolution-1-26-blue.webp"
+   "image": "assets/img/products/stringlab-atomic-revolution-1-26-blue.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2a62c9"
+   ]
   },
   {
    "id": "stringlab-lemon-hexa-1-25-yellow",
@@ -1547,7 +1857,13 @@
    "tags": [
     "Spin"
    ],
-   "image": "assets/img/products/stringlab-atomic-revolution-1-26-blue.webp"
+   "image": "assets/img/products/stringlab-atomic-revolution-1-26-blue.webp",
+   "material": "Polyester",
+   "shape": "hexagonal",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f4d21f"
+   ]
   },
   {
    "id": "stringlab-tournament-1-25-beige",
@@ -1561,7 +1877,12 @@
     "Kontrolle",
     "Spannungsstabilität"
    ],
-   "image": "assets/img/products/stringlab-atomic-revolution-1-26-blue.webp"
+   "image": "assets/img/products/stringlab-atomic-revolution-1-26-blue.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#d9c7a0"
+   ]
   },
   {
    "id": "yonex-poly-tour-pro-1-20-blue",
@@ -1574,6 +1895,11 @@
    "tags": [
     "Armschonung",
     "Kontrolle"
+   ],
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#2a62c9"
    ]
   },
   {
@@ -1590,7 +1916,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/yonex-poly-tour-rev-1-25-mint.webp"
+   "image": "assets/img/products/yonex-poly-tour-rev-1-25-mint.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#7fd8b8"
+   ]
   },
   {
    "id": "yonex-poly-tour-rev-1-25-orange",
@@ -1606,7 +1937,12 @@
     "Kontrolle",
     "Spin"
    ],
-   "image": "assets/img/products/yonex-poly-tour-rev-1-25-orange.webp"
+   "image": "assets/img/products/yonex-poly-tour-rev-1-25-orange.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#f28c28"
+   ]
   },
   {
    "id": "yonex-poly-tour-spin-1-20-black",
@@ -1621,520 +1957,901 @@
     "Power",
     "Spin"
    ],
-   "image": "assets/img/products/yonex-poly-tour-spin-1-20-black.webp"
+   "image": "assets/img/products/yonex-poly-tour-spin-1-20-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
-   "id": "babolat-my-overgrip-mehrfarbig",
-   "category": "griffbaender",
+   "id": "babolat-addiction-1-30",
+   "category": "saitensets",
    "brand": "Babolat",
-   "name": "Babolat My Overgrip mehrfarbig",
-   "type": "Overgrip",
-   "color": "siehe Bild",
-   "price": 1.0,
-   "stock": 30,
-   "image": "assets/img/products/grip-my-overgrip-4.webp"
+   "name": "Babolat Addiction 1.30",
+   "color": "natur",
+   "price": 27.0,
+   "stock": 0,
+   "tags": [
+    "Armschonung",
+    "Haltbarkeit",
+    "Komfort"
+   ],
+   "image": "assets/img/products/babolat-addiction-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
-   "id": "babolat-pro-tour-2-0",
-   "category": "griffbaender",
+   "id": "babolat-xalt-1-30-white",
+   "category": "saitensets",
    "brand": "Babolat",
-   "name": "Babolat Pro Tour 2.0",
-   "type": "Overgrip",
+   "name": "Babolat Xalt 1.30 white",
    "color": "weiß",
-   "price": 2.0,
-   "stock": 3,
-   "image": "assets/img/products/grip-babolat-pro-tour-2-0-0.webp"
+   "price": 27.0,
+   "stock": 1,
+   "tags": [
+    "Komfort",
+    "Kontrolle"
+   ],
+   "image": "assets/img/products/babolat-xalt-1-30-white.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
+   "id": "babolat-xplore-1-30-blue",
+   "category": "saitensets",
+   "brand": "Babolat",
+   "name": "Babolat Xplore 1.30 blue",
+   "color": "blau",
+   "price": 25.0,
+   "stock": 1,
+   "tags": [
+    "Armschonung",
+    "Kontrolle"
+   ],
+   "image": "assets/img/products/babolat-xplore-1-30-blue.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#2a62c9"
+   ]
+  },
+  {
+   "id": "diadem-impulse-1-25-natur",
+   "category": "saitensets",
+   "brand": "Diadem",
+   "name": "Diadem Impulse 1.25 natur",
+   "color": "natur",
+   "price": 26.0,
+   "stock": 1,
+   "tags": [
+    "Armschonung",
+    "Spannungsstabilität",
+    "Spin"
+   ],
+   "image": "assets/img/products/diadem-impulse-1-25-natur.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
+  },
+  {
+   "id": "genesis-new-cyan-1-25-mint",
+   "category": "saitensets",
+   "brand": "Genesis",
+   "name": "Genesis New Cyan 1.25 mint",
+   "color": "mint",
+   "price": 25.0,
+   "stock": 1,
+   "tags": [
+    "Gefühl",
+    "Power"
+   ],
+   "image": "assets/img/products/genesis-new-cyan-1-25-mint.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#7fd8b8"
+   ]
+  },
+  {
+   "id": "isospeed-cream-1-28-beige",
+   "category": "saitensets",
+   "brand": "Isospeed",
+   "name": "Isospeed Cream 1.28 beige",
+   "color": "beige",
+   "price": 23.0,
+   "stock": 1,
+   "comment": "Hervorragende Ballkontrolle und Armschonung.",
+   "image": "assets/img/products/isospeed-cream-1-28-beige.webp",
+   "material": "Polyamid",
+   "shape": "rund",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#d9c7a0"
+   ]
+  },
+  {
+   "id": "kirschbaum-for-you-1-30-black",
+   "category": "saitensets",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum For You 1.30 black",
+   "color": "schwarz",
+   "price": 23.0,
+   "stock": 1,
+   "tags": [
+    "Armschonung",
+    "Power"
+   ],
+   "image": "assets/img/products/kirschbaum-for-you-1-30-black.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "kirschbaum-for-you-1-30-natur",
+   "category": "saitensets",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum For You 1.30 natur",
+   "color": "natur",
+   "price": 23.0,
+   "stock": 1,
+   "tags": [
+    "Armschonung",
+    "Power"
+   ],
+   "image": "assets/img/products/kirschbaum-for-you-1-30-black.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
+  },
+  {
+   "id": "kirschbaum-gut-feeling-1-25",
+   "category": "saitensets",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Gut Feeling 1.25",
+   "color": "natur",
+   "price": 25.0,
+   "stock": 2,
+   "tags": [
+    "Armschonung",
+    "Komfort"
+   ],
+   "image": "assets/img/products/kirschbaum-gut-feeling-1-25.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-dura-1-25",
+   "category": "saitensets",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch Dura 1.25",
+   "color": "natur",
+   "price": 25.0,
+   "stock": 2,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle"
+   ],
+   "image": "assets/img/products/kirschbaum-touch-dura-1-25.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#e6d3a8"
+   ]
+  },
+  {
+   "id": "babolat-vs-touch-1-30",
+   "category": "saitensets",
+   "brand": "Babolat",
+   "name": "Babolat VS Touch 1.30",
+   "color": "natur",
+   "price": 67.0,
+   "stock": 1,
+   "tags": [
+    "Armschonung",
+    "Gefühl",
+    "Haltbarkeit",
+    "Power",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/babolat-vs-touch-1-30.webp",
+   "material": "Naturdarm",
+   "sub": "Naturdarm",
+   "colorHex": [
+    "#e6d3a8"
+   ]
+  },
+  {
+   "id": "luxilon-natural-gut-1-30",
+   "category": "saitensets",
+   "brand": "Luxilon",
+   "name": "Luxilon Natural Gut 1.30",
+   "color": "natur",
+   "price": 58.0,
+   "stock": 5,
+   "tags": [
+    "Armschonung",
+    "Gefühl",
+    "Haltbarkeit",
+    "Power",
+    "Spannungsstabilität"
+   ],
+   "image": "assets/img/products/luxilon-natural-gut-1-30.webp",
+   "material": "Naturdarm",
+   "sub": "Naturdarm",
+   "colorHex": [
+    "#e6d3a8"
+   ]
   },
   {
    "id": "babolat-syntec-pro-basic-grip-schwarz-gelb-20250208",
    "category": "griffbaender",
    "brand": "Babolat",
    "name": "Babolat Syntec Pro Basic Grip schwarz-gelb 20250208",
-   "type": "Basisgriffband",
    "color": "schwarz-gelb",
    "price": 15.0,
    "stock": 3,
-   "image": "assets/img/products/grip-syntec-pro-basic-grip-schwarz-gelb-1.webp"
+   "image": "assets/img/products/grip-syntec-pro-basic-grip-schwarz-gelb-1.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a",
+    "#f4d21f"
+   ]
   },
   {
    "id": "babolat-syntec-pro-basic-grip-schwarz-weiss-20260617",
    "category": "griffbaender",
    "brand": "Babolat",
    "name": "Babolat Syntec Pro Basic Grip schwarz-weiß 20260617",
-   "type": "Basisgriffband",
    "color": "schwarz-weiß",
    "price": 15.0,
    "stock": 3,
-   "image": "assets/img/products/grip-syntec-pro-basic-grip-schwarz-weiss-2.webp"
+   "image": "assets/img/products/grip-syntec-pro-basic-grip-schwarz-weiss-2.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a",
+    "#f5f5f5"
+   ]
   },
   {
    "id": "babolat-syntec-pro-basic-grip-weiss-20260617",
    "category": "griffbaender",
    "brand": "Babolat",
    "name": "Babolat Syntec Pro Basic Grip weiß 20260617",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 15.0,
    "stock": 1,
-   "image": "assets/img/products/grip-syntec-pro-basic-grip-weiss-3.webp"
-  },
-  {
-   "id": "diadem-pro-feel-20260717",
-   "category": "griffbaender",
-   "brand": "Diadem",
-   "name": "Diadem Pro Feel 20260717",
-   "type": "Overgrip",
-   "color": "weiß",
-   "price": 2.0,
-   "stock": 14,
-   "image": "assets/img/products/grip-diadem-pro-feel-5.webp"
-  },
-  {
-   "id": "dunlop-viper-dry",
-   "category": "griffbaender",
-   "brand": "Dunlop",
-   "name": "Dunlop Viper Dry",
-   "type": "Overgrip",
-   "color": "weiß",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-viper-dry-6.webp"
-  },
-  {
-   "id": "gamma-overgrip",
-   "category": "griffbaender",
-   "brand": "Gamma",
-   "name": "Gamma Overgrip",
-   "type": "Overgrip",
-   "color": "blau",
-   "price": 1.0,
-   "stock": 1
+   "image": "assets/img/products/grip-syntec-pro-basic-grip-weiss-3.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-neon-gelb-20260727",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Hydrosorb PRO Basic Grip neon gelb 20260727",
-   "type": "Basisgriffband",
-   "color": "neon-gelb",
+   "color": "neongelb",
    "price": 15.0,
-   "stock": 2
+   "stock": 2,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#dfff2e"
+   ]
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-neon-orange-20260707",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Hydrosorb PRO Basic Grip neon orange 20260707",
-   "type": "Basisgriffband",
    "color": "orange",
    "price": 15.0,
    "stock": 3,
-   "image": "assets/img/products/grip-pro-basic-grip-neon-orange-7.webp"
+   "image": "assets/img/products/grip-pro-basic-grip-neon-orange-7.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f28c28"
+   ]
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-schwarz-20260526",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Hydrosorb PRO Basic Grip schwarz 20260526",
-   "type": "Basisgriffband",
    "color": "schwarz",
    "price": 15.0,
    "stock": 1,
-   "image": "assets/img/products/grip-basic-grip-schwarz-2026-8.webp"
+   "image": "assets/img/products/grip-basic-grip-schwarz-2026-8.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-schwarz-20260727",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Hydrosorb PRO Basic Grip schwarz 20260727",
-   "type": "Basisgriffband",
    "color": "schwarz",
    "price": 15.0,
    "stock": 3,
-   "image": "assets/img/products/grip-basic-grip-schwarz-2026-8.webp"
+   "image": "assets/img/products/grip-basic-grip-schwarz-2026-8.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-weiss-20250717",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Hydrosorb PRO Basic Grip weiß 20250717",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 15.0,
    "stock": 1,
-   "image": "assets/img/products/grip-hydrosorb-pro-basic-grip-weiss-9.webp"
+   "image": "assets/img/products/grip-hydrosorb-pro-basic-grip-weiss-9.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-weiss",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Hydrosorb PRO Basic Grip weiß*",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 7.0,
    "stock": 1,
-   "image": "assets/img/products/grip-hydrosorb-pro-basic-grip-weiss-9.webp"
+   "image": "assets/img/products/grip-hydrosorb-pro-basic-grip-weiss-9.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "head-ultimate-20260526",
    "category": "griffbaender",
    "brand": "Head",
    "name": "Head Ultimate 20260526",
-   "type": "Basisgriffband",
    "color": "schwarz",
    "price": 15.0,
-   "stock": 3
+   "stock": 3,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "karakal-pu-super-grip-gelb-20260306",
    "category": "griffbaender",
    "brand": "Karakal",
    "name": "Karakal PU Super Grip gelb 20260306",
-   "type": "Basisgriffband",
    "color": "gelb",
    "price": 11.0,
-   "stock": 2
+   "stock": 2,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f4d21f"
+   ]
   },
   {
    "id": "karakal-pu-super-grip-schwarz-20260306",
    "category": "griffbaender",
    "brand": "Karakal",
    "name": "Karakal PU Super Grip schwarz 20260306",
-   "type": "Basisgriffband",
    "color": "schwarz",
    "price": 11.0,
-   "stock": 3
+   "stock": 3,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "karakal-pu-super-grip-weiss-20260306",
    "category": "griffbaender",
    "brand": "Karakal",
    "name": "Karakal PU Super Grip weiß 20260306",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 11.0,
-   "stock": 2
-  },
-  {
-   "id": "kirschbaum-touch-it-pink",
-   "category": "griffbaender",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch it pink",
-   "type": "Overgrip",
-   "color": "pink",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp"
-  },
-  {
-   "id": "kirschbaum-touch-it-black",
-   "category": "griffbaender",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch it black",
-   "type": "Overgrip",
-   "color": "schwarz",
-   "price": 2.0,
-   "stock": 4,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-black-11.webp"
-  },
-  {
-   "id": "kirschbaum-touch-it-dark-red",
-   "category": "griffbaender",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch it dark red",
-   "type": "Overgrip",
-   "color": "dunkelrot",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp"
-  },
-  {
-   "id": "kirschbaum-touch-it-light-blue",
-   "category": "griffbaender",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch it light blue",
-   "type": "Overgrip",
-   "color": "hellblau",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp"
-  },
-  {
-   "id": "kirschbaum-touch-it-orange",
-   "category": "griffbaender",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch it orange",
-   "type": "Overgrip",
-   "color": "orange",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp"
+   "stock": 2,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "kirschbaum-touch-it-soft-feeling-schwarz-20251020",
    "category": "griffbaender",
    "brand": "Kirschbaum",
    "name": "Kirschbaum Touch It Soft Feeling schwarz 20251020",
-   "type": "Basisgriffband",
    "color": "schwarz",
    "price": 15.0,
-   "stock": 3
+   "stock": 3,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "kirschbaum-touch-it-soft-feeling-weiss-20251020",
    "category": "griffbaender",
    "brand": "Kirschbaum",
    "name": "Kirschbaum Touch It Soft Feeling weiß 20251020",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 15.0,
-   "stock": 2
-  },
-  {
-   "id": "kirschbaum-touch-it-yellow",
-   "category": "griffbaender",
-   "brand": "Kirschbaum",
-   "name": "Kirschbaum Touch it yellow",
-   "type": "Overgrip",
-   "color": "gelb",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp"
-  },
-  {
-   "id": "msv-prespi-absorb-gruen",
-   "category": "griffbaender",
-   "brand": "MSV",
-   "name": "MSV Prespi Absorb grün",
-   "type": "Overgrip",
-   "color": "grün",
-   "price": 2.0,
-   "stock": 3,
-   "image": "assets/img/products/grip-prespi-13.webp"
-  },
-  {
-   "id": "silvester-feel-rot",
-   "category": "griffbaender",
-   "brand": "Silvester",
-   "name": "Silvester Feel rot",
-   "type": "Overgrip",
-   "color": "rot",
-   "price": 2.0,
-   "stock": 3,
-   "image": "assets/img/products/grip-silvester-feel-14.webp"
-  },
-  {
-   "id": "silvester-pro-weiss",
-   "category": "griffbaender",
-   "brand": "Silvester",
-   "name": "Silvester PRO weiß",
-   "type": "Overgrip",
-   "color": "weiß",
-   "price": 2.0,
-   "stock": 1,
-   "image": "assets/img/products/grip-silvester-pro-15.webp"
+   "stock": 2,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "stringlab-replacement-grip-thin-1-30",
    "category": "griffbaender",
    "brand": "StringLab",
    "name": "Stringlab Replacement Grip Thin 1.30",
-   "type": "Basisgriffband",
    "color": "schwarz",
    "price": 15.0,
-   "stock": 9
+   "stock": 9,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "stringlab-replacement-grip-ultra-thick-2-80",
    "category": "griffbaender",
    "brand": "StringLab",
    "name": "Stringlab Replacement Grip Ultra Thick 2.80",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 15.0,
-   "stock": 8
+   "stock": 8,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "stringlab-replacement-grip-ultra-thin-1-10",
    "category": "griffbaender",
    "brand": "StringLab",
    "name": "Stringlab Replacement Grip Ultra Thin 1.10",
-   "type": "Basisgriffband",
    "color": "weiß",
    "price": 15.0,
-   "stock": 10
-  },
-  {
-   "id": "stringlab-seta-overgrip-white",
-   "category": "griffbaender",
-   "brand": "StringLab",
-   "name": "StringLab Seta Overgrip white",
-   "type": "Overgrip",
-   "color": "weiß",
-   "price": 2.0,
-   "stock": 1
+   "stock": 10,
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "tourna-basisband-pro-thin-1-25mm-schwarz",
    "category": "griffbaender",
    "brand": "Tourna",
    "name": "Tourna Basisband Pro Thin 1.25mm schwarz",
-   "type": "Basisgriffband",
    "color": "schwarz perforiert",
    "price": 15.0,
    "stock": 2,
-   "image": "assets/img/products/grip-tourna-17.webp"
-  },
-  {
-   "id": "wilson-comfort-overgrip-gruen-20240925",
-   "category": "griffbaender",
-   "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip grün 20240925",
-   "type": "Overgrip",
-   "color": "grün",
-   "price": 2.0,
-   "stock": 5,
-   "image": "assets/img/products/grip-wilson-comfort-18.webp"
-  },
-  {
-   "id": "wilson-comfort-overgrip-braun-20240925",
-   "category": "griffbaender",
-   "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip braun 20240925",
-   "type": "Overgrip",
-   "color": "braun",
-   "price": 2.0,
-   "stock": 7,
-   "image": "assets/img/products/grip-wilson-comfort-18.webp"
-  },
-  {
-   "id": "wilson-comfort-overgrip-gelb-20240925",
-   "category": "griffbaender",
-   "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip gelb 20240925",
-   "type": "Overgrip",
-   "color": "gelb",
-   "price": 2.0,
-   "stock": 5,
-   "image": "assets/img/products/grip-wilson-comfort-18.webp"
-  },
-  {
-   "id": "wilson-comfort-overgrip-lila-20240925",
-   "category": "griffbaender",
-   "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip lila 20240925",
-   "type": "Overgrip",
-   "color": "lila",
-   "price": 2.0,
-   "stock": 4,
-   "image": "assets/img/products/grip-wilson-comfort-18.webp"
-  },
-  {
-   "id": "wilson-comfort-overgrip-pink-20240925",
-   "category": "griffbaender",
-   "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip pink 20240925",
-   "type": "Overgrip",
-   "color": "pink",
-   "price": 2.0,
-   "stock": 6,
-   "image": "assets/img/products/grip-wilson-comfort-18.webp"
-  },
-  {
-   "id": "wilson-comfort-overgrip-weiss-20240925",
-   "category": "griffbaender",
-   "brand": "Wilson",
-   "name": "Wilson Comfort Overgrip weiß 20240925",
-   "type": "Overgrip",
-   "color": "weiß",
-   "price": 2.0,
-   "stock": 4,
-   "image": "assets/img/products/grip-wilson-comfort-18.webp"
+   "image": "assets/img/products/grip-tourna-17.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "yonex-excel-pro-grip-schwarz",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Excel Pro Grip schwarz",
-   "type": "Basisgriffband",
    "color": "schwarz perforiert",
    "price": 15.0,
    "stock": 2,
-   "image": "assets/img/products/grip-excel-pro-19.webp"
+   "image": "assets/img/products/grip-excel-pro-19.webp",
+   "sub": "Basisgriffbänder",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "babolat-my-overgrip-mehrfarbig",
+   "category": "griffbaender",
+   "brand": "Babolat",
+   "name": "Babolat My Overgrip mehrfarbig",
+   "price": 1.0,
+   "stock": 30,
+   "image": "assets/img/products/grip-my-overgrip-4.webp",
+   "sub": "Overgrips"
+  },
+  {
+   "id": "babolat-pro-tour-2-0",
+   "category": "griffbaender",
+   "brand": "Babolat",
+   "name": "Babolat Pro Tour 2.0",
+   "color": "weiß",
+   "price": 2.0,
+   "stock": 3,
+   "image": "assets/img/products/grip-babolat-pro-tour-2-0-0.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
+   "id": "diadem-pro-feel-20260717",
+   "category": "griffbaender",
+   "brand": "Diadem",
+   "name": "Diadem Pro Feel 20260717",
+   "color": "weiß",
+   "price": 2.0,
+   "stock": 14,
+   "image": "assets/img/products/grip-diadem-pro-feel-5.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
+   "id": "dunlop-viper-dry",
+   "category": "griffbaender",
+   "brand": "Dunlop",
+   "name": "Dunlop Viper Dry",
+   "color": "weiß",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-viper-dry-6.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
+   "id": "gamma-overgrip",
+   "category": "griffbaender",
+   "brand": "Gamma",
+   "name": "Gamma Overgrip",
+   "color": "blau",
+   "price": 1.0,
+   "stock": 1,
+   "sub": "Overgrips",
+   "colorHex": [
+    "#2a62c9"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-black",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it black",
+   "color": "schwarz",
+   "price": 2.0,
+   "stock": 4,
+   "image": "assets/img/products/grip-kirschbaum-touch-it-black-11.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-dark-red",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it dark red",
+   "color": "dunkelrot",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#8b1a1a"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-light-blue",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it light blue",
+   "color": "hellblau",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#7ec8f0"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-orange",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it orange",
+   "color": "orange",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f28c28"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-pink",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it pink",
+   "color": "pink",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#e94b9a"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-yellow",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it yellow",
+   "color": "gelb",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f4d21f"
+   ]
+  },
+  {
+   "id": "msv-prespi-absorb-gruen",
+   "category": "griffbaender",
+   "brand": "MSV",
+   "name": "MSV Prespi Absorb grün",
+   "color": "grün",
+   "price": 2.0,
+   "stock": 3,
+   "image": "assets/img/products/grip-prespi-13.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  },
+  {
+   "id": "silvester-feel-rot",
+   "category": "griffbaender",
+   "brand": "Silvester",
+   "name": "Silvester Feel rot",
+   "color": "rot",
+   "price": 2.0,
+   "stock": 3,
+   "image": "assets/img/products/grip-silvester-feel-14.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#d62828"
+   ]
+  },
+  {
+   "id": "silvester-pro-weiss",
+   "category": "griffbaender",
+   "brand": "Silvester",
+   "name": "Silvester PRO weiß",
+   "color": "weiß",
+   "price": 2.0,
+   "stock": 1,
+   "image": "assets/img/products/grip-silvester-pro-15.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
+   "id": "stringlab-seta-overgrip-white",
+   "category": "griffbaender",
+   "brand": "StringLab",
+   "name": "StringLab Seta Overgrip white",
+   "color": "weiß",
+   "price": 2.0,
+   "stock": 1,
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
+   "id": "wilson-comfort-overgrip-braun-20240925",
+   "category": "griffbaender",
+   "brand": "Wilson",
+   "name": "Wilson Comfort Overgrip braun 20240925",
+   "color": "braun",
+   "price": 2.0,
+   "stock": 7,
+   "image": "assets/img/products/grip-wilson-comfort-18.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#7b4b2a"
+   ]
+  },
+  {
+   "id": "wilson-comfort-overgrip-gelb-20240925",
+   "category": "griffbaender",
+   "brand": "Wilson",
+   "name": "Wilson Comfort Overgrip gelb 20240925",
+   "color": "gelb",
+   "price": 2.0,
+   "stock": 5,
+   "image": "assets/img/products/grip-wilson-comfort-18.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f4d21f"
+   ]
+  },
+  {
+   "id": "wilson-comfort-overgrip-gruen-20240925",
+   "category": "griffbaender",
+   "brand": "Wilson",
+   "name": "Wilson Comfort Overgrip grün 20240925",
+   "color": "grün",
+   "price": 2.0,
+   "stock": 5,
+   "image": "assets/img/products/grip-wilson-comfort-18.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  },
+  {
+   "id": "wilson-comfort-overgrip-lila-20240925",
+   "category": "griffbaender",
+   "brand": "Wilson",
+   "name": "Wilson Comfort Overgrip lila 20240925",
+   "color": "lila",
+   "price": 2.0,
+   "stock": 4,
+   "image": "assets/img/products/grip-wilson-comfort-18.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#8e44ad"
+   ]
+  },
+  {
+   "id": "wilson-comfort-overgrip-pink-20240925",
+   "category": "griffbaender",
+   "brand": "Wilson",
+   "name": "Wilson Comfort Overgrip pink 20240925",
+   "color": "pink",
+   "price": 2.0,
+   "stock": 6,
+   "image": "assets/img/products/grip-wilson-comfort-18.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#e94b9a"
+   ]
+  },
+  {
+   "id": "wilson-comfort-overgrip-weiss-20240925",
+   "category": "griffbaender",
+   "brand": "Wilson",
+   "name": "Wilson Comfort Overgrip weiß 20240925",
+   "color": "weiß",
+   "price": 2.0,
+   "stock": 4,
+   "image": "assets/img/products/grip-wilson-comfort-18.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "yonex-super-grap-mint",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Super Grap mint",
-   "type": "Overgrip",
    "color": "mint",
    "price": 2.0,
    "stock": 3,
-   "image": "assets/img/products/grip-super-grap-mint-20.webp"
+   "image": "assets/img/products/grip-super-grap-mint-20.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#7fd8b8"
+   ]
   },
   {
    "id": "yonex-super-grap-orange",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Super Grap orange",
-   "type": "Overgrip",
    "color": "orange",
    "price": 2.0,
    "stock": 4,
-   "image": "assets/img/products/grip-super-grap-orange-21.webp"
+   "image": "assets/img/products/grip-super-grap-orange-21.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f28c28"
+   ]
   },
   {
    "id": "yonex-super-grap-schwarz",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Super Grap schwarz",
-   "type": "Overgrip",
    "color": "schwarz",
    "price": 2.0,
    "stock": 3,
-   "image": "assets/img/products/grip-super-grap-schwarz-22.webp"
+   "image": "assets/img/products/grip-super-grap-schwarz-22.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "yonex-super-grap-schwarz-20260727",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Super Grap schwarz 20260727",
-   "type": "Overgrip",
    "color": "schwarz",
    "price": 2.0,
    "stock": 30,
-   "image": "assets/img/products/grip-super-grap-schwarz-22.webp"
+   "image": "assets/img/products/grip-super-grap-schwarz-22.webp",
+   "sub": "Overgrips",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "yonex-towel-grip-gelb",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Towel Grip gelb",
-   "type": "Overgrip",
    "color": "gelb",
    "price": 2.0,
-   "stock": 1
+   "stock": 1,
+   "sub": "Overgrips",
+   "colorHex": [
+    "#f4d21f"
+   ]
   },
   {
    "id": "yonex-towel-grip-rot",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Towel Grip rot",
-   "type": "Overgrip",
    "color": "rot",
    "price": 2.0,
-   "stock": 1
+   "stock": 1,
+   "sub": "Overgrips",
+   "colorHex": [
+    "#d62828"
+   ]
   },
   {
    "id": "yonex-towel-grip-schwarz",
    "category": "griffbaender",
    "brand": "Yonex",
    "name": "Yonex Towel Grip schwarz",
-   "type": "Overgrip",
    "color": "schwarz",
    "price": 2.0,
-   "stock": 1
+   "stock": 1,
+   "sub": "Overgrips",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "dunlop-official-tennis-dampener",
@@ -2145,7 +2862,10 @@
    "price": 2.0,
    "stock": 2,
    "comment": "Offizieller Partner der ATP",
-   "image": "assets/img/products/grip-dunlop-official-23.webp"
+   "image": "assets/img/products/grip-dunlop-official-23.webp",
+   "colorHex": [
+    "#2a62c9"
+   ]
   },
   {
    "id": "gamma-shockbuster-orange",
@@ -2155,7 +2875,10 @@
    "color": "orange",
    "price": 5.0,
    "stock": 4,
-   "image": "assets/img/products/grip-shockbuster-orange-24.webp"
+   "image": "assets/img/products/grip-shockbuster-orange-24.webp",
+   "colorHex": [
+    "#f28c28"
+   ]
   },
   {
    "id": "gamma-shockbuster-rosa",
@@ -2165,7 +2888,10 @@
    "color": "rosa",
    "price": 5.0,
    "stock": 4,
-   "image": "assets/img/products/grip-shockbuster-rosa-25.webp"
+   "image": "assets/img/products/grip-shockbuster-rosa-25.webp",
+   "colorHex": [
+    "#f4a6c8"
+   ]
   },
   {
    "id": "gamma-shockbuster-weiss",
@@ -2175,7 +2901,10 @@
    "color": "weiß",
    "price": 5.0,
    "stock": 3,
-   "image": "assets/img/products/grip-shockbuster-weiss-28.webp"
+   "image": "assets/img/products/grip-shockbuster-weiss-28.webp",
+   "colorHex": [
+    "#f5f5f5"
+   ]
   },
   {
    "id": "kirschbaum-vibrastop-schwarz",
@@ -2185,7 +2914,10 @@
    "color": "schwarz",
    "price": 2.0,
    "stock": 1,
-   "image": "assets/img/products/grip-vibrastop-26.webp"
+   "image": "assets/img/products/grip-vibrastop-26.webp",
+   "colorHex": [
+    "#1a1a1a"
+   ]
   },
   {
    "id": "wilson-string-glide",
@@ -2196,7 +2928,10 @@
    "price": 1.0,
    "stock": 164,
    "comment": "Auf Wunsch ziehe ich 10 Saitenschoner (Federer-Pattern) ein.",
-   "image": "assets/img/products/grip-string-glide-29.webp"
+   "image": "assets/img/products/grip-string-glide-29.webp",
+   "colorHex": [
+    "#2a62c9"
+   ]
   },
   {
    "id": "diadem-premier-all-court",
@@ -2271,6 +3006,119 @@
    "deposit": 20.0,
    "comment": "Power, Feel, Speed, Comfort",
    "image": "assets/img/products/diadem-nova-100-v3.webp"
+  },
+  {
+   "id": "yonex-bg-65-0-70",
+   "category": "saitenrollen-badminton",
+   "brand": "Yonex",
+   "name": "Yonex BG 65 0.70",
+   "color": "orange",
+   "price": 24.0,
+   "tags": [
+    "Allround"
+   ],
+   "image": "assets/img/products/yonex-bg-65-0-70.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#f28c28"
+   ]
+  },
+  {
+   "id": "yonex-bg-80-0-68",
+   "category": "saitenrollen-badminton",
+   "brand": "Yonex",
+   "name": "Yonex BG 80 0.68",
+   "color": "gelb",
+   "price": 25.0,
+   "tags": [
+    "Power"
+   ],
+   "image": "assets/img/products/yonex-bg-80-0-68.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#f4d21f"
+   ]
+  },
+  {
+   "id": "discho-dura-squash-1-30",
+   "category": "saiten-squash",
+   "brand": "Discho",
+   "name": "Discho Dura Squash 1.30",
+   "color": "beige",
+   "price": 22.0,
+   "tags": [
+    "Leistung/Preis"
+   ],
+   "image": "assets/img/products/discho-dura-squash-1-30.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#d9c7a0"
+   ]
+  },
+  {
+   "id": "tecnifibre-305-1-20",
+   "category": "saiten-squash",
+   "brand": "Tecnifibre",
+   "name": "Tecnifibre 305 1.20",
+   "color": "grün",
+   "price": 28.0,
+   "tags": [
+    "Haltbarkeit",
+    "Gefühl",
+    "Kontrolle",
+    "Power",
+    "Spin"
+   ],
+   "image": "assets/img/products/tecnifibre-305-1-20.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "id": "Polyester",
+   "title": "Polyester"
+  },
+  {
+   "id": "Polyamid",
+   "title": "Polyamid"
+  },
+  {
+   "id": "Naturdarm",
+   "title": "Naturdarm"
+  }
+ ],
+ "shapes": [
+  {
+   "id": "rund",
+   "title": "Rund",
+   "sides": 0
+  },
+  {
+   "id": "pentagonal",
+   "title": "Pentagonal",
+   "sides": 5
+  },
+  {
+   "id": "hexagonal",
+   "title": "Hexagonal",
+   "sides": 6
+  },
+  {
+   "id": "heptagonal",
+   "title": "Heptagonal",
+   "sides": 7
+  },
+  {
+   "id": "octagonal",
+   "title": "Octagonal",
+   "sides": 8
   }
  ]
 }

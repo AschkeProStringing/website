@@ -28,6 +28,8 @@ jobs:
           cache: pip
           cache-dependency-path: scripts/requirements.txt
       - run: pip install -r scripts/requirements.txt
+      - name: Produktdaten prüfen
+        run: python scripts/products.py check
       - name: Angebots-PDF aus data/products.json erzeugen
         run: python scripts/build_pdf.py Angebot.pdf
       - name: Veröffentlichungsordner zusammenstellen

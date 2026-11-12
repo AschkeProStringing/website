@@ -1,0 +1,36 @@
+{
+  "_hinweis": "Farbname (deutsch, klein) -> Hex. Zweifarbige Saiten als 'a-b' (z. B. schwarz-gelb); jede Teilfarbe wird hier nachgeschlagen. Eigene Farbe pro Produkt: Feld colorHex.",
+  "colors": {
+    "natur": "#e6d3a8",
+    "schwarz": "#1a1a1a",
+    "weiß": "#f5f5f5",
+    "grün": "#2e9e4f",
+    "gelb": "#f4d21f",
+    "orange": "#f28c28",
+    "blau": "#2a62c9",
+    "silber": "#b8bcc6",
+    "rot": "#d62828",
+    "pink": "#e94b9a",
+    "grau": "#8a8f98",
+    "anthrazit": "#3b3f46",
+    "mint": "#7fd8b8",
+    "beige": "#d9c7a0",
+    "azurblau": "#1e90e8",
+    "gold": "#c9a227",
+    "dunkel silber": "#8a8e99",
+    "lila": "#8e44ad",
+    "neongelb": "#dfff2e",
+    "schwarz perforiert": "#1a1a1a",
+    "cyan": "#00b7d4",
+    "cobalt-blau": "#0047ab",
+    "olivgrün": "#6b7a2f",
+    "dunkelrot": "#8b1a1a",
+    "hellblau": "#7ec8f0",
+    "braun": "#7b4b2a",
+    "rosa": "#f4a6c8"
+  },
+  "aliases": {
+    "black": "schwarz",
+    "neon-gelb": "neongelb"
+  }
+}
