@@ -32,7 +32,11 @@ NAVY2 = colors.HexColor("#1f2646")
 ORANGE = colors.HexColor("#f59b42")
 SILVER = colors.HexColor("#adb0c1")
 LIGHT = colors.HexColor("#eef0f8")
-INK = colors.HexColor("#1a1f36")
+INK = colors.HexColor("#e8eaf5")
+MUTED = colors.HexColor("#adb0c1")
+ROW = colors.HexColor("#1f2646")
+ROW2 = colors.HexColor("#1b2140")
+LINE = colors.HexColor("#323b68")
 
 data = json.loads((ROOT / "data/products.json").read_text(encoding="utf-8"))
 site = json.loads((ROOT / "data/site.json").read_text(encoding="utf-8"))
@@ -67,7 +71,7 @@ class ColorCell(Flowable):
         cx, cy = r, 3.5 * mm
         c.saveState()
         c.setLineWidth(0.5)
-        c.setStrokeColor(colors.HexColor("#8a8fa8"))
+        c.setStrokeColor(MUTED)
         for i, hx in enumerate(self.hexes[:2]):
             c.setFillColor(colors.HexColor(hx))
             if len(self.hexes) == 1:
@@ -103,7 +107,7 @@ class ShapeCell(Flowable):
         cx, cy = r, 3.5 * mm
         c.saveState()
         c.setStrokeColor(ORANGE)
-        c.setFillColor(colors.HexColor("#fdebd5"))
+        c.setFillColor(colors.HexColor("#3a3350"))
         c.setLineWidth(0.9)
         if not self.sides:
             c.circle(cx, cy, r, stroke=1, fill=1)
@@ -123,12 +127,12 @@ class ShapeCell(Flowable):
 
 S = {
     "body": ParagraphStyle("body", fontName="Helvetica", fontSize=9.5, leading=13.5, textColor=INK),
-    "small": ParagraphStyle("small", fontName="Helvetica", fontSize=7.5, leading=9.5, textColor=colors.HexColor("#555b78")),
-    "h1": ParagraphStyle("h1", fontName="Helvetica-Bold", fontSize=20, leading=24, textColor=NAVY, spaceBefore=4, spaceAfter=6),
-    "h2": ParagraphStyle("h2", fontName="Helvetica-Bold", fontSize=14, leading=18, textColor=NAVY, spaceBefore=10, spaceAfter=2),
-    "sub": ParagraphStyle("sub", fontName="Helvetica", fontSize=8.5, leading=11, textColor=colors.HexColor("#555b78"), spaceAfter=5),
+    "small": ParagraphStyle("small", fontName="Helvetica", fontSize=7.5, leading=9.5, textColor=MUTED),
+    "h1": ParagraphStyle("h1", fontName="Helvetica-Bold", fontSize=20, leading=24, textColor=colors.white, spaceBefore=4, spaceAfter=6),
+    "h2": ParagraphStyle("h2", fontName="Helvetica-Bold", fontSize=14, leading=18, textColor=ORANGE, spaceBefore=10, spaceAfter=2),
+    "sub": ParagraphStyle("sub", fontName="Helvetica", fontSize=8.5, leading=11, textColor=MUTED, spaceAfter=5),
     "name": ParagraphStyle("name", fontName="Helvetica-Bold", fontSize=8.8, leading=10.5, textColor=INK),
-    "price": ParagraphStyle("price", fontName="Helvetica-Bold", fontSize=10, leading=12, textColor=NAVY, alignment=TA_RIGHT),
+    "price": ParagraphStyle("price", fontName="Helvetica-Bold", fontSize=10, leading=12, textColor=ORANGE, alignment=TA_RIGHT),
     "th": ParagraphStyle("th", fontName="Helvetica-Bold", fontSize=7.5, leading=9, textColor=colors.white),
     "cover": ParagraphStyle("cover", fontName="Helvetica", fontSize=10.5, leading=15, textColor=colors.white),
 }
@@ -144,7 +148,7 @@ def thumb(path, size=13 * mm):
         return ""
     im = Image.open(ROOT / path).convert("RGBA")
     im.thumbnail((180, 180))
-    bg = Image.new("RGBA", im.size, (238, 240, 248, 255))
+    bg = Image.new("RGBA", im.size, (31, 38, 70, 255))
     bg.alpha_composite(im)
     buf = io.BytesIO()
     bg.convert("RGB").save(buf, "JPEG", quality=85)
@@ -169,10 +173,9 @@ def category_table(all_items, items):
     show_color = any(p.get("colorHex") for p in all_items)
     show_shape = any(p.get("shape") for p in all_items)
     show_struct = any(p.get("structureImage") for p in all_items)
-    has_stock = any("stock" in p for p in all_items)
     head = ["", "Produkt"] + (["Farbe"] if show_color else []) + (["Form"] if show_shape else []) + \
-           (["Aufbau"] if show_struct else []) + ["Preis", "Bestand" if has_stock else ""]
-    widths = [16 * mm, None] + [24 * mm] * show_color + [24 * mm] * show_shape + [15 * mm] * show_struct + [19 * mm, 21 * mm]
+           (["Aufbau"] if show_struct else []) + ["Preis"]
+    widths = [16 * mm, None] + [24 * mm] * show_color + [24 * mm] * show_shape + [15 * mm] * show_struct + [22 * mm]
     widths[1] = 180 * mm - sum(w for w in widths if w)
     rows = [[Paragraph(h, S["th"]) for h in head]]
     for p in items:
@@ -183,7 +186,7 @@ def category_table(all_items, items):
             extra = (extra + " – " if extra else "") + f"Kaution {eur(p['deposit'])}"
         if p.get("weight"):
             extra = (extra + " – " if extra else "") + esc(p["weight"])
-        name = f"<b>{esc(p['name'])}</b>" + (f"<br/><font size=7 color='#555b78'>{extra}</font>" if extra else "")
+        name = f"<b>{esc(p['name'])}</b>" + (f"<br/><font size=7 color='#adb0c1'>{extra}</font>" if extra else "")
         row = [thumb(p.get("image")), Paragraph(name, S["name"])]
         if show_color:
             row.append(ColorCell(p["colorHex"], p["color"]) if p.get("colorHex") else Paragraph(esc(p.get("color", "")), S["small"]))
@@ -192,20 +195,17 @@ def category_table(all_items, items):
             row.append(ShapeCell(sh["sides"], sh["title"]) if sh else "")
         if show_struct:
             row.append(thumb(p.get("structureImage"), 11 * mm) if p.get("structureImage") else "")
-        row += [Paragraph(eur(p["price"]), S["price"]), Paragraph(esc(stock_text(p)), S["small"])]
+        row.append(Paragraph(eur(p["price"]), S["price"]))
         rows.append(row)
     t = Table(rows, colWidths=widths, repeatRows=1)
     st = [
-        ("BACKGROUND", (0, 0), (-1, 0), NAVY), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-        ("LINEBELOW", (0, 1), (-1, -1), 0.3, colors.HexColor("#d5d8e6")),
+        ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#0f1325")), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("LINEBELOW", (0, 1), (-1, -1), 0.3, LINE),
         ("TOPPADDING", (0, 0), (-1, -1), 2.5), ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5),
         ("LEFTPADDING", (0, 0), (-1, -1), 3), ("RIGHTPADDING", (0, 0), (-1, -1), 3),
     ]
     for i, p in enumerate(items, start=1):
-        if i % 2 == 0:
-            st.append(("BACKGROUND", (0, i), (-1, i), colors.HexColor("#f7f8fc")))
-        if p.get("stock") == 0:
-            st.append(("TEXTCOLOR", (0, i), (-1, i), colors.HexColor("#999999")))
+        st.append(("BACKGROUND", (0, i), (-1, i), ROW if i % 2 else ROW2))
     t.setStyle(TableStyle(st))
     return t
 
@@ -226,6 +226,8 @@ def page(canvas, doc):
     w, h = A4
     canvas.saveState()
     canvas.setFillColor(NAVY)
+    canvas.rect(0, 0, w, h, stroke=0, fill=1)
+    canvas.setFillColor(colors.HexColor("#0f1325"))
     canvas.rect(0, h - 12 * mm, w, 12 * mm, stroke=0, fill=1)
     canvas.setFillColor(ORANGE)
     canvas.rect(0, h - 12.8 * mm, w, 0.8 * mm, stroke=0, fill=1)
@@ -235,7 +237,7 @@ def page(canvas, doc):
     canvas.drawString(26.5 * mm, h - 8 * mm, site["name"])
     canvas.setFont("Helvetica", 8)
     canvas.drawRightString(w - 15 * mm, h - 8 * mm, f"Aktuelles Angebot · Stand {updated}")
-    canvas.setFillColor(colors.HexColor("#555b78"))
+    canvas.setFillColor(MUTED)
     canvas.drawString(15 * mm, 8 * mm, f"{site['email']} · {site['phoneDisplay']}")
     canvas.drawRightString(w - 15 * mm, 8 * mm, f"Seite {doc.page}")
     canvas.restoreState()
@@ -261,9 +263,9 @@ story = [Spacer(1, 4 * mm),
 story.append(Paragraph("Allgemeine Informationen", S["h1"]))
 story.append(Paragraph(esc(site["priceNote"]), S["body"]))
 story.append(Paragraph("Dienstleistungen", S["h2"]))
-svc = Table([[Paragraph(f"<b>{esc(s['title'])}</b><br/><font size=7.5 color='#555b78'>{esc(s['note'])}</font>", S["body"]),
+svc = Table([[Paragraph(f"<b>{esc(s['title'])}</b><br/><font size=7.5 color='#adb0c1'>{esc(s['note'])}</font>", S["body"]),
               Paragraph(esc(s["price"]), S["price"])] for s in site["services"]], colWidths=[130 * mm, 50 * mm])
-svc.setStyle(TableStyle([("LINEBELOW", (0, 0), (-1, -1), 0.3, colors.HexColor("#d5d8e6")), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+svc.setStyle(TableStyle([("LINEBELOW", (0, 0), (-1, -1), 0.3, LINE), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
                          ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 4)]))
 story.append(svc)
 story.append(Paragraph("Kulanz", S["h2"]))
@@ -271,7 +273,7 @@ story.append(Paragraph(esc(site["kulanz"]["intro"]), S["body"]))
 kt = Table([[Paragraph("Grund", S["th"]), Paragraph("Kulanz", S["th"])]] +
            [[Paragraph(esc(r["reason"]), S["body"]), Paragraph(esc(r["result"]), S["body"])] for r in site["kulanz"]["rows"]],
           colWidths=[90 * mm, 90 * mm])
-kt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("LINEBELOW", (0, 1), (-1, -1), 0.3, colors.HexColor("#d5d8e6")),
+kt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#0f1325")), ("LINEBELOW", (0, 1), (-1, -1), 0.3, LINE),
                         ("VALIGN", (0, 0), (-1, -1), "TOP"), ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 4)]))
 story += [Spacer(1, 2 * mm), kt, Spacer(1, 2 * mm), Paragraph(esc(site["kulanz"]["grip"]), S["body"])]
 story.append(Paragraph("Übergabe", S["h2"]))
@@ -279,7 +281,7 @@ for h in site["handover"]:
     story.append(Paragraph(f"<b>{esc(h['title'])}:</b> {esc(h['text'])}", S["body"]))
 story.append(Paragraph("Diadem-Produkte", S["h2"]))
 story.append(Paragraph(esc(site["diademNote"]), S["body"]))
-story.append(PageBreak())
+story.append(Spacer(1, 4 * mm))
 
 SUB = ParagraphStyle("sub2", fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3, keepWithNext=1)
 for c in data["categories"]:
@@ -298,11 +300,11 @@ for c in data["categories"]:
             tabs.append((sc, group))
     for sc, group in tabs:
         if sc["title"]:
-            story.append(Paragraph(f"{esc(sc['title'])} <font size=8 color='#555b78'>· {len(group)}</font>", SUB))
+            story.append(Paragraph(f"{esc(sc['title'])} <font size=8 color='#adb0c1'>· {len(group)}</font>", SUB))
         story.append(category_table(items, group))
         story.append(Spacer(1, 4 * mm))
     story.append(Spacer(1, 4 * mm))
 
-story.append(Paragraph("Änderungen und Irrtümer vorbehalten. Bestände nur solange der Vorrat reicht.", S["small"]))
+story.append(Paragraph("Änderungen und Irrtümer vorbehalten. Produkte nur solange der Vorrat reicht.", S["small"]))
 doc.build(story)
 print(f"{OUT} geschrieben ({OUT.stat().st_size // 1024} KB)")
