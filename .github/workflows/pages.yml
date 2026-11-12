@@ -15,11 +15,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -46,6 +43,15 @@ jobs:
         if: ${{ !github.event.repository.private }}
         with:
           path: _site
+
+  # Nur für das öffentliche Repository "website": im privaten Repo wird nichts veröffentlicht
+  deploy:
+    needs: build
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
-        if: ${{ !github.event.repository.private }}
         uses: actions/deploy-pages@v4
