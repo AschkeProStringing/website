@@ -117,6 +117,8 @@ def check(save_changes=True):
 
 def write_embedded(data):
     site = json.loads((ROOT / "data/site.json").read_text(encoding="utf-8"))
+    # Ausverkaufte Produkte (stock 0) erscheinen nicht auf der Webseite
+    data = {**data, "products": [p for p in data["products"] if p.get("stock") != 0]}
     js = "window.SITE_DATA=" + json.dumps({"products": data, "site": site}, ensure_ascii=False) + ";\n"
     (ROOT / "data/data.js").write_text(js, encoding="utf-8")
 

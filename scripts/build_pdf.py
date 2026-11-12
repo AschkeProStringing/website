@@ -283,7 +283,7 @@ story.append(PageBreak())
 
 SUB = ParagraphStyle("sub2", fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3, keepWithNext=1)
 for c in data["categories"]:
-    items = [p for p in data["products"] if p["category"] == c["id"]]
+    items = [p for p in data["products"] if p["category"] == c["id"] and p.get("stock") != 0]
     if not items:
         continue
     head = [Paragraph(esc(c["title"]), S["h2"])]

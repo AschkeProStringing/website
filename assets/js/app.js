@@ -44,7 +44,7 @@
 
   function initCatalog(data, site) {
     const { categories, products } = data;
-    const state = { q: '', cat: 'all', tag: '', sort: 'name', onlyStock: false, material: '', shape: '' };
+    const state = { q: '', cat: 'all', tag: '', sort: 'name', material: '', shape: '' };
     const shapeById = Object.fromEntries(data.shapes.map(x => [x.id, x]));
     const catById = Object.fromEntries(categories.map(c => [c.id, c]));
     const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -84,7 +84,6 @@
     $('#shape').innerHTML += data.shapes.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
     $('#material').addEventListener('change', e => { state.material = e.target.value; render(); });
     $('#shape').addEventListener('change', e => { state.shape = e.target.value; render(); });
-    $('#onlyStock').addEventListener('change', e => { state.onlyStock = e.target.checked; render(); });
 
     const stockBadge = p => {
       if (p.stock === undefined) return '';
@@ -111,7 +110,7 @@
       const props = [swatch(p), p.material ? `<span class="chip-info">${esc(p.material)}</span>` : '',
         sh ? `<span class="chip-info shape" title="Saitenform: ${esc(sh.title)}">${shapeSvg(sh.sides)}${esc(sh.title)}</span>` : ''].join('');
       const priceNote = cat.priceNote ? `<small class="meta">${esc(cat.priceNote)}</small>` : '';
-      return `<article class="product${p.stock === 0 ? ' soldout' : ''}">
+      return `<article class="product" data-cat="${esc(p.category)}">
         <div class="pic">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : '<span class="ph" aria-hidden="true">◎</span>'}</div>
         <div class="body">
           <span class="brand-l">${esc(p.brand)}</span>
@@ -130,7 +129,6 @@
       let list = products.filter(p => {
         if (state.cat !== 'all' && p.category !== state.cat) return false;
         if (state.tag && !(p.tags || []).includes(state.tag)) return false;
-        if (state.onlyStock && p.stock === 0) return false;
         if (state.material && p.material !== state.material) return false;
         if (state.shape && p.shape !== state.shape) return false;
         if (state.q) {

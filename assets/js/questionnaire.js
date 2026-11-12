@@ -22,6 +22,15 @@
           <select id="r${n}method" data-k="Methode"><option value="">nach Empfehlung</option><option>2 Knoten</option><option>4 Knoten</option><option>Hybrid (Längs-/Quersaite verschieden)</option></select></div>
       </div>
       <div class="row2">
+        <div class="field"><label for="r${n}cur">Welche Saite spielst du aktuell?</label><input id="r${n}cur" type="text" data-k="Aktuelle Saite" placeholder="unbekannt ist kein Problem"><span class="hint">Wurde der Schläger bei mir besaitet, habe ich die Daten.</span></div>
+        <div class="field"><label for="r${n}pat">Saitenbild des Schlägers</label>
+          <select id="r${n}pat" data-k="Saitenbild"><option value="">weiß nicht / bei dir besaitet</option><option>offenes Saitenbild</option><option>dichtes Saitenbild</option></select></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="r${n}hard">Welche Härte (Spannung) spielst du aktuell?</label><input id="r${n}hard" type="text" data-k="Bisherige Härte/Spannung" placeholder="z.&nbsp;B. 24 kg, eher hart – unbekannt ist ok"></div>
+        <div class="field"></div>
+      </div>
+      <div class="row2">
         <div class="field"><label for="r${n}len">Spannung längs (kg)</label><input id="r${n}len" type="number" min="10" max="40" step="0.5" data-k="Spannung längs (kg)" inputmode="decimal"></div>
         <div class="field"><label for="r${n}cross">Spannung quer (kg)</label><input id="r${n}cross" type="number" min="10" max="40" step="0.5" data-k="Spannung quer (kg)" inputmode="decimal"></div>
       </div>
@@ -61,9 +70,11 @@
     const prof = [];
     if (val('level')) prof.push(`Spielstärke: ${val('level')}`);
     if (val('freq')) prof.push(`Spielhäufigkeit: ${val('freq')}`);
-    if (checked('wants').length) prof.push(`Wichtig: ${checked('wants').join(', ')}`);
-    if (checked('arm').length) prof.push('Beschwerden an Arm/Ellbogen/Schulter: ja');
-    if (val('bisher')) prof.push(`Bisherige Saite/Erfahrung: ${val('bisher')}`);
+    [['arm', 'Arm-/Schulterprobleme'], ['power', 'Kontrolle oder Power'], ['spin', 'Spin oder flach'], ['length', 'Mehr Länge gewünscht'],
+      ['logo', 'Kostenloses Herstellerlogo'], ['colormatch', 'Saitenfarbe passend zum Schläger'], ['hand', 'Spielhand']]
+      .forEach(([k, t]) => { if (checked(k).length) prof.push(`${t}: ${checked(k)[0]}`); });
+    if (checked('wants').length) prof.push(`Weitere Wünsche: ${checked('wants').join(', ')}`);
+    if (val('bisher')) prof.push(`Erfahrungen/Sonstiges: ${val('bisher')}`);
     if (prof.length) L.push('Spielerprofil', ...prof, '');
     document.querySelectorAll('.racket').forEach(r => {
       L.push(`Schläger ${r.dataset.racket}`);
