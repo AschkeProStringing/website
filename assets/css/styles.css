@@ -280,7 +280,7 @@ textarea { min-height: 110px; resize: vertical; }
 .more .reset { margin-left: auto; background: none; border: none; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
 
 #kontakt { position: relative; isolation: isolate; overflow: hidden; }
-#kontakt::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(21, 26, 48, .82), rgba(21, 26, 48, .82)), url("../img/site/kontakt-bg.webp") center / cover no-repeat; }
+#kontakt::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(21, 26, 48, .5), rgba(21, 26, 48, .5)), url("../img/site/kontakt-bg.webp") center / cover no-repeat; }
 .contact-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
 .contact-card { min-width: 0; background: rgba(31, 38, 70, .85); }
 .contact-card span { min-width: 0; overflow-wrap: anywhere; }
