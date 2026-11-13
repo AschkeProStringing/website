@@ -44,18 +44,14 @@
 
   function initCatalog(data, site) {
     const { categories, products } = data;
-    const state = { q: '', cat: 'all', tag: '', sort: 'name', material: '', shape: '', color: '', soldout: false };
+    const state = { q: '', brand: '', cat: 'all', tag: '', sort: 'name', material: '', shape: '', color: '', soldout: false };
     const shapeById = Object.fromEntries(data.shapes.map(x => [x.id, x]));
     const catById = Object.fromEntries(categories.map(c => [c.id, c]));
     const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-    const brands = [...new Set(products.filter(p => ['saitenrollen-tennis', 'saitensets'].includes(p.category)).map(p => p.brand))].sort((a, b) => a.localeCompare(b));
-    $('#brands').innerHTML = brands.map(b => `<li><button type="button" data-brand="${esc(b)}">${esc(b)}</button></li>`).join('');
-    $('#brands').addEventListener('click', e => {
-      const b = e.target.closest('[data-brand]'); if (!b) return;
-      $('#search').value = b.dataset.brand; state.q = norm(b.dataset.brand); render();
-      $('#search').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
+    const brands = [...new Set(products.map(p => p.brand).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'de'));
+    $('#brand').innerHTML += brands.map(b => `<option>${esc(b)}</option>`).join('');
+    $('#brand').addEventListener('change', e => { state.brand = e.target.value; render(); });
     $('#updated').textContent = 'Stand der Preise und Bestände: ' + new Date(data.updated).toLocaleDateString('de-DE') + '. Änderungen und Irrtümer vorbehalten.';
 
     const catChips = $('#catChips');
@@ -69,14 +65,8 @@
     });
 
     const tags = [...new Set(products.flatMap(p => p.tags || []))].sort((a, b) => a.localeCompare(b, 'de'));
-    const tagChips = $('#tagChips');
-    tagChips.innerHTML = tags.map(t => `<button class="chip small" data-tag="${esc(t)}" aria-pressed="false">${esc(t)}</button>`).join('');
-    tagChips.addEventListener('click', e => {
-      const b = e.target.closest('[data-tag]'); if (!b) return;
-      state.tag = state.tag === b.dataset.tag ? '' : b.dataset.tag;
-      tagChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.tag === state.tag));
-      render();
-    });
+    $('#tag').innerHTML += tags.map(t => `<option>${esc(t)}</option>`).join('');
+    $('#tag').addEventListener('change', e => { state.tag = e.target.value; render(); });
 
     $('#search').addEventListener('input', e => { state.q = norm(e.target.value.trim()); render(); });
     $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
@@ -151,9 +141,20 @@
         </div></article>`;
     };
 
+    $('#resetFilters').addEventListener('click', () => {
+      Object.assign(state, { brand: '', tag: '', material: '', shape: '', color: '', soldout: false });
+      ['#brand', '#tag', '#material', '#shape'].forEach(i => { $(i).value = ''; });
+      $('#soldout').checked = false;
+      colorBtn.innerHTML = '<span class="cdd-cur">alle</span>';
+      render();
+    });
+
     function render() {
+      const active = ['brand', 'tag', 'material', 'shape', 'color'].filter(k => state[k]).length + (state.soldout ? 1 : 0);
+      $('#filterBadge').textContent = active; $('#filterBadge').hidden = !active;
       let list = products.filter(p => {
         if (state.cat !== 'all' && p.category !== state.cat) return false;
+        if (state.brand && p.brand !== state.brand) return false;
         if (state.tag && !(p.tags || []).includes(state.tag)) return false;
         if (state.material && p.material !== state.material) return false;
         if (state.shape && p.shape !== state.shape) return false;
