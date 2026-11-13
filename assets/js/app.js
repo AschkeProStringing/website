@@ -89,9 +89,8 @@
     $('#shape').addEventListener('change', e => { state.shape = e.target.value; render(); });
 
     const stockBadge = p => {
-      if (p.stock === undefined) return '';
-      if (p.stock <= 0) return '<span class="stock out">ausverkauft</span>';
-            return '<span class="stock ok">verfügbar</span>';
+      if (p.stock !== undefined && p.stock <= 0) return '<span class="stock out">Ausverkauft</span>';
+      return '<span class="stock ok">Verfügbar</span>';
     };
     // Querschnitt der Saite: Kreis oder regelmäßiges Vieleck
     const shapeSvg = sh => {

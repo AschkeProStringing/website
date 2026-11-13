@@ -1075,7 +1075,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "image": "assets/img/products/dunlop-explosive-bite-1-27-yellow.webp"
   },
   {
    "id": "dunlop-explosive-speed-1-25-blue",
@@ -1985,7 +1986,8 @@
    "colorHex": [
     "#2a62c9"
    ],
-   "shape": "rund"
+   "shape": "rund",
+   "image": "assets/img/products/yonex-poly-tour-pro-1-20-blue.webp"
   },
   {
    "id": "yonex-poly-tour-rev-1-25-mint",
