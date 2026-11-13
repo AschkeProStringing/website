@@ -121,11 +121,12 @@ class ShapeCell(Flowable):
             p.close()
             c.drawPath(p, stroke=1, fill=1)
         elif icon == "rough":
-            c.circle(cx, cy, r * 0.8, stroke=1, fill=1)
+            c.circle(cx, cy, r * 0.7, stroke=1, fill=1)
             c.setFillColor(ORANGE)
-            for i in range(11):
+            for i in range(14):
                 a = i * 2.4
-                c.circle(cx + r * 0.8 * math.cos(a), cy + r * 0.8 * math.sin(a), 0.2 * mm, stroke=0, fill=1)
+                d = (0.3 if i % 3 else 0.42) * mm
+                c.circle(cx + (r * 0.7 + d * 0.8) * math.cos(a), cy + (r * 0.7 + d * 0.8) * math.sin(a), d, stroke=0, fill=1)
         elif not sides:
             c.circle(cx, cy, r, stroke=1, fill=1)
         else:
