@@ -83,8 +83,23 @@
     $('#material').innerHTML += data.materials.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
     $('#shape').innerHTML += data.shapes.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
     $('#material').addEventListener('change', e => { state.material = e.target.value; render(); });
-    $('#color').innerHTML += [...new Set(products.map(p => p.color).filter(Boolean))].sort((x, y) => x.localeCompare(y, 'de')).map(c => `<option>${esc(c)}</option>`).join('');
-    $('#color').addEventListener('change', e => { state.color = e.target.value; render(); });
+    const swatchBg = hex => hex.length > 1 ? `linear-gradient(135deg, ${hex[0]} 50%, ${hex[1]} 50%)` : hex[0];
+    const colorOpts = new Map();
+    products.forEach(p => { if (p.color && !colorOpts.has(p.color)) colorOpts.set(p.color, p.colorHex); });
+    const colorList = $('#colorList'), colorBtn = $('#colorBtn');
+    const colorItem = (val, hex) => `<li role="option" data-v="${esc(val)}" tabindex="-1">${hex ? `<i class="swatch" style="background:${esc(swatchBg(hex))}"></i>` : ''}<span>${esc(val || 'alle')}</span></li>`;
+    colorList.innerHTML = colorItem('', null) + [...colorOpts.keys()].sort((x, y) => x.localeCompare(y, 'de')).map(c => colorItem(c, colorOpts.get(c))).join('');
+    const closeColor = () => { colorList.hidden = true; colorBtn.setAttribute('aria-expanded', 'false'); };
+    colorBtn.addEventListener('click', () => { const open = colorList.hidden; colorList.hidden = !open; colorBtn.setAttribute('aria-expanded', String(open)); });
+    colorList.addEventListener('click', e => {
+      const li = e.target.closest('li'); if (!li) return;
+      state.color = li.dataset.v;
+      const hex = colorOpts.get(state.color);
+      colorBtn.innerHTML = `${hex ? `<i class="swatch" style="background:${esc(swatchBg(hex))}"></i>` : ''}<span class="cdd-cur">${esc(state.color || 'alle')}</span>`;
+      closeColor(); render();
+    });
+    document.addEventListener('click', e => { if (!e.target.closest('#colorDd')) closeColor(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeColor(); });
     $('#soldout').addEventListener('change', e => { state.soldout = e.target.checked; render(); });
     $('#shape').addEventListener('change', e => { state.shape = e.target.value; render(); });
 

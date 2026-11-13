@@ -180,9 +180,10 @@
             <label for="material">Material
               <select id="material"><option value="">alle</option></select>
             </label>
-            <label for="color">Farbe
-              <select id="color"><option value="">alle</option></select>
-            </label>
+            <div class="cdd" id="colorDd">Farbe
+              <button type="button" class="cdd-btn" id="colorBtn" aria-haspopup="listbox" aria-expanded="false"><span class="cdd-cur">alle</span></button>
+              <ul class="cdd-list" id="colorList" role="listbox" hidden></ul>
+            </div>
             <label for="shape">Form
               <select id="shape"><option value="">alle</option></select>
             </label>

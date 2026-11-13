@@ -260,3 +260,11 @@ textarea { min-height: 110px; resize: vertical; }
 .hero h1 .h1-sub { display: block; color: var(--text); font-size: .62em; font-weight: 500; margin: .35rem 0 .6rem; }
 .hero h1 em { display: block; }
 .product .pic img { object-position: center; margin: 0 auto; justify-self: center; }
+
+.cdd { position: relative; display: inline-flex; align-items: center; gap: .4rem; }
+.cdd-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: .45rem .8rem; font: inherit; min-height: 40px; min-width: 7rem; cursor: pointer; }
+.cdd-btn::after { content: "▾"; margin-left: auto; opacity: .7; }
+.cdd-list { position: absolute; top: calc(100% + 4px); left: 0; z-index: 30; margin: 0; padding: .3rem; list-style: none; min-width: 12rem; max-height: 320px; overflow: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(0, 0, 0, .5); }
+.cdd-list[hidden] { display: none; }
+.cdd-list li { display: flex; align-items: center; gap: .6rem; padding: .45rem .6rem; border-radius: 8px; cursor: pointer; }
+.cdd-list li:hover { background: rgba(255, 255, 255, .08); }
