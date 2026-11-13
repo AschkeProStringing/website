@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "categories": [
   {
    "id": "saitenrollen-tennis",
@@ -1176,7 +1176,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#6b7a2f"
-   ]
+   ],
+   "image": "assets/img/products/grapplesnake-tour-m8-1-25-olive.webp"
   },
   {
    "id": "grapplesnake-tour-sniper-1-25-silver",
@@ -1195,7 +1196,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#b8bcc6"
-   ]
+   ],
+   "image": "assets/img/products/grapplesnake-tour-sniper-1-25-silver.webp"
   },
   {
    "id": "highstring-ng-soft-1-25-grey",
@@ -2356,7 +2358,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#dfff2e"
-   ]
+   ],
+   "image": "assets/img/products/head-hydrosorb-pro-basic-grip-neon-gelb.webp"
   },
   {
    "id": "head-hydrosorb-pro-basic-grip-neon-orange",
@@ -2411,7 +2414,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "image": "assets/img/products/head-ultimate.webp"
   },
   {
    "id": "karakal-pu-super-grip-gelb",
@@ -2424,7 +2428,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "image": "assets/img/products/karakal-pu-super-grip-gelb.webp"
   },
   {
    "id": "karakal-pu-super-grip-schwarz",
@@ -2437,7 +2442,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "image": "assets/img/products/karakal-pu-super-grip-schwarz.webp"
   },
   {
    "id": "karakal-pu-super-grip-weiss",
@@ -2450,7 +2456,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "image": "assets/img/products/karakal-pu-super-grip-weiss.webp"
   },
   {
    "id": "kirschbaum-touch-it-soft-feeling-schwarz",
@@ -2463,7 +2470,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "image": "assets/img/products/kirschbaum-touch-it-soft-feeling-schwarz.webp"
   },
   {
    "id": "kirschbaum-touch-it-soft-feeling-weiss",
@@ -2476,7 +2484,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "image": "assets/img/products/kirschbaum-touch-it-soft-feeling-weiss.webp"
   },
   {
    "id": "stringlab-replacement-grip-thin-1-30",
@@ -2489,7 +2498,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "image": "assets/img/products/stringlab-replacement-grip-thin-1-30.webp"
   },
   {
    "id": "stringlab-replacement-grip-ultra-thick-2-80",
@@ -2502,7 +2512,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "image": "assets/img/products/stringlab-replacement-grip-ultra-thick-2-80.webp"
   },
   {
    "id": "stringlab-replacement-grip-ultra-thin-1-10",
@@ -2515,7 +2526,8 @@
    "sub": "Basisgriffbänder",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "image": "assets/img/products/stringlab-replacement-grip-ultra-thin-1-10.webp"
   },
   {
    "id": "tourna-basisband-pro-thin-1-25mm-schwarz",
@@ -2595,19 +2607,6 @@
    "sub": "Overgrips",
    "colorHex": [
     "#f5f5f5"
-   ]
-  },
-  {
-   "id": "gamma-overgrip",
-   "category": "griffbaender",
-   "brand": "Gamma",
-   "name": "Gamma Overgrip",
-   "color": "blau",
-   "price": 1.0,
-   "stock": 1,
-   "sub": "Overgrips",
-   "colorHex": [
-    "#2a62c9"
    ]
   },
   {
@@ -2747,7 +2746,8 @@
    "sub": "Overgrips",
    "colorHex": [
     "#f5f5f5"
-   ]
+   ],
+   "image": "assets/img/products/stringlab-seta-overgrip-white.webp"
   },
   {
    "id": "wilson-comfort-overgrip-braun",
@@ -2886,7 +2886,8 @@
    "sub": "Overgrips",
    "colorHex": [
     "#f4d21f"
-   ]
+   ],
+   "image": "assets/img/products/yonex-towel-grip-gelb.webp"
   },
   {
    "id": "yonex-towel-grip-rot",
@@ -2899,7 +2900,8 @@
    "sub": "Overgrips",
    "colorHex": [
     "#d62828"
-   ]
+   ],
+   "image": "assets/img/products/yonex-towel-grip-rot.webp"
   },
   {
    "id": "yonex-towel-grip-schwarz",
@@ -2912,7 +2914,8 @@
    "sub": "Overgrips",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "image": "assets/img/products/yonex-towel-grip-schwarz.webp"
   },
   {
    "id": "dunlop-official-tennis-dampener",

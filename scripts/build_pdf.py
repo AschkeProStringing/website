@@ -18,6 +18,9 @@ from reportlab.lib.enums import TA_RIGHT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from reportlab.graphics import renderPDF
 from reportlab.platypus.flowables import Flowable
 from svglib.svglib import svg2rlg
@@ -25,6 +28,8 @@ from reportlab.platypus import (BaseDocTemplate, Frame, Image as RLImage, KeepTo
                                 PageBreak, PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
 ROOT = Path(__file__).resolve().parent.parent
+pdfmetrics.registerFont(TTFont("Sansation", str(ROOT / "assets/fonts/Sansation.ttf")))
+registerFontFamily("Sansation", normal="Sansation", bold="Sansation", italic="Sansation", boldItalic="Sansation")
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "Angebot.pdf"
 
 NAVY = colors.HexColor("#151a30")
@@ -148,12 +153,12 @@ class ShapeCell(Flowable):
 S = {
     "body": ParagraphStyle("body", fontName="Helvetica", fontSize=9.5, leading=13.5, textColor=INK),
     "small": ParagraphStyle("small", fontName="Helvetica", fontSize=7.5, leading=9.5, textColor=MUTED),
-    "h1": ParagraphStyle("h1", fontName="Helvetica-Bold", fontSize=20, leading=24, textColor=colors.white, spaceBefore=4, spaceAfter=6),
-    "h2": ParagraphStyle("h2", fontName="Helvetica-Bold", fontSize=14, leading=18, textColor=ORANGE, spaceBefore=10, spaceAfter=2),
+    "h1": ParagraphStyle("h1", fontName="Sansation", fontSize=20, leading=24, textColor=colors.white, spaceBefore=4, spaceAfter=6),
+    "h2": ParagraphStyle("h2", fontName="Sansation", fontSize=14, leading=18, textColor=ORANGE, spaceBefore=10, spaceAfter=2),
     "sub": ParagraphStyle("sub", fontName="Helvetica", fontSize=8.5, leading=11, textColor=MUTED, spaceAfter=5),
     "name": ParagraphStyle("name", fontName="Helvetica-Bold", fontSize=8.8, leading=10.5, textColor=INK),
     "price": ParagraphStyle("price", fontName="Helvetica-Bold", fontSize=10, leading=12, textColor=ORANGE, alignment=TA_RIGHT),
-    "th": ParagraphStyle("th", fontName="Helvetica-Bold", fontSize=7.5, leading=9, textColor=colors.white),
+    "th": ParagraphStyle("th", fontName="Sansation", fontSize=7.5, leading=9, textColor=colors.white),
     "cover": ParagraphStyle("cover", fontName="Helvetica", fontSize=10.5, leading=15, textColor=colors.white),
 }
 
@@ -254,10 +259,10 @@ def page(canvas, doc):
     canvas.setFillColor(ORANGE)
     canvas.rect(0, h - 12.8 * mm, w, 0.8 * mm, stroke=0, fill=1)
     canvas.setFillColor(colors.white)
-    canvas.setFont("Helvetica-Bold", 9)
+    canvas.setFont("Sansation", 10)
     draw_svg(canvas, ROOT / "assets/img/site/icon.svg", 15 * mm, h - 10.6 * mm, 9.2 * mm)
     canvas.drawString(26.5 * mm, h - 8 * mm, site["name"])
-    canvas.setFont("Helvetica", 8)
+    canvas.setFont("Sansation", 8)
     canvas.drawRightString(w - 15 * mm, h - 8 * mm, f"Aktuelles Angebot · Stand {updated}")
     canvas.setFillColor(MUTED)
     canvas.drawString(15 * mm, 8 * mm, f"{site['email']} · {site['phoneDisplay']}")
@@ -272,7 +277,7 @@ cover_fr = Frame(25 * mm, 25 * mm, A4[0] - 50 * mm, A4[1] - 135 * mm, id="c")
 doc.addPageTemplates([PageTemplate("cover", [cover_fr], onPage=cover), PageTemplate("page", [fr], onPage=page)])
 
 story = [Spacer(1, 4 * mm),
-         Paragraph("<b>Aktuelles Angebot</b>", ParagraphStyle("ct", parent=S["cover"], fontName="Helvetica-Bold", fontSize=24, leading=30, textColor=ORANGE)),
+         Paragraph("<b>Aktuelles Angebot</b>", ParagraphStyle("ct", parent=S["cover"], fontName="Sansation", fontSize=24, leading=30, textColor=ORANGE)),
          Spacer(1, 3 * mm),
          Paragraph(esc(site["pdfIntro"]), S["cover"]), Spacer(1, 6 * mm),
          Paragraph(f"<b>{esc(site['name'])}</b><br/>z. Hd. {esc(site['owner'])}, {esc(site['address'])}<br/>"
@@ -305,7 +310,7 @@ story.append(Paragraph("Diadem-Produkte", S["h2"]))
 story.append(Paragraph(esc(site["diademNote"]), S["body"]))
 story.append(Spacer(1, 4 * mm))
 
-SUB = ParagraphStyle("sub2", fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3, keepWithNext=1)
+SUB = ParagraphStyle("sub2", fontName="Sansation", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3, keepWithNext=1)
 for c in data["categories"]:
     items = [p for p in data["products"] if p["category"] == c["id"] and p.get("stock") != 0]
     if not items:
