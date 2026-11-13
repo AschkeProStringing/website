@@ -4,6 +4,20 @@ Statische Website (HTML/CSS/JS, kein Build-Schritt) für GitHub Pages. Das Angeb
 
 ## Produkte pflegen
 
+### Neue Produkte / Bilder melden (Vorlage)
+
+Formlos reicht – am einfachsten eine Zeile pro Produkt, Bilder dazu hochladen (Dateiname = Produktname):
+
+```
+Kategorie | Unterkategorie | Marke | Name inkl. Stärke | Farbe | Material | Form | Preis | Besonderheiten
+Saitenrolle | Polyester | Yonex | Poly Tour Pro 1.30 | gelb | Polyester | pentagonal | 23 | Kontrolle, Haltbarkeit
+```
+
+* Pflicht: Kategorie, Marke, Name, Preis. Alles andere (Farbe, Material, Form, Tags, Bestand) ist optional.
+* Fehlende Bilder: nur hochladen und dazusagen, zu welchem Produkt sie gehören (Produktbild bzw. Strukturbild).
+* Nicht mehr verfügbar: einfach den Produktnamen nennen (wird auf Bestand 0 gesetzt und ausgeblendet) oder „entfernen“ (wird gelöscht).
+* Preisänderungen: Produktname + neuer Preis.
+
 Alle Produkte stehen in `data/products.json` (Website **und** PDF lesen dieselbe Datei). Alphabetisch sortiert wird automatisch – Reihenfolge in der Datei ist egal.
 
 **Neues Produkt:** Bild(er) nach `assets/img/products/` (Strukturbild einer Saite nach `assets/img/structure/`), Eintrag in `products` ergänzen, dann `python scripts/products.py check` (löst Farben auf, sortiert, prüft Pflichtfelder und Bilder).
@@ -27,7 +41,7 @@ Alle Produkte stehen in `data/products.json` (Website **und** PDF lesen dieselbe
 
 * `category`: `id` aus `categories`. `sub`: Unterkategorie dieser Kategorie (Saiten: `Polyester`, `Polyamid`, `Naturdarm`; Griffbänder: `Basisgriffbänder`, `Overgrips`). Neue Unterkategorien unter `subcategories` der Kategorie anlegen.
 * `color`: deutscher Farbname. Die echte Farbe (`colorHex`) wird aus `data/colors.json` ergänzt – unbekannte Farben dort eintragen oder einmalig `"colorCustom": "#aabbcc"` am Produkt setzen. Zweifarbig: `schwarz-gelb`.
-* `material`: `Polyester`, `Polyamid` oder `Naturdarm`. `shape` (optional): `rund`, `pentagonal`, `hexagonal`, `heptagonal`, `octagonal` – wird als Querschnitts-Symbol angezeigt. `structureImage` (optional): Bild des Saitenaufbaus (v. a. Multifilament).
+* `material`: `Polyester`, `Polyamid` oder `Naturdarm`. `shape` (optional): `rund`, `pentagonal`, `hexagonal`, `heptagonal`, `octagonal`, `quadratisch`, `stern`, `strukturiert` – wird als Querschnitts-Symbol angezeigt. `structureImage` (optional): Bild des Saitenaufbaus (v. a. Multifilament).
 * `stock` optional (`0` = ausverkauft: standardmäßig auf der Seite ausgeblendet, per Filter "Ausverkauftes anzeigen" sichtbar; nicht im PDF). `tags`, `comment`, `weight`, `deposit`, `image` optional.
 * Preise ändern = `price` anpassen.
 
