@@ -100,7 +100,7 @@
       if (sh.icon === 'star') {
         inner = `<polygon points="${Array.from({ length: 12 }, (_, i) => { const a = -Math.PI / 2 + i * Math.PI / 6, k = i % 2 ? 4.6 : 10; return f(c + k * Math.cos(a)) + ',' + f(c + k * Math.sin(a)); }).join(' ')}"/>`;
       } else if (sh.icon === 'rough') {
-        inner = `<circle cx="${c}" cy="${c}" r="7"/>` + Array.from({ length: 11 }, (_, i) => { const a = i * 2.4; return `<circle class="dot" cx="${f(c + 8.4 * Math.cos(a))}" cy="${f(c + 8.4 * Math.sin(a))}" r="0.9"/>`; }).join('');
+        inner = `<circle cx="${c}" cy="${c}" r="7"/>` + Array.from({ length: 11 }, (_, i) => { const a = i * 2.4; return `<circle class="dot" cx="${f(c + 7 * Math.cos(a))}" cy="${f(c + 7 * Math.sin(a))}" r="0.6"/>`; }).join('');
       } else if (!sh.sides) {
         inner = `<circle cx="${c}" cy="${c}" r="${r}"/>`;
       } else {

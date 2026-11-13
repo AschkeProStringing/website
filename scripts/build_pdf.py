@@ -125,7 +125,7 @@ class ShapeCell(Flowable):
             c.setFillColor(ORANGE)
             for i in range(11):
                 a = i * 2.4
-                c.circle(cx + r * (0.95 + 0.12 * (i % 3)) * math.cos(a), cy + r * (0.95 + 0.12 * (i % 3)) * math.sin(a), 0.3 * mm, stroke=0, fill=1)
+                c.circle(cx + r * 0.8 * math.cos(a), cy + r * 0.8 * math.sin(a), 0.2 * mm, stroke=0, fill=1)
         elif not sides:
             c.circle(cx, cy, r, stroke=1, fill=1)
         else:

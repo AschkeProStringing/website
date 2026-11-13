@@ -3187,13 +3187,13 @@
   },
   {
    "id": "stern",
-   "title": "Stern (6 Zacken)",
+   "title": "Sternförmig",
    "sides": 6,
    "icon": "star"
   },
   {
    "id": "strukturiert",
-   "title": "Strukturiert (rau)",
+   "title": "Strukturiert",
    "sides": 0,
    "icon": "rough"
   }
