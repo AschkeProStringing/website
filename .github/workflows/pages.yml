@@ -32,7 +32,7 @@ jobs:
       - name: Veröffentlichungsordner zusammenstellen
         run: |
           mkdir _site
-          cp -r index.html anfrage.html impressum.html datenschutz.html AschkeBesaitungsserviceAngebot.pdf assets data _site/
+          cp -r index.html anfrage.html impressum.html datenschutz.html AschkeBesaitungsserviceAngebot.pdf sitemap.xml robots.txt assets data _site/
           touch _site/.nojekyll
       - name: Vorschau-Paket (zum Herunterladen, auch bei privatem Repo)
         uses: actions/upload-artifact@v7
