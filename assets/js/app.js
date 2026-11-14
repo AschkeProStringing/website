@@ -72,7 +72,7 @@
     $('#search').addEventListener('input', e => { state.q = norm(e.target.value.trim()).replace(/[^a-z0-9.]+/g, ' ').trim(); render(); });
     $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
     $('#material').innerHTML += data.materials.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
-    $('#shape').innerHTML += data.shapes.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
+    $('#shape').innerHTML += [...new Set(data.shapes.map(m => m.title))].map(t => `<option>${esc(t)}</option>`).join('');
     $('#material').addEventListener('change', e => { state.material = e.target.value; render(); });
     const swatchBg = hex => hex.length > 1 ? `linear-gradient(135deg, ${hex[0]} 50%, ${hex[1]} 50%)` : hex[0];
     const colorOpts = new Map();
@@ -159,7 +159,7 @@
         if (state.brand && p.brand !== state.brand) return false;
         if (state.tag && !(p.tags || []).includes(state.tag)) return false;
         if (state.material && p.material !== state.material) return false;
-        if (state.shape && p.shape !== state.shape) return false;
+        if (state.shape && (shapeById[p.shape] || {}).title !== state.shape) return false;
         if (state.color && p.color !== state.color) return false;
         if (p.stock === 0 && !state.soldout) return false;
         if (state.q) {
