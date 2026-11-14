@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "categories": [
   {
    "id": "saitenrollen-tennis",
@@ -368,7 +368,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "structureImage": "assets/img/structure/MSVFocusHexStruktur.webp"
   },
   {
    "id": "msv-focus-hex-plus-25-1-20",
@@ -388,7 +389,8 @@
    "sub": "Polyester",
    "colorHex": [
     "#1a1a1a"
-   ]
+   ],
+   "structureImage": "assets/img/structure/MSVFocusHexStruktur.webp"
   },
   {
    "id": "msv-hepta-twist-1-20",
@@ -1099,6 +1101,26 @@
    "shape": "rund"
   },
   {
+   "id": "dunlop-explosive-spin-1-25-black",
+   "category": "saitensets",
+   "brand": "Dunlop",
+   "name": "Dunlop Explosive Spin 1.25 black",
+   "color": "schwarz",
+   "price": 23.0,
+   "tags": [
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/dunlop-explosive-spin-1-25-black.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "hexagonal",
+   "structureImage": "assets/img/structure/DunlopExplosiveSpinStructure.webp",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
    "id": "dunlop-explosive-tour-1-20-silver",
    "category": "saitensets",
    "brand": "Dunlop",
@@ -1157,6 +1179,26 @@
    "sub": "Polyester",
    "colorHex": [
     "#2e9e4f"
+   ]
+  },
+  {
+   "id": "genesis-top-secret-1-30-gold",
+   "category": "saitensets",
+   "brand": "Genesis",
+   "name": "Genesis Top Secret 1.30 gold",
+   "color": "gold",
+   "price": 23.0,
+   "tags": [
+    "Haltbarkeit",
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/genesis-top-secret-1-30-gold.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "rund",
+   "colorHex": [
+    "#c9a227"
    ]
   },
   {
@@ -1361,6 +1403,44 @@
    "shape": "rund"
   },
   {
+   "id": "kirschbaum-flash-shark-1-25-mint",
+   "category": "saitensets",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Flash Shark 1.25 mint",
+   "color": "mint",
+   "price": 23.0,
+   "tags": [
+    "Power",
+    "Spin"
+   ],
+   "image": "assets/img/products/kirschbaum-flash-shark-1-25-mint.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "stern8",
+   "colorHex": [
+    "#7fd8b8"
+   ]
+  },
+  {
+   "id": "kirschbaum-flash-shark-1-25-pink",
+   "category": "saitensets",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Flash Shark 1.25 pink",
+   "color": "pink",
+   "price": 23.0,
+   "tags": [
+    "Power",
+    "Spin"
+   ],
+   "image": "assets/img/products/kirschbaum-flash-shark-1-25-pink.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "stern8",
+   "colorHex": [
+    "#e94b9a"
+   ]
+  },
+  {
    "id": "kirschbaum-max-power-1-20-red",
    "category": "saitensets",
    "brand": "Kirschbaum",
@@ -1527,6 +1607,25 @@
    "shape": "hexagonal"
   },
   {
+   "id": "luxilon-alu-power-1-25-grey",
+   "category": "saitensets",
+   "brand": "Luxilon",
+   "name": "Luxilon Alu Power 1.25 grey",
+   "color": "grau",
+   "price": 23.0,
+   "tags": [
+    "Power",
+    "Spin"
+   ],
+   "image": "assets/img/products/luxilon-alu-power-1-25-grey.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "rund",
+   "colorHex": [
+    "#8a8f98"
+   ]
+  },
+  {
    "id": "luxilon-big-banger-alu-power-1-20-grey",
    "category": "saitensets",
    "brand": "Luxilon",
@@ -1600,6 +1699,25 @@
    "shape": "pentagonal"
   },
   {
+   "id": "luxilon-element-1-25-bronze",
+   "category": "saitensets",
+   "brand": "Luxilon",
+   "name": "Luxilon Element 1.25 bronze",
+   "color": "bronzefarben",
+   "price": 23.0,
+   "tags": [
+    "Komfort",
+    "Power"
+   ],
+   "image": "assets/img/products/luxilon-element-1-25-bronze.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "rund",
+   "colorHex": [
+    "#a8672d"
+   ]
+  },
+  {
    "id": "luxilon-element-soft-ir-1-27-pink-red",
    "category": "saitensets",
    "brand": "Luxilon",
@@ -1620,6 +1738,26 @@
     "#d62828"
    ],
    "shape": "rund"
+  },
+  {
+   "id": "msv-co-focus-1-23-red",
+   "category": "saitensets",
+   "brand": "MSV",
+   "name": "MSV Co Focus 1.23 red",
+   "color": "rot",
+   "price": 23.0,
+   "tags": [
+    "Kontrolle",
+    "Spin"
+   ],
+   "image": "assets/img/products/msv-co-focus-1-23-red.webp",
+   "material": "Polyester",
+   "sub": "Polyester",
+   "shape": "rund",
+   "structureImage": "assets/img/structure/MSVCoFocusStruktur.webp",
+   "colorHex": [
+    "#d62828"
+   ]
   },
   {
    "id": "msv-focus-hex-1-18-orange",
@@ -2260,6 +2398,28 @@
    "shape": "rund"
   },
   {
+   "id": "msv-multi-q06-1-25",
+   "category": "saitensets",
+   "brand": "MSV",
+   "name": "MSV Multi Q06 1.25",
+   "color": "natur",
+   "price": 23.0,
+   "tags": [
+    "Komfort",
+    "Kontrolle",
+    "Power"
+   ],
+   "image": "assets/img/products/msv-multi-q06-1-25.webp",
+   "material": "Polyamid",
+   "sub": "Polyamid",
+   "shape": "rund",
+   "comment": "Aus Polypropylen und Polyamid.",
+   "structureImage": "assets/img/structure/MSVMultiQ06Struktur.webp",
+   "colorHex": [
+    "#e6d3a8"
+   ]
+  },
+  {
    "id": "babolat-vs-touch-1-30",
    "category": "saitensets",
    "brand": "Babolat",
@@ -2462,6 +2622,19 @@
    "image": "assets/img/products/karakal-pu-super-grip-weiss.webp"
   },
   {
+   "id": "kirschbaum-soft-feeling-diamond-black",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Soft Feeling Diamond black",
+   "color": "schwarz",
+   "price": 15,
+   "sub": "Basisgriffbänder",
+   "image": "assets/img/products/kirschbaum-soft-feeling-diamond-black.webp",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
    "id": "kirschbaum-touch-it-soft-feeling-schwarz",
    "category": "griffbaender",
    "brand": "Kirschbaum",
@@ -2612,6 +2785,32 @@
    ]
   },
   {
+   "id": "kimony-hi-soft-ex-black",
+   "category": "griffbaender",
+   "brand": "Kimony",
+   "name": "Kimony HI-SOFT EX black",
+   "color": "schwarz",
+   "price": 2.0,
+   "sub": "Overgrips",
+   "image": "assets/img/products/kimony-hi-soft-ex-black.webp",
+   "colorHex": [
+    "#1a1a1a"
+   ]
+  },
+  {
+   "id": "kimony-hi-soft-ex-white",
+   "category": "griffbaender",
+   "brand": "Kimony",
+   "name": "Kimony HI-SOFT EX white",
+   "color": "weiß",
+   "price": 2.0,
+   "sub": "Overgrips",
+   "image": "assets/img/products/kimony-hi-soft-ex-white.webp",
+   "colorHex": [
+    "#f5f5f5"
+   ]
+  },
+  {
    "id": "kirschbaum-touch-it-black",
    "category": "griffbaender",
    "brand": "Kirschbaum",
@@ -2675,10 +2874,36 @@
    "color": "pink",
    "price": 2.0,
    "stock": 1,
-   "image": "assets/img/products/grip-kirschbaum-touch-it-pink-10.webp",
+   "image": "assets/img/products/kirschbaum-touch-it-pink.webp",
    "sub": "Overgrips",
    "colorHex": [
     "#e94b9a"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-tuerkis",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it türkis",
+   "color": "türkis",
+   "price": 2,
+   "sub": "Overgrips",
+   "image": "assets/img/products/kirschbaum-touch-it-tuerkis.webp",
+   "colorHex": [
+    "#1fb5ad"
+   ]
+  },
+  {
+   "id": "kirschbaum-touch-it-weiss",
+   "category": "griffbaender",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Touch it white",
+   "color": "weiß",
+   "price": 2,
+   "sub": "Overgrips",
+   "image": "assets/img/products/kirschbaum-touch-it-weiss.webp",
+   "colorHex": [
+    "#f5f5f5"
    ]
   },
   {
@@ -2693,6 +2918,19 @@
    "sub": "Overgrips",
    "colorHex": [
     "#f4d21f"
+   ]
+  },
+  {
+   "id": "msv-cyber-wet-red",
+   "category": "griffbaender",
+   "brand": "MSV",
+   "name": "MSV Cyber Wet red",
+   "color": "rot",
+   "price": 2,
+   "sub": "Overgrips",
+   "image": "assets/img/products/msv-cyber-wet-red.webp",
+   "colorHex": [
+    "#d62828"
    ]
   },
   {
@@ -2973,6 +3211,30 @@
    ]
   },
   {
+   "id": "kirschbaum-vibrastop-gruen",
+   "category": "daempfer",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Vibrastop - grün",
+   "color": "grün",
+   "price": 2.0,
+   "image": "assets/img/products/kirschbaum-vibrastop-gruen.webp",
+   "colorHex": [
+    "#2e9e4f"
+   ]
+  },
+  {
+   "id": "kirschbaum-vibrastop-pink",
+   "category": "daempfer",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Vibrastop - pink",
+   "color": "pink",
+   "price": 2.0,
+   "image": "assets/img/products/kirschbaum-vibrastop-pink.webp",
+   "colorHex": [
+    "#e94b9a"
+   ]
+  },
+  {
    "id": "kirschbaum-vibrastop-schwarz",
    "category": "daempfer",
    "brand": "Kirschbaum",
@@ -2983,6 +3245,18 @@
    "image": "assets/img/products/grip-vibrastop-26.webp",
    "colorHex": [
     "#1a1a1a"
+   ]
+  },
+  {
+   "id": "kirschbaum-vibrastop-weiss",
+   "category": "daempfer",
+   "brand": "Kirschbaum",
+   "name": "Kirschbaum Vibrastop - weiß",
+   "color": "weiß",
+   "price": 2.0,
+   "image": "assets/img/products/kirschbaum-vibrastop-weiss.webp",
+   "colorHex": [
+    "#f5f5f5"
    ]
   },
   {
@@ -3194,6 +3468,12 @@
    "id": "stern",
    "title": "Sternförmig",
    "sides": 6,
+   "icon": "star"
+  },
+  {
+   "id": "stern8",
+   "title": "Sternförmig (8 Zacken)",
+   "sides": 8,
    "icon": "star"
   },
   {

@@ -28,11 +28,11 @@ jobs:
       - name: Produktdaten prüfen
         run: python scripts/products.py check
       - name: Angebots-PDF aus data/products.json erzeugen
-        run: python scripts/build_pdf.py Angebot.pdf
+        run: python scripts/build_pdf.py AschkeBesaitungsserviceAngebot.pdf
       - name: Veröffentlichungsordner zusammenstellen
         run: |
           mkdir _site
-          cp -r index.html anfrage.html impressum.html datenschutz.html Angebot.pdf assets data _site/
+          cp -r index.html anfrage.html impressum.html datenschutz.html AschkeBesaitungsserviceAngebot.pdf assets data _site/
           touch _site/.nojekyll
       - name: Vorschau-Paket (zum Herunterladen, auch bei privatem Repo)
         uses: actions/upload-artifact@v4

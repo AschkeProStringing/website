@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Erzeugt das Angebots-PDF (Angebot.pdf) aus data/products.json und data/site.json.
+"""Erzeugt das Angebots-PDF (AschkeBesaitungsserviceAngebot.pdf) aus data/products.json und data/site.json.
 
 Aufruf:  python scripts/build_pdf.py [ausgabe.pdf]
 Benötigt: pip install -r scripts/requirements.txt
@@ -30,7 +30,7 @@ from reportlab.platypus import (BaseDocTemplate, Frame, Image as RLImage, KeepTo
 ROOT = Path(__file__).resolve().parent.parent
 pdfmetrics.registerFont(TTFont("Sansation", str(ROOT / "assets/fonts/Sansation.ttf")))
 registerFontFamily("Sansation", normal="Sansation", bold="Sansation", italic="Sansation", boldItalic="Sansation")
-OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "Angebot.pdf"
+OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "AschkeBesaitungsserviceAngebot.pdf"
 
 NAVY = colors.HexColor("#151a30")
 NAVY2 = colors.HexColor("#1f2646")
@@ -118,9 +118,10 @@ class ShapeCell(Flowable):
         c.setLineWidth(0.9)
         if icon == "star":
             p = c.beginPath()
-            for i in range(12):
+            n = sides or 6
+            for i in range(2 * n):
                 k = r * (1.1 if i % 2 == 0 else 0.5)
-                a = math.pi / 2 + i * math.pi / 6
+                a = math.pi / 2 + i * math.pi / n
                 x, y = cx + k * math.cos(a), cy + k * math.sin(a)
                 p.moveTo(x, y) if i == 0 else p.lineTo(x, y)
             p.close()

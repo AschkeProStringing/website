@@ -30,7 +30,7 @@
 
   loadData()
     .then(([data, site]) => { renderSite(site); initCatalog(data, site); })
-    .catch(() => { catalog.innerHTML = '<p class="empty">Das Sortiment konnte nicht geladen werden. Bitte Seite neu laden oder <a href="Angebot.pdf">das Angebot als PDF</a> öffnen.</p>'; });
+    .catch(() => { catalog.innerHTML = '<p class="empty">Das Sortiment konnte nicht geladen werden. Bitte Seite neu laden oder <a href="AschkeBesaitungsserviceAngebot.pdf">das Angebot als PDF</a> öffnen.</p>'; });
 
   function renderSite(site) {
     $('#handover').innerHTML = site.handover.map(h => `<article class="card"><h3>${esc(h.title)}</h3><p>${esc(h.text)}</p></article>`).join('');
@@ -68,7 +68,7 @@
     $('#tag').innerHTML += tags.map(t => `<option>${esc(t)}</option>`).join('');
     $('#tag').addEventListener('change', e => { state.tag = e.target.value; render(); });
 
-    $('#search').addEventListener('input', e => { state.q = norm(e.target.value.trim()); render(); });
+    $('#search').addEventListener('input', e => { state.q = norm(e.target.value.trim()).replace(/[^a-z0-9.]+/g, ' ').trim(); render(); });
     $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
     $('#material').innerHTML += data.materials.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
     $('#shape').innerHTML += data.shapes.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
@@ -102,7 +102,8 @@
       const c = 12, r = 9, f = n => n.toFixed(2);
       let inner;
       if (sh.icon === 'star') {
-        inner = `<polygon points="${Array.from({ length: 12 }, (_, i) => { const a = -Math.PI / 2 + i * Math.PI / 6, k = i % 2 ? 4.6 : 10; return f(c + k * Math.cos(a)) + ',' + f(c + k * Math.sin(a)); }).join(' ')}"/>`;
+        const n = sh.sides || 6;
+        inner = `<polygon points="${Array.from({ length: 2 * n }, (_, i) => { const a = -Math.PI / 2 + i * Math.PI / n, k = i % 2 ? 4.6 : 10; return f(c + k * Math.cos(a)) + ',' + f(c + k * Math.sin(a)); }).join(' ')}"/>`;
       } else if (sh.icon === 'rough') {
         inner = `<circle cx="${c}" cy="${c}" r="6.6"/>` + Array.from({ length: 14 }, (_, i) => { const a = i * 2.4, d = i % 3 ? 0.65 : 0.9; return `<circle class="dot" cx="${f(c + (6.6 + d * 0.8) * Math.cos(a))}" cy="${f(c + (6.6 + d * 0.8) * Math.sin(a))}" r="${d}"/>`; }).join('');
       } else if (!sh.sides) {
@@ -161,8 +162,9 @@
         if (state.color && p.color !== state.color) return false;
         if (p.stock === 0 && !state.soldout) return false;
         if (state.q) {
-          const hay = norm([p.brand, p.name, p.color, p.comment, ...(p.tags || []), catById[p.category].title, p.sub, p.material, p.shape].filter(Boolean).join(' '));
-          if (!state.q.split(/\s+/).every(w => hay.includes(w))) return false;
+          const hay = ' ' + norm([p.brand, p.name, p.color, p.comment, ...(p.tags || []), catById[p.category].title, p.sub, p.material, p.shape].filter(Boolean).join(' ')).replace(/[^a-z0-9.]+/g, ' ');
+          // Treffer nur am Wortanfang (sonst findet "dun" z. B. "Rückmeldung")
+          if (!state.q.split(/\s+/).every(w => hay.includes(' ' + w))) return false;
         }
         return true;
       });

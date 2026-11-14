@@ -46,6 +46,11 @@
           <div class="field"><label for="contactWay">Bevorzugter Kontaktweg</label>
             <select id="contactWay" name="contactWay"><option>WhatsApp</option><option>E-Mail</option><option>Telefon</option></select></div>
         </div>
+        <div class="field"><label for="street">Rechnungsadresse – Straße und Hausnummer</label><input id="street" name="street" type="text" autocomplete="street-address"><span class="hint">Nur nötig, falls Sie noch nicht bei mir waren.</span></div>
+        <div class="row2">
+          <div class="field"><label for="zip">PLZ</label><input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"></div>
+          <div class="field"><label for="city">Ort</label><input id="city" name="city" type="text" autocomplete="address-level2"></div>
+        </div>
         <div class="field"><span class="lbl">Sportart *</span>
           <div class="choices" role="radiogroup" aria-label="Sportart">
             <label class="choice"><input type="radio" name="sport" value="Tennis" checked> Tennis</label>
@@ -69,13 +74,7 @@
         <div class="field"><span class="lbl">Möchtest du ein kostenloses Logo des Schlägerherstellers auf den neu besaiteten Schläger?</span><div class="choices"><label class="choice"><input type="radio" name="logo" value="Ja"> Ja</label><label class="choice"><input type="radio" name="logo" value="Nein"> Nein</label></div></div>
         <div class="field"><span class="lbl">Ist dir wichtig, dass die Saite farblich zum Schläger passt?</span><div class="choices"><label class="choice"><input type="radio" name="colormatch" value="Ja"> Ja</label><label class="choice"><input type="radio" name="colormatch" value="Nein"> Nein</label></div></div>
         <div class="field"><span class="lbl">Spielst du mit rechts oder mit links? (relevant, sollte mal ein Griffband fällig werden)</span><div class="choices"><label class="choice"><input type="radio" name="hand" value="Rechts"> Rechts</label><label class="choice"><input type="radio" name="hand" value="Links"> Links</label></div></div>
-        <div class="field"><span class="lbl">Weitere Wünsche</span>
-          <div class="choices">
-            <label class="choice"><input type="checkbox" name="wants" value="Haltbarkeit"> Haltbarkeit</label>
-            <label class="choice"><input type="checkbox" name="wants" value="Spannungsstabilität"> Spannungsstabilität</label>
-            <label class="choice"><input type="checkbox" name="wants" value="Preis"> günstiger Preis</label>
-          </div></div>
-        <div class="field"><label for="bisher">Bisherige Erfahrungen / Sonstiges zum Spiel</label><textarea id="bisher" name="bisher" placeholder="z.&nbsp;B. Head Hawk 1.25 mit 24/23 kg – war mir zu hart …"></textarea></div>
+        <div class="field"><label for="bisher">Sonstige Wünsche / Bisherige Erfahrungen / Sonstiges zum Spiel</label><textarea id="bisher" name="bisher" placeholder="z.&nbsp;B. Haltbarkeit, günstiger Preis oder Head Hawk 1.25 mit 24/23 kg – war mir zu hart …"></textarea></div>
       </fieldset>
 
       <fieldset>
@@ -90,8 +89,8 @@
         <legend>4 · Übergabe &amp; Termin</legend>
         <div class="field"><span class="lbl">Wie übergeben Sie mir den Schläger? *</span>
           <div class="choices" id="handoverChoices" role="radiogroup" aria-label="Übergabe"></div></div>
-        <div class="field"><label for="until">Gewünscht fertig bis</label><input id="until" name="until" type="date"><span class="hint">Unverbindlich – ich melde mich, wenn es knapp werden könnte.</span></div>
-        <div class="field"><label for="notes">Sonstige Wünsche oder Fragen</label><textarea id="notes" name="notes"></textarea></div>
+        <div class="field"><label for="until">Fertigstellung gewünscht bis</label><input id="until" name="until" type="date"><span class="hint">Unverbindlich – ich melde mich, wenn es knapp werden könnte.</span></div>
+        <div class="field"><label for="notes">Sonstige Lieferwünsche / Fragen zur Übergabe</label><textarea id="notes" name="notes"></textarea></div>
       </fieldset>
 
       <fieldset>

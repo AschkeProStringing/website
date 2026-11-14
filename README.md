@@ -47,7 +47,7 @@ Alle Produkte stehen in `data/products.json` (Website **und** PDF lesen dieselbe
 
 **Produkt entfällt:** `python scripts/products.py remove ID [ID …]` – entfernt es aus Website und Angebot und löscht nicht mehr genutzte Bilder.
 
-Commit auf `main` → Website **und** `Angebot.pdf` werden automatisch neu veröffentlicht (Tab *Actions*); der Stand im PDF wird beim `check` aktualisiert.
+Commit auf `main` → Website **und** `AschkeBesaitungsserviceAngebot.pdf` werden automatisch neu veröffentlicht (Tab *Actions*); der Stand im PDF wird beim `check` aktualisiert.
 
 ## Anleitung für GitHub-Einsteiger: Produkt selbst hinzufügen
 
@@ -58,7 +58,7 @@ Ohne Installation, direkt im Browser:
 3. **Speichern (= pushen):** Oben rechts **Commit changes…**, kurze Beschreibung (z. B. „Neue Saite Yonex Poly Tour Pro 1.30“), **Commit directly to the main branch** → **Commit changes**.
 4. **Ausverkauft:** im Eintrag `"stock": 0` ergänzen. **Preis ändern:** `price` anpassen. **Löschen:** den ganzen Eintrag entfernen.
 
-Hinweise: Der Commit löst automatisch den Build aus (Tab *Actions*, grüner Haken = fertig). Dabei werden Farben ergänzt, alles alphabetisch sortiert und `Angebot.pdf` neu erzeugt. Bei einem Tippfehler im JSON (fehlendes Komma/Anführungszeichen) schlägt der Build fehl (roter Haken) – dann den Eintrag korrigieren oder mir Bescheid geben. Mit Git auf dem eigenen Rechner: `git pull`, Dateien ändern, `python scripts/products.py check`, `git add -A`, `git commit -m "Text"`, `git push`.
+Hinweise: Der Commit löst automatisch den Build aus (Tab *Actions*, grüner Haken = fertig). Dabei werden Farben ergänzt, alles alphabetisch sortiert und `AschkeBesaitungsserviceAngebot.pdf` neu erzeugt. Bei einem Tippfehler im JSON (fehlendes Komma/Anführungszeichen) schlägt der Build fehl (roter Haken) – dann den Eintrag korrigieren oder mir Bescheid geben. Mit Git auf dem eigenen Rechner: `git pull`, Dateien ändern, `python scripts/products.py check`, `git add -A`, `git commit -m "Text"`, `git push`.
 
 ## Weitere Inhalte
 
@@ -77,7 +77,7 @@ Hinweise: Der Commit löst automatisch den Build aus (Tab *Actions*, grüner Hak
 ```bash
 python -m http.server 8000          # http://localhost:8000
 pip install -r scripts/requirements.txt
-python scripts/build_pdf.py         # erzeugt Angebot.pdf
+python scripts/build_pdf.py         # erzeugt AschkeBesaitungsserviceAngebot.pdf
 ```
 
 ## Vorschau ansehen (ohne Veröffentlichung)
