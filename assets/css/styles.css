@@ -98,6 +98,7 @@ p { margin: 0 0 1em; }
 .card .icon svg { width: 26px; height: 26px; }
 .split { display: grid; gap: 2rem; align-items: center; }
 .split img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); width: 100%; }
+#uebergabe .split > img { height: auto; }
 @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } .split.rev > :first-child { order: 2; } }
 .steps { counter-reset: step; display: grid; gap: 1.6rem 1.2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); padding: 0; list-style: none; margin-top: 2rem; }
 .steps li { counter-increment: step; position: relative; padding: 1.6rem 1.4rem 1.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
