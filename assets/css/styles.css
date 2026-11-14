@@ -285,3 +285,6 @@ textarea { min-height: 110px; resize: vertical; }
 .contact-card { min-width: 0; background: rgba(31, 38, 70, .85); }
 .contact-card span { min-width: 0; overflow-wrap: anywhere; }
 .contact-card small { overflow-wrap: anywhere; }
+
+.send{display:inline-flex;flex-direction:column;gap:.25rem;align-items:flex-start}
+.send small{font-size:.8rem}
