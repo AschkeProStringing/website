@@ -902,7 +902,8 @@
    "colorHex": [
     "#e6d3a8"
    ],
-   "shape": "rund"
+   "shape": "rund",
+   "structureImage": "assets/img/structure/tecnifibre-multifeel-struktur.webp"
   },
   {
    "id": "tecnifibre-triax-1-33",
@@ -921,7 +922,8 @@
    "colorHex": [
     "#e6d3a8"
    ],
-   "shape": "rund"
+   "shape": "rund",
+   "structureImage": "assets/img/structure/tecnifibre-triax-struktur.webp"
   },
   {
    "id": "tecnifibre-x-one-biphase-1-30",
@@ -941,7 +943,8 @@
    "colorHex": [
     "#e6d3a8"
    ],
-   "shape": "rund"
+   "shape": "rund",
+   "structureImage": "assets/img/structure/tecnifibre-x-one-biphase-struktur.webp"
   },
   {
    "id": "wilson-synthetic-gut-1-30",
