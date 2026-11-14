@@ -11,7 +11,7 @@
    "subcategories": [
     {
      "id": "Polyester",
-     "title": "Polyester"
+     "title": "Co-Polyester"
     },
     {
      "id": "Polyamid",
@@ -33,7 +33,7 @@
    "subcategories": [
     {
      "id": "Polyester",
-     "title": "Polyester"
+     "title": "Co-Polyester"
     },
     {
      "id": "Polyamid",
@@ -100,7 +100,7 @@
    "subcategories": [
     {
      "id": "Polyester",
-     "title": "Polyester"
+     "title": "Co-Polyester"
     },
     {
      "id": "Polyamid",
@@ -122,7 +122,7 @@
    "subcategories": [
     {
      "id": "Polyester",
-     "title": "Polyester"
+     "title": "Co-Polyester"
     },
     {
      "id": "Polyamid",
@@ -3422,7 +3422,7 @@
  "materials": [
   {
    "id": "Polyester",
-   "title": "Polyester"
+   "title": "Co-Polyester"
   },
   {
    "id": "Polyamid",

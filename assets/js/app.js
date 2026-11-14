@@ -45,6 +45,7 @@
   function initCatalog(data, site) {
     const { categories, products } = data;
     const state = { q: '', brand: '', cat: 'all', tag: '', sort: 'name', material: '', shape: '', color: '', soldout: false };
+    const materialById = Object.fromEntries(data.materials.map(x => [x.id, x]));
     const shapeById = Object.fromEntries(data.shapes.map(x => [x.id, x]));
     const catById = Object.fromEntries(categories.map(c => [c.id, c]));
     const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -124,7 +125,7 @@
       const cat = catById[p.category];
       const meta = [p.colorHex ? '' : p.color, p.weight].filter(Boolean).join(' · ');
       const sh = p.shape && shapeById[p.shape];
-      const props = [swatch(p), p.material ? `<span class="chip-info">${esc(p.material)}</span>` : '',
+      const props = [swatch(p), p.material ? `<span class="chip-info">${esc(materialById[p.material]?.title || p.material)}</span>` : '',
         sh ? `<span class="chip-info shape" title="Saitenform: ${esc(sh.title)}">${shapeSvg(sh)}${esc(sh.title)}</span>` : ''].join('');
       const priceNote = cat.priceNote ? `<small class="meta">${esc(cat.priceNote)}</small>` : '';
       return `<article class="product${p.stock === 0 ? ' soldout' : ''}" data-cat="${esc(p.category)}">
