@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /data/
 
-Sitemap: https://aschkebesaitungsservice.de/sitemap.xml
+Sitemap: https://besaitungsservice.aschke.net/sitemap.xml
