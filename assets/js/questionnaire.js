@@ -63,7 +63,14 @@
   $('#rackets').addEventListener('change', e => { if (e.target.matches('select[data-k="Saitenbild"]')) syncPattern(e.target); });
   $('#count').addEventListener('change', renderRackets);
   renderRackets();
-  form.addEventListener('reset', () => setTimeout(() => { renderRackets(); $('#result').classList.remove('show'); }, 0));
+  function syncCustomerDetails() {
+    const unchanged = $('#existingCustomer').checked;
+    $('#billingDetails').hidden = unchanged;
+    $('#playerProfile').hidden = unchanged;
+    $('#result').classList.remove('show');
+  }
+  $('#existingCustomer').addEventListener('change', syncCustomerDetails);
+  form.addEventListener('reset', () => setTimeout(() => { renderRackets(); syncCustomerDetails(); }, 0));
 
   loadData().then(([data, s]) => {
     site = s;
@@ -80,16 +87,22 @@
     L.push(`Name: ${val('name')}`);
     if (val('phone')) L.push(`Telefon/WhatsApp: ${val('phone')}`);
     if (val('email')) L.push(`E-Mail: ${val('email')}`);
-    const addr = [val('street'), [val('zip'), val('city')].filter(Boolean).join(' ')].filter(Boolean).join(', ');
-    if (addr) L.push(`Rechnungsadresse: ${addr}`);
+    const unchanged = $('#existingCustomer').checked;
+    if (unchanged) L.push('Bestandskunde: Rechnungsadresse und Spielerprofil unverändert');
+    else {
+      const addr = [val('street'), [val('zip'), val('city')].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+      if (addr) L.push(`Rechnungsadresse: ${addr}`);
+    }
     L.push(`Bevorzugter Kontakt: ${val('contactWay')}`, `Sportart: ${checked('sport')[0]}`, '');
     const prof = [];
-    if (val('level')) prof.push(`Spielstärke: ${val('level')}`);
-    if (val('freq')) prof.push(`Spielhäufigkeit: ${val('freq')}`);
-    [['arm', 'Arm-/Schulterprobleme'], ['power', 'Kontrolle oder Power'], ['spin', 'Spin oder flach'], ['length', 'Mehr Länge gewünscht'],
-      ['logo', 'Kostenloses Herstellerlogo'], ['colormatch', 'Saitenfarbe passend zum Schläger'], ['hand', 'Spielhand']]
-      .forEach(([k, t]) => { if (checked(k).length) prof.push(`${t}: ${checked(k)[0]}`); });
-    if (val('bisher')) prof.push(`Sonstige Wünsche / Erfahrungen: ${val('bisher')}`);
+    if (!unchanged) {
+      if (val('level')) prof.push(`Spielstärke: ${val('level')}`);
+      if (val('freq')) prof.push(`Spielhäufigkeit: ${val('freq')}`);
+      [['arm', 'Arm-/Schulterprobleme'], ['power', 'Kontrolle oder Power'], ['spin', 'Spin oder flach'], ['length', 'Mehr Länge gewünscht'],
+        ['logo', 'Kostenloses Herstellerlogo'], ['colormatch', 'Saitenfarbe passend zum Schläger'], ['hand', 'Spielhand']]
+        .forEach(([k, t]) => { if (checked(k).length) prof.push(`${t}: ${checked(k)[0]}`); });
+      if (val('bisher')) prof.push(`Sonstige Wünsche / Erfahrungen: ${val('bisher')}`);
+    }
     if (prof.length) L.push('Spielerprofil', ...prof, '');
     document.querySelectorAll('.racket').forEach(r => {
       L.push(`Schläger ${r.dataset.racket}`);

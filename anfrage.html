@@ -35,6 +35,10 @@
     </div>
 
     <form class="questionnaire" id="form" novalidate>
+      <div>
+        <label class="choice"><input type="checkbox" id="existingCustomer" aria-controls="billingDetails playerProfile"> Ich bin bereits Kunde und meine Rechnungsadresse und mein Spielerprofil sind unverändert.</label>
+        <p class="hint">Bei Änderungen oder für eine neue Saitenempfehlung bitte nicht auswählen und die Angaben ergänzen.</p>
+      </div>
       <fieldset>
         <legend>1 · Zu Ihrer Person</legend>
         <div class="row2">
@@ -46,10 +50,12 @@
           <div class="field"><label for="contactWay">Bevorzugter Kontaktweg</label>
             <select id="contactWay" name="contactWay"><option>WhatsApp</option><option>E-Mail</option><option>Telefon</option></select></div>
         </div>
-        <div class="field"><label for="street">Rechnungsadresse – Straße und Hausnummer</label><input id="street" name="street" type="text" autocomplete="street-address"><span class="hint">Nur nötig, falls Sie noch nicht bei mir waren.</span></div>
-        <div class="row2">
-          <div class="field"><label for="zip">PLZ</label><input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"></div>
-          <div class="field"><label for="city">Ort</label><input id="city" name="city" type="text" autocomplete="address-level2"></div>
+        <div id="billingDetails">
+          <div class="field"><label for="street">Rechnungsadresse – Straße und Hausnummer</label><input id="street" name="street" type="text" autocomplete="street-address"></div>
+          <div class="row2">
+            <div class="field"><label for="zip">PLZ</label><input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"></div>
+            <div class="field"><label for="city">Ort</label><input id="city" name="city" type="text" autocomplete="address-level2"></div>
+          </div>
         </div>
         <div class="field"><span class="lbl">Sportart *</span>
           <div class="choices" role="radiogroup" aria-label="Sportart">
@@ -59,7 +65,7 @@
           </div></div>
       </fieldset>
 
-      <fieldset>
+      <fieldset id="playerProfile">
         <legend>2 · Spielerprofil (optional – hilft bei der Saitenempfehlung)</legend>
         <div class="row2">
           <div class="field"><label for="level">Spielstärke</label>
