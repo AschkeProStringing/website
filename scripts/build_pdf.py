@@ -309,6 +309,7 @@ for h in site["handover"]:
     story.append(Paragraph(f"<b>{esc(h['title'])}:</b> {esc(h['text'])}", S["body"]))
 story.append(Paragraph("Diadem-Produkte", S["h2"]))
 story.append(Paragraph(esc(site["diademNote"]), S["body"]))
+story.append(Paragraph('<link href="https://diademsports.eu/" color="#f59b42"><u>https://diademsports.eu/</u></link>', S["body"]))
 story.append(Spacer(1, 4 * mm))
 
 SUB = ParagraphStyle("sub2", fontName="Sansation", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3, keepWithNext=1)
