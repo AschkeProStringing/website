@@ -57,12 +57,15 @@
     const catChips = $('#catChips');
     catChips.innerHTML = [`<button class="chip" data-cat="all" aria-pressed="true">Alle</button>`]
       .concat(categories.map(c => `<button class="chip" data-cat="${esc(c.id)}" aria-pressed="false">${esc(c.title)}</button>`)).join('');
+    const catSelect = $('#catSelect');
+    catSelect.innerHTML = '<option value="all">Alle</option>' +
+      categories.map(c => `<option value="${esc(c.id)}">${esc(c.title)}</option>`).join('');
     catChips.addEventListener('click', e => {
       const b = e.target.closest('[data-cat]'); if (!b) return;
       state.cat = b.dataset.cat;
-      catChips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c === b));
       render();
     });
+    catSelect.addEventListener('change', e => { state.cat = e.target.value; render(); });
 
     const tags = [...new Set(products.flatMap(p => p.tags || []))].sort((a, b) => a.localeCompare(b, 'de'));
     $('#tag').addEventListener('change', e => { state.tag = e.target.value; render(); });
@@ -182,7 +185,12 @@
       const availableCategories = new Set(matchingProducts('cat').map(p => p.category));
       catChips.querySelectorAll('[data-cat]').forEach(button => {
         button.disabled = button.dataset.cat !== 'all' && button.dataset.cat !== state.cat && !availableCategories.has(button.dataset.cat);
+        button.setAttribute('aria-pressed', String(button.dataset.cat === state.cat));
       });
+      [...catSelect.options].forEach(option => {
+        option.disabled = option.value !== 'all' && option.value !== state.cat && !availableCategories.has(option.value);
+      });
+      catSelect.value = state.cat;
     }
 
     function render() {
