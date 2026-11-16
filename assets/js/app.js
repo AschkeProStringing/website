@@ -51,7 +51,6 @@
     const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
     const brands = [...new Set(products.map(p => p.brand).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'de'));
-    $('#brand').innerHTML += brands.map(b => `<option>${esc(b)}</option>`).join('');
     $('#brand').addEventListener('change', e => { state.brand = e.target.value; render(); });
     $('#updated').textContent = 'Stand der Preise und Bestände: ' + new Date(data.updated).toLocaleDateString('de-DE') + '. Änderungen und Irrtümer vorbehalten.';
 
@@ -66,20 +65,16 @@
     });
 
     const tags = [...new Set(products.flatMap(p => p.tags || []))].sort((a, b) => a.localeCompare(b, 'de'));
-    $('#tag').innerHTML += tags.map(t => `<option>${esc(t)}</option>`).join('');
     $('#tag').addEventListener('change', e => { state.tag = e.target.value; render(); });
 
     $('#search').addEventListener('input', e => { state.q = norm(e.target.value.trim()).replace(/[^a-z0-9.]+/g, ' ').trim(); render(); });
     $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
-    $('#material').innerHTML += data.materials.map(m => `<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');
-    $('#shape').innerHTML += [...new Set(data.shapes.map(m => m.title))].map(t => `<option>${esc(t)}</option>`).join('');
     $('#material').addEventListener('change', e => { state.material = e.target.value; render(); });
     const swatchBg = hex => hex.length > 1 ? `linear-gradient(135deg, ${hex[0]} 50%, ${hex[1]} 50%)` : hex[0];
     const colorOpts = new Map();
     products.forEach(p => { if (p.color && !colorOpts.has(p.color)) colorOpts.set(p.color, p.colorHex); });
     const colorList = $('#colorList'), colorBtn = $('#colorBtn');
     const colorItem = (val, hex) => `<li role="option" data-v="${esc(val)}" tabindex="-1">${hex ? `<i class="swatch" style="background:${esc(swatchBg(hex))}"></i>` : ''}<span>${esc(val || 'alle')}</span></li>`;
-    colorList.innerHTML = colorItem('', null) + [...colorOpts.keys()].sort((x, y) => x.localeCompare(y, 'de')).map(c => colorItem(c, colorOpts.get(c))).join('');
     const closeColor = () => { colorList.hidden = true; colorBtn.setAttribute('aria-expanded', 'false'); };
     colorBtn.addEventListener('click', () => { const open = colorList.hidden; colorList.hidden = !open; colorBtn.setAttribute('aria-expanded', String(open)); });
     colorList.addEventListener('click', e => {
@@ -151,16 +146,14 @@
       render();
     });
 
-    function render() {
-      const active = ['brand', 'tag', 'material', 'shape', 'color'].filter(k => state[k]).length + (state.soldout ? 1 : 0);
-      $('#filterBadge').textContent = active; $('#filterBadge').hidden = !active;
-      let list = products.filter(p => {
-        if (state.cat !== 'all' && p.category !== state.cat) return false;
-        if (state.brand && p.brand !== state.brand) return false;
-        if (state.tag && !(p.tags || []).includes(state.tag)) return false;
-        if (state.material && p.material !== state.material) return false;
-        if (state.shape && (shapeById[p.shape] || {}).title !== state.shape) return false;
-        if (state.color && p.color !== state.color) return false;
+    function matchingProducts(except = '') {
+      return products.filter(p => {
+        if (except !== 'cat' && state.cat !== 'all' && p.category !== state.cat) return false;
+        if (except !== 'brand' && state.brand && p.brand !== state.brand) return false;
+        if (except !== 'tag' && state.tag && !(p.tags || []).includes(state.tag)) return false;
+        if (except !== 'material' && state.material && p.material !== state.material) return false;
+        if (except !== 'shape' && state.shape && (shapeById[p.shape] || {}).title !== state.shape) return false;
+        if (except !== 'color' && state.color && p.color !== state.color) return false;
         if (p.stock === 0 && !state.soldout) return false;
         if (state.q) {
           const hay = ' ' + norm([p.brand, p.name, p.color, p.comment, ...(p.tags || []), catById[p.category].title, p.sub, p.material, p.shape].filter(Boolean).join(' ')).replace(/[^a-z0-9.]+/g, ' ');
@@ -169,6 +162,34 @@
         }
         return true;
       });
+    }
+
+    function updateFilterOptions() {
+      const options = (key, values, getValues) => {
+        const available = new Set(matchingProducts(key).flatMap(getValues).filter(Boolean));
+        const select = $('#' + key);
+        select.innerHTML = '<option value="">alle</option>' + values.filter(v => available.has(v.value) || v.value === state[key])
+          .map(v => `<option value="${esc(v.value)}">${esc(v.label)}</option>`).join('');
+        select.value = state[key];
+      };
+      options('brand', brands.map(v => ({ value: v, label: v })), p => p.brand);
+      options('tag', tags.map(v => ({ value: v, label: v })), p => p.tags || []);
+      options('material', data.materials.map(v => ({ value: v.id, label: v.title })), p => p.material);
+      options('shape', [...new Set(data.shapes.map(v => v.title))].map(v => ({ value: v, label: v })), p => shapeById[p.shape]?.title);
+      const colors = new Set(matchingProducts('color').map(p => p.color).filter(Boolean));
+      colorList.innerHTML = colorItem('', null) + [...colorOpts.keys()].filter(c => colors.has(c) || c === state.color)
+        .sort((a, b) => a.localeCompare(b, 'de')).map(c => colorItem(c, colorOpts.get(c))).join('');
+      const availableCategories = new Set(matchingProducts('cat').map(p => p.category));
+      catChips.querySelectorAll('[data-cat]').forEach(button => {
+        button.disabled = button.dataset.cat !== 'all' && button.dataset.cat !== state.cat && !availableCategories.has(button.dataset.cat);
+      });
+    }
+
+    function render() {
+      const active = ['brand', 'tag', 'material', 'shape', 'color'].filter(k => state[k]).length + (state.soldout ? 1 : 0);
+      $('#filterBadge').textContent = active; $('#filterBadge').hidden = !active;
+      updateFilterOptions();
+      const list = matchingProducts();
       const byName = (a, b) => a.name.localeCompare(b.name, 'de', { numeric: true, sensitivity: 'base' });
       const cmp = { name: byName, 'price-asc': (a, b) => a.price - b.price || byName(a, b), 'price-desc': (a, b) => b.price - a.price || byName(a, b) }[state.sort];
       $('#count').textContent = list.length + (list.length === 1 ? ' Produkt' : ' Produkte');
