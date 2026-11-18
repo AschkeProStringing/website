@@ -196,7 +196,7 @@ def stock_text(p):
     return "ausverkauft" if p["stock"] <= 0 else f"{p['stock']} verfügbar"
 
 
-def category_table(all_items, items):
+def category_table(all_items, items, image_size=13 * mm):
     """Spalten richten sich nach der ganzen Kategorie, damit alle Unterkategorien gleich aussehen."""
     show_color = any(p.get("colorHex") for p in all_items)
     show_shape = any(p.get("shape") for p in all_items)
@@ -215,7 +215,7 @@ def category_table(all_items, items):
         if p.get("weight"):
             extra = (extra + " – " if extra else "") + esc(p["weight"])
         name = f"<b>{esc(p['name'])}</b>" + (f"<br/><font size=7 color='#adb0c1'>{extra}</font>" if extra else "")
-        row = [thumb(p.get("image")), Paragraph(name, S["name"])]
+        row = [thumb(p.get("image"), image_size), Paragraph(name, S["name"])]
         if show_color:
             row.append(ColorCell(p["colorHex"], p["color"]) if p.get("colorHex") else Paragraph(esc(p.get("color", "")), S["small"]))
         if show_shape:
@@ -312,7 +312,7 @@ story.append(Paragraph(esc(site["diademNote"]), S["body"]))
 story.append(Paragraph('<link href="https://diademsports.eu/" color="#f59b42"><u>https://diademsports.eu/</u></link>', S["body"]))
 story.append(Spacer(1, 4 * mm))
 
-SUB = ParagraphStyle("sub2", fontName="Sansation", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3, keepWithNext=1)
+SUB = ParagraphStyle("sub2", fontName="Sansation", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3)
 for c in data["categories"]:
     items = [p for p in data["products"] if p["category"] == c["id"] and p.get("stock") != 0]
     if not items:
@@ -330,7 +330,8 @@ for c in data["categories"]:
     for sc, group in tabs:
         if sc["title"]:
             story.append(Paragraph(f"{esc(sc['title'])} <font size=8 color='#adb0c1'>· {len(group)}</font>", SUB))
-        story.append(category_table(items, group))
+        image_size = 10 * mm if c["id"] == "griffbaender" else 13 * mm
+        story.append(category_table(items, group, image_size))
         story.append(Spacer(1, 4 * mm))
     story.append(Spacer(1, 4 * mm))
 
