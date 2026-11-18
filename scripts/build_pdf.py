@@ -25,7 +25,7 @@ from reportlab.graphics import renderPDF
 from reportlab.platypus.flowables import Flowable
 from svglib.svglib import svg2rlg
 from reportlab.platypus import (BaseDocTemplate, Frame, Image as RLImage, KeepTogether, NextPageTemplate,
-                                PageBreak, PageTemplate, Paragraph, Spacer, Table, TableStyle)
+                                CondPageBreak, PageBreak, PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
 ROOT = Path(__file__).resolve().parent.parent
 pdfmetrics.registerFont(TTFont("Sansation", str(ROOT / "assets/fonts/Sansation.ttf")))
@@ -274,6 +274,7 @@ def page(canvas, doc):
 doc = BaseDocTemplate(str(OUT), pagesize=A4, title=f"{site['name']} – Angebot", author=site["owner"],
                       leftMargin=15 * mm, rightMargin=15 * mm, topMargin=20 * mm, bottomMargin=16 * mm)
 fr = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="f")
+heading_break = 0.25 * A4[1] - doc.bottomMargin
 cover_fr = Frame(25 * mm, 25 * mm, A4[0] - 50 * mm, A4[1] - 135 * mm, id="c")
 doc.addPageTemplates([PageTemplate("cover", [cover_fr], onPage=cover), PageTemplate("page", [fr], onPage=page)])
 
@@ -311,12 +312,14 @@ story.append(Paragraph("Diadem-Produkte", S["h2"]))
 story.append(Paragraph(esc(site["diademNote"]), S["body"]))
 story.append(Paragraph('<link href="https://diademsports.eu/" color="#f59b42"><u>https://diademsports.eu/</u></link>', S["body"]))
 story.append(Spacer(1, 4 * mm))
+story.append(PageBreak())
 
 SUB = ParagraphStyle("sub2", fontName="Sansation", fontSize=10.5, leading=13, textColor=ORANGE, spaceBefore=7, spaceAfter=3)
 for c in data["categories"]:
     items = [p for p in data["products"] if p["category"] == c["id"] and p.get("stock") != 0]
     if not items:
         continue
+    story.append(CondPageBreak(heading_break))
     head = [Paragraph(esc(c["title"]), S["h2"])]
     if c["subtitle"]:
         head.append(Paragraph(esc(c["subtitle"]), S["sub"]))
@@ -329,6 +332,7 @@ for c in data["categories"]:
             tabs.append((sc, group))
     for sc, group in tabs:
         if sc["title"]:
+            story.append(CondPageBreak(heading_break))
             story.append(Paragraph(f"{esc(sc['title'])} <font size=8 color='#adb0c1'>· {len(group)}</font>", SUB))
         image_size = 10 * mm if c["id"] == "griffbaender" else 13 * mm
         story.append(category_table(items, group, image_size))
