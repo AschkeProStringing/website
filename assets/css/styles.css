@@ -197,6 +197,7 @@ textarea { min-height: 110px; resize: vertical; }
 .choice { display: flex; gap: .7rem; align-items: center; padding: .7rem .9rem; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; background: var(--bg); min-height: 48px; }
 .choice:has(input:checked) { border-color: var(--accent); background: rgba(245, 155, 66, .1); }
 .choice input { accent-color: var(--accent); width: 18px; height: 18px; flex: none; }
+.privacy-text { min-width: 0; overflow-wrap: anywhere; }
 .racket { border: 1px dashed var(--line); border-radius: 14px; padding: 1rem; margin-bottom: 1rem; background: rgba(255, 255, 255, .02); }
 .racket h4 { margin: 0 0 .8rem; color: var(--accent-2); }
 .result { display: none; }
