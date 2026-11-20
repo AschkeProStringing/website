@@ -7,6 +7,7 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const form = $('#form');
   let site = { email: 'besaitungsservice@aschke.net', whatsapp: 'https://wa.me/491626951862', handover: [] };
+  let strings = [];
 
   const racketHtml = n => `
     <div class="racket" data-racket="${n}">
@@ -17,7 +18,9 @@
           <select id="r${n}grip" data-k="Griffstärke"><option value="">weiß nicht</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
       </div>
       <div class="row2">
-        <div class="field"><label for="r${n}string">Gewünschte Saite</label><input id="r${n}string" type="text" list="stringList" data-k="Saite" placeholder="aus dem Sortiment wählen oder tippen"><span class="hint">Eigene Saite? Dann einfach hier eintragen (17 € Arbeitspreis).</span>
+        <div class="field"><label for="r${n}string">Gewünschte Saite</label>
+          <div class="string-picker"><input id="r${n}string" type="text" data-k="Saite" placeholder="aus dem Sortiment wählen oder tippen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="r${n}stringList" aria-describedby="r${n}stringHint"><ul id="r${n}stringList" class="cdd-list string-list" role="listbox" aria-label="Passende Saiten" hidden></ul></div>
+          <span class="hint" id="r${n}stringHint">Eigene Saite? Dann einfach hier eintragen (17 € Arbeitspreis).</span>
           <label class="choice" style="margin-top:.5rem"><input type="checkbox" id="r${n}pick" data-k="Saitenwahl" value="Bitte eine passende Saite für mich aussuchen"> Bitte eine passende Saite für mich aussuchen</label></div>
         <div class="field"><label for="r${n}method">Besaitungsmethode</label>
           <select id="r${n}method" data-k="Methode"><option value="">nach Empfehlung</option><option>2 Knoten</option><option>4 Knoten</option><option>Hybrid (Längs-/Quersaite verschieden)</option></select></div>
@@ -53,6 +56,71 @@
       if (el.type === 'checkbox') el.checked = old[el.id]; else el.value = old[el.id];
     });
     box.querySelectorAll('select[data-k="Saitenbild"]').forEach(syncPattern);
+    box.querySelectorAll('.string-picker').forEach(setupStringPicker);
+  }
+
+  function setupStringPicker(picker) {
+    const input = $('input', picker), list = $('ul', picker);
+    let active = -1, interacting = false;
+    function close() {
+      list.hidden = true;
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+      active = -1;
+    }
+    function show() {
+      const query = input.value.trim().toLocaleLowerCase('de');
+      const matches = strings.filter(name => name.toLocaleLowerCase('de').includes(query));
+      list.innerHTML = matches.map((name, i) => `<li id="${list.id}-${i}" role="option" aria-selected="false">${esc(name)}</li>`).join('');
+      active = -1;
+      input.removeAttribute('aria-activedescendant');
+      list.hidden = !matches.length;
+      input.setAttribute('aria-expanded', String(!!matches.length));
+    }
+    function choose(option) {
+      input.value = option.textContent;
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+      close();
+    }
+    input.addEventListener('focus', show);
+    input.addEventListener('click', () => { if (list.hidden) show(); });
+    input.addEventListener('input', show);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !list.hidden) {
+        e.preventDefault();
+        close();
+      } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        if (list.hidden) show();
+        const options = [...list.children];
+        if (!options.length) return;
+        e.preventDefault();
+        active = active < 0 ? (e.key === 'ArrowDown' ? 0 : options.length - 1)
+          : Math.max(0, Math.min(options.length - 1, active + (e.key === 'ArrowDown' ? 1 : -1)));
+        options.forEach((option, i) => option.setAttribute('aria-selected', String(i === active)));
+        input.setAttribute('aria-activedescendant', options[active].id);
+        options[active].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter' && !list.hidden && active >= 0) {
+        e.preventDefault();
+        choose(list.children[active]);
+      }
+    });
+    list.addEventListener('pointerdown', e => {
+      interacting = true;
+      if (e.pointerType === 'mouse') e.preventDefault();
+    });
+    const endInteraction = () => setTimeout(() => {
+      interacting = false;
+      if (document.activeElement !== input) close();
+    }, 0);
+    list.addEventListener('pointerup', endInteraction);
+    list.addEventListener('pointercancel', endInteraction);
+    list.addEventListener('click', e => {
+      const option = e.target.closest('[role="option"]');
+      if (option) choose(option);
+    });
+    input.addEventListener('blur', () => setTimeout(() => {
+      if (!interacting && document.activeElement !== input) close();
+    }, 0));
   }
   // Freitextfeld nur bei "anderes Saitenbild" anzeigen
   function syncPattern(sel) {
@@ -74,8 +142,10 @@
 
   loadData().then(([data, s]) => {
     site = s;
-    $('#stringList').innerHTML = data.products.filter(p => ['saitenrollen-tennis', 'saitensets', 'saitenrollen-badminton', 'saiten-squash'].includes(p.category) && p.stock !== 0)
-      .map(p => `<option value="${esc(p.name)}"></option>`).join('');
+    strings = data.products.filter(p => ['saitenrollen-tennis', 'saitensets', 'saitenrollen-badminton', 'saiten-squash'].includes(p.category) && p.stock !== 0)
+      .map(p => p.name);
+    const focusedPicker = document.activeElement.closest('.string-picker');
+    if (focusedPicker) document.activeElement.dispatchEvent(new Event('input', { bubbles: true }));
     $('#handoverChoices').innerHTML = s.handover.map((h, i) => `<label class="choice"><input type="radio" name="handover" value="${esc(h.title)}" ${i === 0 ? 'checked' : ''}> ${esc(h.title)}</label>`).join('');
   });
 
